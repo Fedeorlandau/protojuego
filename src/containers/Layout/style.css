@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Bai+Jamjuree');
+
 html, body {
     background-color: #111116;
+    font-family: 'Bai Jamjuree', sans-serif;
 }
 
-h1 {
+h1, h3 {
     color: white;
+}
+
+.form-control, .form-control:focus {
+    color: white;
+    background-color: transparent;
+    width: 300px;
+    margin: auto;
+    border-radius: 0;
+    border-color: white;
+    box-shadow: unset;
 }
