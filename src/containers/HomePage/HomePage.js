@@ -15,6 +15,7 @@ export default class HomePageContainer extends Component {
             effect="jump"
             effectChange={1.0}
             effectDuration={0.5}
+            iterations={3}
           />
         </div>
         <div className="login-container">
