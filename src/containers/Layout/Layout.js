@@ -6,9 +6,9 @@ import './style.css';
 export default class Layout extends Component {
   render() {
     return (
-      <Container fluid={true}>
+      <Container fluid={true} className="h-100">
         {this.props.children}
-        <Footer/>
+        {!this.props.showFooter && <Footer/> }
       </Container>
     );
   }

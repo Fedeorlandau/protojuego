@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Random } from 'react-animated-text';
 import Layout from 'containers/Layout/Layout';
+import { ROUTES } from 'constants/routes';
+import { redirect } from 'react-router-dom';
 import { Input, Button, Form, FormGroup } from 'reactstrap';
 import './style.css';
 
@@ -25,7 +27,7 @@ export default class HomePageContainer extends Component {
             <FormGroup>
               <Input type="text" name="name" placeholder="Escribí tu nombre" />
             </FormGroup>
-            <Button type="button" className="btn-protojuego">Entrar</Button>
+            <Button type="button" className="btn-protojuego" onClick={() =>  this.props.history.push(ROUTES.DASHBOARD)}>Entrar</Button>
           </Form>
           </div>
         </div>

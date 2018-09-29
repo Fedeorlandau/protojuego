@@ -4,8 +4,17 @@ html, body {
     background-color: #111116;
     font-family: 'Bai Jamjuree', sans-serif;
     color: white;
+    height: 100%;
 }
 
+h3 {
+    color: white;
+}
+
+hr {
+    margin: 50px 0;
+    background-color: white;
+}
 .form-control, .form-control:focus {
     color: white;
     background-color: transparent;
