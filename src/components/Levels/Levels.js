@@ -1,9 +1,39 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import './style.css';
 
 export default class LevelsComponenet extends Component {
+
+  componentDidMount() {
+    console.log('asd')
+    toast("Default Notification !");
+
+    toast.success("Success Notification !", {
+      position: toast.POSITION.TOP_RIGHT
+    });
+
+    toast.error("Error Notification !", {
+      position: toast.POSITION.TOP_RIGHT
+    });
+
+    toast.warn("Warning Notification !", {
+      position: toast.POSITION.TOP_RIGHT
+    });
+
+    toast.info("Info Notification !", {
+      position: toast.POSITION.TOP_RIGHT
+    });
+
+    toast("Custom Style Notification with css class!", {
+      position: toast.POSITION.TOP_RIGHT,
+      className: 'foo-bar'
+    });
+  }
 
   render() {
     return (
@@ -54,6 +84,7 @@ export default class LevelsComponenet extends Component {
             </Col>
           </Row>
         </div>
+        <ToastContainer autoClose={8000} />
 
       </div>
     );
