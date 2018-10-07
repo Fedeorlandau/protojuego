@@ -1,4 +1,5 @@
 export const ROUTES = {
     HOME: '/',
-    DASHBOARD: '/dashboard'
+    DASHBOARD: '/dashboard',
+    SIMULACION: '/simulacion'
 };

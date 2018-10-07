@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, Row, Col } from 'reactstrap';
-
+  CardTitle, Button, Row, Col } from 'reactstrap';
+import { ROUTES } from 'constants/routes';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import history from 'history/history';
 
 import './style.css';
 
@@ -48,7 +49,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Simulacion</CardTitle>
                   <CardText>Afronta los desafios </CardText>
-                  <Button>Ingresar</Button>
+                  <Button onClick={() =>  history.push(ROUTES.SIMULACION)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
