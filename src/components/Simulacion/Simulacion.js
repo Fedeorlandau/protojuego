@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import {Line} from 'react-chartjs-2';
+import { Line, Radar} from 'react-chartjs-2';
+import { Row, Col, Input, Label, FormGroup } from 'reactstrap';
 import './style.css';
+import Slider, { Range } from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -51,6 +54,18 @@ const data = {
   ]
 };
 
+const marks = {
+  0: <strong>Basico</strong>,
+  25: 'Funcionalidad X',
+  50: 'Funcionalidad Y',
+  75: 'Funcionalidad Z',
+  100: {
+    style: {
+      color: 'green',
+    },
+    label: <strong>Completo</strong>,
+  },
+};
 
 export default class SimulacionComponent extends Component {
 
@@ -59,8 +74,53 @@ export default class SimulacionComponent extends Component {
       <div className="levels-container">
         <h3>Simulación</h3>
         <hr/>
-        <div className="charts-container">
-          <Line data={data} />
+        <div className="simulacion-container">
+          <div className="complexity-container">
+            <h3>
+              Alcance
+            </h3>
+            <Slider marks={marks} step={null} defaultValue={25} />
+          </div>
+          <div className="config-container">
+          <Row>
+            <Col>
+              <div className="config-card">
+                <h3>Budget</h3>
+                <span className="price">$200</span>
+              </div>
+            </Col>
+            <Col>
+              <div className="config-card">
+                <h3>Devs</h3>
+                <div className="config-input">
+                    <Input type="number" name="devs" id="exampleSelect" value="5"/>
+                </div>
+              </div>
+            </Col>
+            <Col>
+              <div className="config-card">
+                <h3>Seniority</h3>
+                <div className="config-input">
+                  <Input type="select" name="select" id="exampleSelect">
+                    <option>Junior</option>
+                    <option>Semi Senior</option>
+                    <option>Senior</option>
+                  </Input>
+                </div>
+              </div>
+            </Col>
+          </Row>
+          </div>
+          <div className="charts-container">
+          <Row>
+            <Col>
+              <Line data={data} />
+            </Col>
+            <Col>
+              <Radar data={data} />
+            </Col>
+          </Row>
+          </div>
         </div>
 
       </div>

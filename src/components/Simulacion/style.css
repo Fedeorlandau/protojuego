@@ -3,7 +3,42 @@
     color: black;
 }
 
-.charts-container {
+.simulacion-container {
     background-color: white;
     padding: 20px;
+}
+
+.charts-container {
+    margin-top: 25px;
+}
+
+.config-card {
+    background-color: #041631;
+    padding: 15px;
+    height: 150px;
+}
+
+.config-card h3 {
+    color: white;
+}
+
+.price {
+    color: green;
+    text-align: right;
+    display: block;
+    font-size: 48px;
+}
+
+.config-input {
+    margin-top: 20px;
+}
+
+.complexity-container {
+    margin: 0 0 45px;
+    padding: 0 20px 20px;
+}
+
+.complexity-container h3{
+    color: black;
+    padding-bottom: 15px;
 }

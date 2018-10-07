@@ -14,13 +14,13 @@ export default class LeftPanel extends Component {
 
         <Table>
           <thead>
+          <tr>
+            <th>Jugador</th>
+            <th>Nivel</th>
+            <th>Puntos</th>
+          </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Jugador</td>
-            <td>Nivel</td>
-            <td>Puntos</td>
-          </tr>
           <tr>
             <td>Federico</td>
             <td>10</td>
