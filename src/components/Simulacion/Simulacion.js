@@ -7,14 +7,14 @@ import Slider, { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['0 Semanas', '5 Semanas', '10 Semanas', '15 Semanas', '20 Semanas', '25 Semanas'],
   datasets: [
     {
-      label: 'My First dataset',
+      label: 'Esperado',
       fill: false,
       lineTension: 0.1,
-      backgroundColor: 'rgba(75,192,192,0.4)',
-      borderColor: 'rgba(75,192,192,1)',
+      backgroundColor: 'transparent',
+      borderColor: 'green',
       borderCapStyle: 'butt',
       borderDash: [],
       borderDashOffset: 0.0,
@@ -28,14 +28,14 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [0, 59, 80, 81, 56, 55, 40]
+      data: [0, 35, 70, 105, 140, 200]
     },
     {
-      label: 'My second dataset',
+      label: 'Actual',
       fill: false,
       lineTension: 0.1,
-      backgroundColor: 'rgba(75,192,192,0.4)',
-      borderColor: 'rgba(255,192,192,1)',
+      backgroundColor: 'transparent',
+      borderColor: 'red',
       borderCapStyle: 'butt',
       borderDash: [],
       borderDashOffset: 0.0,
@@ -49,7 +49,24 @@ const data = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [0, 30, 40, 30, 20, 50, 70]
+      data: [0, 40, 90, 100, 130, 190]
+    }
+  ]
+};
+
+const emotions = {
+  labels: ['Felicidad', 'Productividad', 'Tristeza', 'Frustracion'],
+  datasets: [
+    {
+      label: 'Emociones',
+      backgroundColor: 'rgba(255,99,132,0.2)',
+      borderColor: 'rgba(255,99,132,1)',
+      pointBackgroundColor: 'rgba(255,99,132,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(255,99,132,1)',
+      data: [30, 100, 40, 60],
+      max: 100,
     }
   ]
 };
@@ -67,19 +84,37 @@ const marks = {
   },
 };
 
+const timeMarks = {
+  5: <strong>5 Semanas</strong>,
+  10: '10 Semanas',
+  15: '15 Semanas',
+  20: '20 Semanas',
+  25: {
+    style: {
+      color: 'red',
+    },
+    label: <strong>25 Semanas </strong>,
+  },
+};
+
 export default class SimulacionComponent extends Component {
 
   render() {
     return (
       <div className="levels-container">
         <h3>Simulación</h3>
-        <hr/>
         <div className="simulacion-container">
           <div className="complexity-container">
             <h3>
               Alcance
             </h3>
             <Slider marks={marks} step={null} defaultValue={25} />
+          </div>
+          <div className="complexity-container">
+            <h3>
+              Tiempo
+            </h3>
+            <Slider marks={timeMarks} step={null} defaultValue={10}  max={25}/>
           </div>
           <div className="config-container">
           <Row>
@@ -93,7 +128,7 @@ export default class SimulacionComponent extends Component {
               <div className="config-card">
                 <h3>Devs</h3>
                 <div className="config-input">
-                    <Input type="number" name="devs" id="exampleSelect" value="5"/>
+                    <Input type="number" name="devs" id="exampleSelect" defaultValue={5} min={1} max={10}/>
                 </div>
               </div>
             </Col>
@@ -117,7 +152,7 @@ export default class SimulacionComponent extends Component {
               <Line data={data} />
             </Col>
             <Col>
-              <Radar data={data} />
+              <Radar data={emotions}  />
             </Col>
           </Row>
           </div>
