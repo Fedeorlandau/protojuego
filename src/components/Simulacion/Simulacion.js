@@ -6,53 +6,6 @@ import './style.css';
 import Slider, { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-const data = {
-  labels: ['0 Semanas', '5 Semanas', '10 Semanas', '15 Semanas', '20 Semanas', '25 Semanas'],
-  datasets: [
-    {
-      label: 'Esperado',
-      fill: false,
-      lineTension: 0.1,
-      backgroundColor: 'transparent',
-      borderColor: 'green',
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: 'rgba(75,192,192,1)',
-      pointBackgroundColor: '#fff',
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      pointHoverBorderColor: 'rgba(220,220,220,1)',
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
-      data: [0, 35, 70, 105, 140, 200]
-    },
-    {
-      label: 'Actual',
-      fill: false,
-      lineTension: 0.1,
-      backgroundColor: 'transparent',
-      borderColor: 'red',
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: 'rgba(75,192,192,1)',
-      pointBackgroundColor: '#fff',
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-      pointHoverBorderColor: 'rgba(220,220,220,1)',
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
-      data: [0, 40, 90, 100, 130, 190]
-    }
-  ]
-};
 
 const emotions = {
   labels: ['Felicidad', 'Productividad', 'Tristeza', 'Frustracion'],
@@ -99,6 +52,72 @@ const timeMarks = {
 
 export default class SimulacionComponent extends Component {
 
+  state = {
+    data: {
+      labels: ['0 Semanas', '5 Semanas', '10 Semanas', '15 Semanas', '20 Semanas', '25 Semanas'],
+      datasets: [
+        {
+          label: 'Esperado',
+          fill: false,
+          lineTension: 0.1,
+          backgroundColor: 'transparent',
+          borderColor: 'green',
+          borderCapStyle: 'butt',
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: 'miter',
+          pointBorderColor: 'rgba(75,192,192,1)',
+          pointBackgroundColor: '#fff',
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+          pointHoverBorderColor: 'rgba(220,220,220,1)',
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: [0, 35, 70, 105, 140, 200]
+        },
+        {
+          label: 'Actual',
+          fill: false,
+          lineTension: 0.1,
+          backgroundColor: 'transparent',
+          borderColor: 'red',
+          borderCapStyle: 'butt',
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: 'miter',
+          pointBorderColor: 'rgba(75,192,192,1)',
+          pointBackgroundColor: '#fff',
+          pointBorderWidth: 1,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+          pointHoverBorderColor: 'rgba(220,220,220,1)',
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: [0, 40, 90, 100, 130, 190]
+        }
+      ]
+    },
+  };
+
+  updateChart() {
+    const datasetsCopy = this.state.data.datasets.slice(0);
+    const dataCopy = datasetsCopy[1].data.slice(0);
+    console.log(dataCopy)
+    dataCopy.forEach((value, i) => {
+      dataCopy[i] = value + 10;
+    });
+    datasetsCopy[1].data = dataCopy;
+    this.setState({
+      data: {...this.state.data, ...{
+        datasets: datasetsCopy
+        }
+      }
+    })
+  }
+
   render() {
     return (
       <div className="levels-container">
@@ -108,13 +127,13 @@ export default class SimulacionComponent extends Component {
             <h3>
               Alcance
             </h3>
-            <Slider marks={marks} step={null} defaultValue={25} />
+            <Slider marks={marks} step={null} defaultValue={25} onChange={() => this.updateChart()}/>
           </div>
           <div className="complexity-container">
             <h3>
               Tiempo
             </h3>
-            <Slider marks={timeMarks} step={null} defaultValue={10}  max={25}/>
+            <Slider marks={timeMarks} step={null} defaultValue={10}  max={25} onChange={() => this.updateChart()}/>
           </div>
           <div className="config-container">
           <Row>
@@ -128,7 +147,7 @@ export default class SimulacionComponent extends Component {
               <div className="config-card">
                 <h3>Devs</h3>
                 <div className="config-input">
-                    <Input type="number" name="devs" id="exampleSelect" defaultValue={5} min={1} max={10}/>
+                    <Input type="number" name="devs" id="exampleSelect" onChange={() => this.updateChart()} defaultValue={5} min={1} max={10}/>
                 </div>
               </div>
             </Col>
@@ -136,7 +155,7 @@ export default class SimulacionComponent extends Component {
               <div className="config-card">
                 <h3>Seniority</h3>
                 <div className="config-input">
-                  <Input type="select" name="select" id="exampleSelect">
+                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()}>
                     <option>Junior</option>
                     <option>Semi Senior</option>
                     <option>Senior</option>
@@ -149,7 +168,7 @@ export default class SimulacionComponent extends Component {
           <div className="charts-container">
           <Row>
             <Col>
-              <Line data={data} />
+              <Line data={this.state.data} />
             </Col>
             <Col>
               <Radar data={emotions}  />
