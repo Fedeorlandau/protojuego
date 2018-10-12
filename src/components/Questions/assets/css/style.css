@@ -1,0 +1,14 @@
+body{
+	background-image: url(https://blog.mailrelay.com/wp-content/uploads/2018/03/gestion-de-proyectos.png);
+	text-align: center;
+}
+
+.text-muted{
+	color: blue;
+}
+.last-seconds{
+  color: red;
+}
+.option{
+  margin: 15px;
+}

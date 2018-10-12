@@ -12,6 +12,7 @@ export default class LeftPanel extends Component {
         <hr/>
         <h3>Ranking</h3>
 
+        <a href="./Questions/projectManagment.html">PREGUNTAME</a>
         <Table>
           <thead>
           <tr>
