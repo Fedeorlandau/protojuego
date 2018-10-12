@@ -11,8 +11,6 @@ export default class LeftPanel extends Component {
         <Progress value={30}/>
         <hr/>
         <h3>Ranking</h3>
-
-        <a href="./Questions/projectManagment.html">PREGUNTAME</a>
         <Table>
           <thead>
           <tr>
