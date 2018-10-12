@@ -37,7 +37,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Examenes prácticos</CardTitle>
                   <CardText>Afronta los desafios </CardText>
-                  <Button>Ingresar</Button>
+                  <Button onClick={() =>  history.push(ROUTES.QUESTIONS)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
