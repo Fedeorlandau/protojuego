@@ -6,3 +6,54 @@
     color: white;
 }
 
+.timer {
+    float: right;
+    color: red;
+    background-color: white;
+    display: block;
+}
+
+.questions-container {
+    padding: 50px;
+    background-image: url('/assets/fondo.png');
+    text-align: center;
+}
+
+.btn-lg {
+    width: 300px;
+}
+
+.options-container {
+    background-color: teal;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.margin-button {
+    margin: 10px 10px;
+}
+
+.options-container h3 {
+    text-align: center;
+}
+
+.error-message {
+    color: red;
+}
+
+.error-container {
+    background-color: white;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.results-container {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: turquoise;
+}
+
+.results-container h4{
+    color: darkslategray;
+}
