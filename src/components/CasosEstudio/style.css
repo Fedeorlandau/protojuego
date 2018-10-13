@@ -1,3 +1,13 @@
 .casosEstudio-container {
     padding: 20px;
+    height: 100%;
+}
+#divContenido {
+    height: 100%;
+}
+.linksCasosEstudio{
+    cursor: pointer;
+}
+.linksCasosEstudio:hover { 
+    color: blue;
 }
