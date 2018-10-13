@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
-import './style.css'
-import { QUESTIONS } from 'constants/questions';
+import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
 
 const TIMER_DEFAULT = 10;
@@ -21,12 +20,11 @@ export default class QuestionComponent extends Component {
   };
 
   isApproved() {
-    if((this.state.rightAnswers/ this.state.totalAnswers) > 0.7) {
+    if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
       this.state.isApproved = "Aprobado";
     } else{ 
       this.state.isApproved = "Desaprobado";
     }
-
   }
 
  interval() {
@@ -98,7 +96,7 @@ export default class QuestionComponent extends Component {
     });
     
 
-    if(QUESTIONS.length - 1 == this.state.step){
+    if(this.props.questions.length - 1 == this.state.step){
       this.showResults();
       this.clearTimer();
     } else{
@@ -112,7 +110,7 @@ export default class QuestionComponent extends Component {
   }
 
   renderQuestion() {
-    const question = QUESTIONS[this.state.step];
+    const question = this.props.questions[this.state.step];
     return (
       <div className="options-container">
         <Row>
@@ -130,8 +128,8 @@ export default class QuestionComponent extends Component {
   }
 
   renderOptions() {
-    const question = QUESTIONS[this.state.step];
 
+    const question = this.props.questions[this.state.step];
     return question.options.map((q, key) => (
         <Button color="primary" className="margin-button" key={key} onClick={() => this.validateAnswer(q)}>{q.answer}</Button>
       )

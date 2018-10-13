@@ -7,7 +7,7 @@ export default class Question extends Component {
   render() {
     return (
       <Dashboard>
-        <QuestionComponent/>
+        <QuestionComponent questions={this.props.questions}/>
       </Dashboard>
     );
   }
