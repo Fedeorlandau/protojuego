@@ -11,12 +11,23 @@ export default class QuestionComponent extends Component {
   state = {
     rightAnswers: 0,
     wrongAnswers: 0,
+    totalAnswers: 0,
     showQuestion: false,
     step: 0,
     time: 10,
     showError: false,
     showResults: false,
+    isApproved: "",
   };
+
+  isApproved() {
+    if((this.state.rightAnswers/ this.state.totalAnswers) > 0.7) {
+      this.state.isApproved = "Aprobado";
+    } else{ 
+      this.state.isApproved = "Desaprobado";
+    }
+
+  }
 
  interval() {
     if(this.state.time > 0){
@@ -46,7 +57,8 @@ export default class QuestionComponent extends Component {
       step: 0,
       showQuestion: false,
       rightAnswers: 0,
-      wrongAnswers: 0
+      wrongAnswers: 0,
+      totalAnswers: 0
     });
   }
 
@@ -55,6 +67,7 @@ export default class QuestionComponent extends Component {
       showQuestion: true,
       rightAnswers: 0,
       wrongAnswers: 0,
+      totalAnswers: 0,
       step: 0,
       showError: false,
       showResults: false,
@@ -80,6 +93,10 @@ export default class QuestionComponent extends Component {
         wrongAnswers: this.state.wrongAnswers + 1
       })
     }
+    this.setState({
+      totalAnswers: this.state.totalAnswers + 1
+    });
+    
 
     if(QUESTIONS.length - 1 == this.state.step){
       this.showResults();
@@ -135,11 +152,13 @@ export default class QuestionComponent extends Component {
 
   renderResults() {
    const {rightAnswers, wrongAnswers} = this.state;
+   this.isApproved() ;
    return (
      <div className="results-container">
        <Row>
          <Col><h4>Respuestas correctas: {rightAnswers} </h4></Col>
          <Col><h4>Respuestas incorrectas: {wrongAnswers}</h4></Col>
+         <Col><h4>El resultado del examen es: {this.state.isApproved}</h4></Col>
        </Row>
      </div>
    )
