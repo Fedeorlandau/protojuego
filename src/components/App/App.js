@@ -17,7 +17,8 @@ export default class App extends Component {
           <Route path={ROUTES.HOME} exact component={HomePageContainer} />
           <Route path={ROUTES.DASHBOARD} exact component={DashboardHomeContainer} />
           <Route path={ROUTES.SIMULACION} exact component={SimulacionContainer} /> 
-          <Route path={ROUTES.QUESTIONS} exact component={() => <QuestionContainer questions={QUESTIONS} />}/>
+          <Route path={ROUTES.QUESTIONS} exact component={() => <QuestionContainer questions={QUESTIONS} questionTitle="Aprendiendo sobre Gestion de Proyectos" />}/>
+          <Route path={ROUTES.QUESTIONS} exact component={QuestionContainer} />
           <Route path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
         </Switch> 
       </Router>

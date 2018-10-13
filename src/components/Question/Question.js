@@ -166,7 +166,7 @@ export default class QuestionComponent extends Component {
     const { showQuestion, time, showResults } = this.state;
     return (
       <div className="question-container">
-        <h1>Aprendiendo sobre Gestion de Proyectos</h1>
+        <h1>{this.props.questionTitle}</h1>
         <div className="questions-container">
           { showQuestion && <Row>
             <Col md={{offset: 4, size: 8}}>
