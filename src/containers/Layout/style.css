@@ -24,3 +24,6 @@ hr {
     border-color: white;
     box-shadow: unset;
 }
+option:not(checked) {
+    color: black;
+}
