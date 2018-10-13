@@ -16,15 +16,10 @@ export default class App extends Component {
         <Switch>
           <Route path={ROUTES.HOME} exact component={HomePageContainer} />
           <Route path={ROUTES.DASHBOARD} exact component={DashboardHomeContainer} />
-          <Route path={ROUTES.SIMULACION} exact component={SimulacionContainer} />
-<<<<<<< HEAD
+          <Route path={ROUTES.SIMULACION} exact component={SimulacionContainer} /> 
           <Route path={ROUTES.QUESTIONS} exact component={() => <QuestionContainer questions={QUESTIONS} />}/>
-          </Switch>
-=======
-          <Route path={ROUTES.QUESTIONS} exact component={QuestionContainer} />
           <Route path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
-        </Switch>
->>>>>>> 1be9ecedbba984cb117d9108eab45eeb9cd4013d
+        </Switch> 
       </Router>
     );
   }
