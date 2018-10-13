@@ -19,26 +19,3 @@ export const QUESTIONS = [
     ]
   }
 ];
-
-export const QUESTIONSVIDELA = [
-  {
-    question: 'Qué permiten realizar los falcons verdes?',
-    options: [
-      {
-        answer: 'chupar gente',
-        isRight: false
-      },
-      {
-        answer: 'encontrar zurditos',
-        isRight: false
-      }, {
-        answer: 'Estar atr',
-        isRight: true
-      }, {
-        answer: 'Todas son correctas',
-        isRight: false
-      }
-    ],
-  }
-];
-
