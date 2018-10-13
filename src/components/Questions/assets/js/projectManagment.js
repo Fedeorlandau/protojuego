@@ -18,29 +18,42 @@ var trivia = {
   timerId : '',
   // questions options and answers data
   questions: {
-    q1: 'Qué permiten realizar los casos de uso?',
-    q2: 'Qué relacion de dependencia existe con los puntos de función?',
-    q3: 'Qué son las transacciones de los casos de uso?',
-    q4: 'Qué tipo de estimacion permite obtener los puntos de función?',
-    q5: "Qué presenta un caso de uso?", 
-    //q6: "Quién dijo que este trabajo era irrealizable en un mes?"
-  },
-  options: {
-    q1: ['Documentar los requerimientos', 'Estimar el tamaño del sistema', 'Todas son correctas', 'Ninguna es correcta'],
-    q2: ['Son independientes de las tecnologías, plataformas, metodologías', 'Son dependientes de las tecnologías, plataformas, metodologías', 'Son dependientes de las plataformas', 'Ninguna es correcta'],
-    q3: ['Entradas externas', 'Salidas externas', 'Consultas externas', 'Todas las anteriores son correctas'],
-    q4: ['Una estimación fina del tamaño del proyecto', 'Una estimación grosera del tamaño del proyecto', 'La estimación final del proyecto', 'Todas son correctas'],
-    q5: ['Un escenario principal','Un escenario alternativo','Un escenario específico','Las primeras dos son correctas'],
-    //q6: ['Tacchini','tacchini en minuscula','TACCHINI en mayusculas','Todas son correctas']
-  },
-  answers: {
-    q1: 'Documentar los requerimientos',
-    q2: 'Son independientes de las tecnologías',
-    q3: 'Todas las anteriores son correctas',
-    q4: 'Una estimación grosera del tamaño del proyecto',
-    q5: 'Las primeras dos son correctas',
-    //q6: 'Todas son correctas'
-  }, 
+    q1: '¿Cuál de las siguientes opciones es una fase de planificación en la implementación de GQM?',
+    q2: '¿Cuál de las siguientes opciones es una fase de interpretación en la implementación de GQM?',
+    q3: '¿Cuál de las siguientes opciones es una fase de Recopilación de datos en la implementación de GQM?',
+    q4: '¿Cuál de las siguientes opciones es una fase de definición en la implementación de GQM?',
+    q5: 'El proceso de GQM comienza con el establecimiento de objetivos de ….',
+    q6: '¿Cuál de las siguientes opciones es una faceta de información de “Objeto”?',
+    q7: '¿Cuál de las siguientes opciones es una faceta de información de “Propósito”?',
+    q8: '¿Cuál de las siguientes opciones NO es una fase de definición en los Fundamentos de GQM?',
+    q9: '¿Cuál de las siguientes opciones NO es una fase de mejora de toma de decisiones en los Fundamentos de GQM?',
+    q10: '¿A qué nivel refiere la siguiente oración? “El equipo identifica las métricas que proporcionarán respuestas a las preguntas planteadas anteriormente?',
+},
+options: {
+    q1: ['Entrevistas GQM','Producir el Plan de Medición','Sesiones de Realimentación','Seleccionar las áreas de mejora'],
+    q2: ['Comprobar Consistencia y Completitud de las Métricas','Preparación de las Sesiones de Realimentación','Modelos de proceso de software','Formación y Arranque'],
+    q3: ['Construcción  de un Sistema de Soporte a la Medición','Producir el Plan GQM','Definir las Métricas','Preguntas e Hipótesis (definición y revisión)'],
+    q4: ['Definir los objetivos de la medición','Establecer el Equipo GQM','Generación de informes de interpretación de los resultados de la medición'],
+    q5: ['Objetivos de Negocios','Objetivos de Medida'],
+    q6: ['El producto o el proceso bajo estudio','Los atributos de calidad del objeto bajo estudio','Alcance o contexto del programa de medidas'],
+    q7: ['Alcance o contexto del programa de medidas','Motivación detrás del objetivo','Perspectiva de las metas'],
+    q8: ['Generación de Preguntas','Especificación de Medidas','Preparar Recolección de datos'],
+    q9: ['Recolectar y Validar','Establecer las Metas','Analizar'],
+    q10: ['Nivel Conceptual','Nivel Operacional','Nivel Cuantitativo'],
+},
+answers: {
+    q1:'Seleccionar las áreas de mejora',
+    q2:'Preparación de las Sesiones de Realimentación',
+    q3:'Construcción  de un Sistema de Soporte a la Medición',
+    q4:'Establecer el Equipo GQM',
+    q5:'Objetivos de Medida',
+    q6:'El producto o el proceso bajo estudio',
+    q7:'Motivación detrás del objetivo',
+    q8:'Preparar Recolección de datos',
+    q9:'Establecer las Metas',
+    q10:'Nivel Operacional',
+},
+ 
   startGame: function(){ 
     trivia.currentSet = 0;
     trivia.correct = 0;
