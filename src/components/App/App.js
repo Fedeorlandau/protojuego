@@ -5,6 +5,7 @@ import HomePageContainer from 'containers/HomePage/HomePage'
 import DashboardHomeContainer from 'containers/DashboardHome/Dashboard'
 import SimulacionContainer from 'containers/Simulacion/Simulacion'
 import QuestionContainer from 'containers/Question/Question'
+import CasosEstudioContainer from 'containers/CasosEstudio/CasosEstudio'
 import history from 'history/history';
 
 export default class App extends Component {
@@ -16,6 +17,7 @@ export default class App extends Component {
           <Route path={ROUTES.DASHBOARD} exact component={DashboardHomeContainer} />
           <Route path={ROUTES.SIMULACION} exact component={SimulacionContainer} />
           <Route path={ROUTES.QUESTIONS} exact component={QuestionContainer} />
+          <Route path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
         </Switch>
       </Router>
     );
