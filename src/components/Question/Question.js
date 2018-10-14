@@ -5,6 +5,14 @@ import './style.css'
 import { Button, Row, Col } from 'reactstrap';
 import ProgressBar from '../ProgressBar/ProgressBar'
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // eslint-disable-line no-param-reassign
+  }
+  return array;
+}
+
 const TIMER_DEFAULT = 10;
 export default class QuestionComponent extends Component {
 
@@ -18,6 +26,7 @@ export default class QuestionComponent extends Component {
     showError: false,
     showResults: false,
     isApproved: "",
+    questions: shuffleArray(this.props.questions)
   };
 
   isApproved() {
@@ -98,7 +107,7 @@ export default class QuestionComponent extends Component {
     });
     
 
-    if(this.props.questions.length - 1 == this.state.step){
+    if(this.state.questions.length - 1 == this.state.step){
       this.showResults();
       this.clearTimer();
     } else{
@@ -112,7 +121,7 @@ export default class QuestionComponent extends Component {
   }
 
   renderQuestion() {
-    const question = this.props.questions[this.state.step];
+    const question = this.state.questions[this.state.step];
     return (
       <div className="options-container">
         <Row>
@@ -131,7 +140,7 @@ export default class QuestionComponent extends Component {
 
   renderOptions() {
 
-    const question = this.props.questions[this.state.step];
+    const question = this.state.questions[this.state.step];
     return question.options.map((q, key) => (
         <Button color="primary" className="margin-button" key={key} onClick={() => this.validateAnswer(q)}>{q.answer}</Button>
       )
