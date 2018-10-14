@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css'
-import { Button, Row, Col } from 'reactstrap';
 
 export default class CasosEstudioComponent extends Component {
   
@@ -29,7 +28,7 @@ export default class CasosEstudioComponent extends Component {
         </div>
         <br></br>
         <div id="divContenido" style={{display:'none'}}>
-          <iframe scrolling="yes" id="frameContenido"></iframe>
+          <iframe scrolling="yes" id="frameContenido" title="Doc2"></iframe>
         </div>
       </div>
     );

@@ -31,10 +31,14 @@ export default class QuestionComponent extends Component {
 
   isApproved() {
     if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
-      this.state.isApproved = "Aprobado";
+      this.setState({
+        isApproved: 'Aprobado'
+      });
       ProgressBar.progress+=1;
-    } else{ 
-      this.state.isApproved = "Desaprobado";
+    } else{
+      this.setState({
+        isApproved: 'Desaprobado'
+      });
     }
   }
 
@@ -107,7 +111,7 @@ export default class QuestionComponent extends Component {
     });
     
 
-    if(this.state.questions.length - 1 == this.state.step){
+    if(this.state.questions.length - 1 === this.state.step){
       this.showResults();
       this.clearTimer();
     } else{
