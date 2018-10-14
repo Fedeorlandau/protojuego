@@ -11,7 +11,7 @@ import './style.css';
 export default class LevelsComponenet extends Component {
 
   componentDidMount() {
-    toast("Default Notification !");
+    toast.info("Bienvenido a ProtoJuego ISW2!");
   }
 
   render() {
@@ -118,8 +118,15 @@ export default class LevelsComponenet extends Component {
                 </CardBody>
               </Card>
             </Col>
-            <br/>
             <Col>
+              <Card>
+                <CardImg top width="100%" src="https://www.wikihow.com/images_en/thumb/9/9c/Play-Ludo-Step-3-Version-3.jpg/v4-728px-Play-Ludo-Step-3-Version-3.jpg.webp" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Propuestas ludicas</CardTitle>
+                  <CardText>Aprendé jugando</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.TED_TALKS)}>Ingresar</Button>
+                </CardBody>
+              </Card>
             </Col>
             <Col>
             </Col>
@@ -127,7 +134,6 @@ export default class LevelsComponenet extends Component {
             </Col>
           </Row>
         </div>
-        <ToastContainer autoClose={8000} />
 
       </div>
     );
