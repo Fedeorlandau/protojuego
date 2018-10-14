@@ -41,4 +41,24 @@
 .complexity-container h3{
     color: black;
     padding-bottom: 15px;
+    margin-top: 15px;
+}
+
+.btn-avanzar {
+    font-size: 24px;
+}
+
+.reuniones-container {
+    background-color: cadetblue;
+    padding: 20px;
+    color: white;
+}
+
+.proyecion-container {
+    background-color: moccasin;
+    padding: 20px;
+}
+
+.proyeccion-container h3 {
+    color: black;
 }

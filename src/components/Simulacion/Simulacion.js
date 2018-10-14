@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
-import { Line, Radar} from 'react-chartjs-2';
-import { Row, Col, Input, Label, FormGroup } from 'reactstrap';
+import { Line } from 'react-chartjs-2';
+import { Row, Col, Input, Button, Label, FormGroup } from 'reactstrap';
 import './style.css';
 import Slider, { Range } from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -75,7 +75,7 @@ export default class SimulacionComponent extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [0, 35, 70, 105, 140, 200]
+          data: [0, 500, 1000, 1500, 1700, 2000]
         },
         {
           label: 'Actual',
@@ -96,7 +96,7 @@ export default class SimulacionComponent extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [0, 40, 90, 100, 130, 190]
+          data: [0, 700, 1200, 1400, 1900, 2300]
         }
       ]
     },
@@ -123,6 +123,10 @@ export default class SimulacionComponent extends Component {
       <div className="levels-container">
         <h3>Simulación</h3>
         <div className="simulacion-container">
+          <div className="config-card">
+            <h3>Budget</h3>
+            <span className="price">$2000</span>
+          </div>
           <div className="complexity-container">
             <h3>
               Alcance
@@ -139,7 +143,7 @@ export default class SimulacionComponent extends Component {
           <Row>
             <Col>
               <div className="config-card">
-                <h3>Budget</h3>
+                <h3>Gasto del sprint</h3>
                 <span className="price">$200</span>
               </div>
             </Col>
@@ -147,7 +151,13 @@ export default class SimulacionComponent extends Component {
               <div className="config-card">
                 <h3>Devs</h3>
                 <div className="config-input">
-                    <Input type="number" name="devs" id="exampleSelect" onChange={() => this.updateChart()} defaultValue={5} min={1} max={10}/>
+                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()}>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </Input>
                 </div>
               </div>
             </Col>
@@ -168,12 +178,50 @@ export default class SimulacionComponent extends Component {
           <div className="charts-container">
           <Row>
             <Col>
-              <Line data={this.state.data} />
+              <div className="reuniones-container">
+                <h4>Reuniones</h4>
+                <FormGroup row>
+                  <Label md={2}>Daily</Label>
+                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()} md={10}>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </Input>
+                </FormGroup>
+                <FormGroup row>
+                  <Label md={2}>Semanal</Label>
+                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()} md={10}>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                  </Input>
+                </FormGroup>
+                <FormGroup row>
+                <Label md={2}>Capacitaciones</Label>
+                <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()} md={10}>
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                </Input>
+              </FormGroup>
+              </div>
             </Col>
             <Col>
-              <Radar data={emotions}  />
+              <div className="proyeccion-container">
+                <h3> Proyección de gasto </h3>
+                <Line data={this.state.data} />
+              </div>
             </Col>
           </Row>
+          <hr/>
+            <Row>
+              <Col>
+                <Button color="primary" className="float-right btn-avanzar">Avanzar</Button>
+              </Col>
+            </Row>
           </div>
         </div>
 

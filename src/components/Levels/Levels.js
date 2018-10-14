@@ -62,6 +62,7 @@ export default class LevelsComponenet extends Component {
               </Card>
             </Col>
           </Row>
+          <hr/>
           <Row>
           <Col>
               <Card>
