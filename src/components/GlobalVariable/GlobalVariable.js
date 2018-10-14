@@ -15,7 +15,7 @@ class GlobalVariable {
     {  
       var approvedCount = 0;
       for (var i = 0; i < this.coursesApproved.length; i++){ 
-        if (this.coursesApproved[i].name == newAchievement){
+        if (this.coursesApproved[i].name === newAchievement){
           this.coursesApproved[i].aproved= "true"; 
         }
         if(this.coursesApproved[i].aproved === "true"){

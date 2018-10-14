@@ -31,16 +31,20 @@ export default class QuestionComponent extends Component {
     showResults: false,
     isApproved: false,
     result: "",
-    questions: this.props.questions//shuffleArray(this.props.questions)
+    questions: shuffleArray(this.props.questions)
   };
 
   isApproved() {
     if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
-      this.state.result = "Aprobado";
-      this.state.isApproved = true;
+      this.setState({
+        result : "Aprobado",
+        isApproved : true
+      });
       GlobalVariable.updateProgress(this.props.AchievementName);
     } else{ 
-      this.state.result = "Desaprobado";
+      this.setState({
+        result : "Desaprobado"
+      });
     }
   }
 
@@ -114,7 +118,7 @@ export default class QuestionComponent extends Component {
     });
     
 
-    if(this.state.questions.length - 1 == this.state.step){
+    if(this.state.questions.length - 1 === this.state.step){
       this.showResults();
       this.clearTimer();
     } else{

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css'
-import { Button, Row, Col } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { ROUTES } from 'constants/routes';
 import 'react-toastify/dist/ReactToastify.css';
 import history from 'history/history';

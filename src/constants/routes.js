@@ -9,5 +9,6 @@ export const ROUTES = {
     METRICAS_SOFTWARE: '/metricas_software',
     METRICAS_SOFTWARE_QUIZ: '/metricas_software_quiz',
     ESTIMACIONES: '/estimaciones',
-    ESTIMACIONES_QUIZ: '/estimaciones_quiz'
+    ESTIMACIONES_QUIZ: '/estimaciones_quiz',
+    DIPLOMA: '/diploma'
 };

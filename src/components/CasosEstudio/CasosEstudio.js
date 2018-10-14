@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css'
-import { Button, Row, Col } from 'reactstrap';
 
 export default class CasosEstudioComponent extends Component {
   

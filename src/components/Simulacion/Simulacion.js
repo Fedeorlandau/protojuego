@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Line } from 'react-chartjs-2';
 import { Row, Col, Input, Button, Label, FormGroup } from 'reactstrap';
 import './style.css';
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 
