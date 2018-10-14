@@ -10,6 +10,8 @@ import GestionCambioContainer from 'containers/GestionCambio/GestionCambio'
 import GestionCambioQuizContainer from 'containers/GestionCambioQuiz/GestionCambioQuiz'
 import MetricasSoftwareContainer from 'containers/MetricasSoftware/MetricasSoftware'
 import MetricasSoftwareQuizContainer from 'containers/MetricasSoftwareQuiz/MetricasSoftwareQuiz'
+import EstimacionesContainer from 'containers/Estimaciones/Estimaciones'
+import EstimacionesQuizContainer from 'containers/EstimacionesQuiz/EstimacionesQuiz'
 
 import history from 'history/history';
 
@@ -27,6 +29,8 @@ export default class App extends Component {
           <Route path={ROUTES.GESTION_CAMBIO_QUIZ} exact component={GestionCambioQuizContainer} />
           <Route path={ROUTES.METRICAS_SOFTWARE} exact component={MetricasSoftwareContainer} />
           <Route path={ROUTES.METRICAS_SOFTWARE_QUIZ} exact component={MetricasSoftwareQuizContainer} />
+          <Route path={ROUTES.ESTIMACIONES} exact component={EstimacionesContainer} />
+          <Route path={ROUTES.ESTIMACIONES_QUIZ} exact component={EstimacionesQuizContainer} />
           MetricasSoftwareQuizContainer
         </Switch> 
       </Router>

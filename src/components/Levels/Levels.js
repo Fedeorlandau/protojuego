@@ -101,7 +101,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>last one to change</CardTitle>
                   <CardText>some text</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                  <Button onClick={() =>  history.push(ROUTES.ESTIMACIONES)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
