@@ -6,6 +6,12 @@ export default class User  {
       localStorage.setItem('progress', 0);
       localStorage.setItem('coursesApproved', []);
     }
+    if(!User.getProgress()) {
+      localStorage.setItem('progress', 0);
+    }
+    if(!User.getCoursesApproved()) {
+      localStorage.setItem('coursesApproved', []);
+    }
   };
   static setProgress = (value) => localStorage.setItem('progress', localStorage.getItem('progress') + value);
   static setCoursesApproved = (course) => localStorage.setItem('coursesApproved', [...localStorage.getItem('coursesApproved'), course]);
