@@ -106,6 +106,26 @@ export default class LevelsComponenet extends Component {
               </Card>
             </Col>
           </Row>
+          <hr/>
+          <Row>
+          <Col>
+              <Card>
+                <CardImg top width="100%" src="https://www.universal.tv/sites/default/files/movie/images/ted_2_-_hero_with_tt_0.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Charlas TED</CardTitle>
+                  <CardText>Aprendé de expertos</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.TED_TALKS)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <br/>
+            <Col>
+            </Col>
+            <Col>
+            </Col>
+            <Col>
+            </Col>
+          </Row>
         </div>
         <ToastContainer autoClose={8000} />
 

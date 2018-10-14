@@ -10,6 +10,8 @@ import QuestionContainer from 'containers/Question/Question'
 import CasosEstudioContainer from 'containers/CasosEstudio/CasosEstudio'
 import GestionCambioContainer from 'containers/GestionCambio/GestionCambio'
 import GestionCambioQuizContainer from 'containers/GestionCambioQuiz/GestionCambioQuiz'
+import TedTalksContainer from 'containers/TedTalks/TedTalks'
+
 import history from 'history/history';
 
 export default class App extends Component {
@@ -20,6 +22,7 @@ export default class App extends Component {
           <Route path={ROUTES.HOME} exact component={HomePageContainer} />
           <AuthRoute path={ROUTES.DASHBOARD} exact component={DashboardHomeContainer} />
           <AuthRoute path={ROUTES.SIMULACION} exact component={SimulacionContainer} />
+          <AuthRoute path={ROUTES.TED_TALKS} exact component={TedTalksContainer} />
           <AuthRoute path={ROUTES.QUESTIONS} exact component={QuestionContainer} />
           <AuthRoute path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
           <AuthRoute path={ROUTES.GESTION_CAMBIO} exact component={GestionCambioContainer} />
