@@ -45,9 +45,9 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="https://www.allnursingschools.com/wp-content/uploads/2016/11/article-nclex-exam.jpg" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Examenes prácticos</CardTitle>
-                  <CardText>Afronta los desafios </CardText>
-                  <Button onClick={() =>  history.push(ROUTES.QUESTIONS)}>Ingresar</Button>
+                  <CardTitle>Gestion de cambios</CardTitle>
+                  <CardText>Abraza al cambio!</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.GESTION_CAMBIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -55,9 +55,9 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="https://lagunita.stanford.edu/c4x/StanfordOnline/O.P.E.N./asset/course_design_tile.jpg" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Cursos</CardTitle>
-                  <CardText>Afronta los desafios </CardText>
-                  <Button>Ingresar</Button>
+                  <CardTitle>Metricas de software</CardTitle>
+                  <CardText>Mide tu avance en el desarrollo</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.METRICAS_SOFTWARE)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -68,9 +68,9 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="https://www.axelos.com/Corporate/media/Images/Website%20Assets/Blogs/change-management-large.gif?width=455&height=231&ext=.gif" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Gestion del cambio</CardTitle>
-                  <CardText>Abraza el cambio!</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.GESTION_CAMBIO)}>Ingresar</Button>
+                  <CardTitle>Gestion de Estimaciones</CardTitle>
+                  <CardText>Estima de forma más efectiva</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.ESTIMACIONES)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>

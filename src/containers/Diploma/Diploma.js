@@ -6,7 +6,6 @@ export default class DiplomaContainer extends Component {
   render() {
     return (
       <Dashboard>
-        sdadasdsadsa
         <Diploma/>
       </Dashboard>
     );
