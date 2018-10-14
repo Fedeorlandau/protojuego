@@ -11,14 +11,18 @@ import User from 'components/User/User';
 
 export default class HomePageContainer extends Component {
 
+  state = {
+    name: 'Tu nombre'
+  };
+
   goDashboard() {
-    User.setName(this.state.inputValue);
+    User.setName(this.state.name);
     history.push(ROUTES.DASHBOARD)
   }
 
   updateInputValue(evt) {
     this.setState({
-      inputValue: evt.target.value
+      name: evt.target.value
     });
   }
 
@@ -39,7 +43,7 @@ export default class HomePageContainer extends Component {
           <div className="form-container">
           <Form>
             <FormGroup>
-              <Input type="text" name="name" placeholder="Escribí tu nombre" onChange={(evt) => this.updateInputValue(evt)} />
+              <Input type="text" value={this.state.name} name="name" placeholder="Escribí tu nombre" onChange={(evt) => this.updateInputValue(evt)} />
             </FormGroup>
             <Button type="button" className="btn-protojuego" onClick={() => this.goDashboard()}>Entrar</Button>
           </Form>

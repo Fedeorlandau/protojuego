@@ -3,7 +3,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
-import ProgressBar from '../ProgressBar/ProgressBar'
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -25,22 +24,9 @@ export default class QuestionComponent extends Component {
     time: 10,
     showError: false,
     showResults: false,
-    isApproved: "",
+    isApproved: false,
     questions: shuffleArray(this.props.questions)
   };
-
-  isApproved() {
-    if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
-      this.setState({
-        isApproved: 'Aprobado'
-      });
-      ProgressBar.progress+=1;
-    } else{
-      this.setState({
-        isApproved: 'Desaprobado'
-      });
-    }
-  }
 
  interval() {
     if(this.state.time > 0){
@@ -91,7 +77,8 @@ export default class QuestionComponent extends Component {
   showResults() {
    this.setState({
      showResults: true,
-     showQuestion: false
+     showQuestion: false,
+     isApproved: ((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7)
    })
   }
 
@@ -165,7 +152,6 @@ export default class QuestionComponent extends Component {
 
   renderResults() {
    const {rightAnswers, wrongAnswers} = this.state;
-   this.isApproved() ;
    return (
      <div className="results-container">
        <Row>
