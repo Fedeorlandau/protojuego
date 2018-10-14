@@ -62,6 +62,49 @@ export default class LevelsComponenet extends Component {
               </Card>
             </Col>
           </Row>
+          <Row>
+          <Col>
+              <Card>
+                <CardImg top width="100%" src="https://www.axelos.com/Corporate/media/Images/Website%20Assets/Blogs/change-management-large.gif?width=455&height=231&ext=.gif" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Gestion del cambio</CardTitle>
+                  <CardText>some text</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <br/>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Gestion del cambio</CardTitle>
+                  <CardText>some text</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Gestion del cambio</CardTitle>
+                  <CardText>some text</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Gestion del cambio</CardTitle>
+                  <CardText>some text</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
         </div>
         <ToastContainer autoClose={8000} />
 
