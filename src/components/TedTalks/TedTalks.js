@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css'
+import ModalComponent from 'components/TedTalks/TedTalksModal';
 
 export default class TedTalksComponent extends Component {
    
@@ -56,11 +57,13 @@ export default class TedTalksComponent extends Component {
                 </div>
             </div>
             <div class="col-sm-2">
-                <button type="button" class="btn btn-default">Relacion entre charlas</button>
-                <button type="button" class="btn btn-default" style={{"margin-top": "10px"}}>Lecciones aprendidas</button>
+                <ModalComponent buttonLabel="Relacion entre charlas" modalContent="https://docs.google.com/document/d/e/2PACX-1vTCE5bYRrdcLz2F5lfQG__PYJR0W76OzCVeouEjC-ZQu18fqEMILucKoEyZyuzWuu4qALlR98s4QbDJ/pub?embedded=true"/>
+                <ModalComponent buttonLabel="Lecciones aprendidas" modalContent="https://docs.google.com/document/d/e/2PACX-1vROECvSFfQLNPmEVnrd7DK0uPzWNC2TwzS9BfDGYAalIufIxyQaAQZRVneUOR6zIpEqwHZ8idVnK-sF/pub?embedded=true"/>
             </div>
         </div>
-
+        
+        <br></br>
+        
         <div id="divContenido" style={{display:'none'}}>
             <h4 id="titulo">  </h4>
             <div style={{"position":"relative","height":"0","padding-bottom":"56.25%"}}>
@@ -68,6 +71,7 @@ export default class TedTalksComponent extends Component {
             </div>
             <iframe title="frResumen" id="frResumen"></iframe>
         </div>
+
       </div>
     );
   }
