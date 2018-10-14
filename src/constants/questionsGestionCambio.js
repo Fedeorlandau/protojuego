@@ -1,19 +1,19 @@
 export const QUESTIONS = [
   {
-    question: 'Qué permiten realizar los casos de uso?',
+    question: 'Qué es un cambio?',
     options: [
       {
-        answer: 'Documentar los requerimientos',
+        answer: 'viva la pepa?',
         isRight: false
       },
       {
-        answer: 'Estimar el tamaño del sistema',
+        answer: 'Estar atr?',
         isRight: false
       }, {
         answer: 'Todas son correctas',
         isRight: true
       }, {
-        answer: 'Ninguna es correcta',
+        answer: 'La respuesta está en tu corazón',
         isRight: false
       }
     ]
