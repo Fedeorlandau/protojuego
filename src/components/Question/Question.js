@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
+import ProgressBar from '../ProgressBar/ProgressBar'
 
 const TIMER_DEFAULT = 10;
 export default class QuestionComponent extends Component {
@@ -22,6 +23,7 @@ export default class QuestionComponent extends Component {
   isApproved() {
     if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
       this.state.isApproved = "Aprobado";
+      ProgressBar.progress+=1;
     } else{ 
       this.state.isApproved = "Desaprobado";
     }

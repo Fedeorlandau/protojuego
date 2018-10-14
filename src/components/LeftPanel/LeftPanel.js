@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { Progress, Table } from 'reactstrap';
 import './style.css';
+import ProgressBar from '../ProgressBar/ProgressBar'
 
 export default class LeftPanel extends Component {
   render() {
     return (
       <div>
         <h3>Federico</h3>
-        <div className="text-center">30%</div>
-        <Progress value={30}/>
+        <div className="text-center">{ProgressBar.progress}%</div>
+        <Progress value={ProgressBar.progress}/>
         <hr/>
         <h3>Ranking</h3>
         <Table>
