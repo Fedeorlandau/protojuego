@@ -36,15 +36,11 @@ export default class QuestionComponent extends Component {
 
   isApproved() {
     if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
-      this.setState({
-        result : "Aprobado",
-        isApproved : true
-      });
+      this.state.result = "Aprobado";
+      this.state.isApproved = true;
       GlobalVariable.updateProgress(this.props.AchievementName);
     } else{ 
-      this.setState({
-        result : "Desaprobado"
-      });
+      this.state.result = "Desaprobado";
     }
   }
 
@@ -118,7 +114,7 @@ export default class QuestionComponent extends Component {
     });
     
 
-    if(this.state.questions.length - 1 === this.state.step){
+    if(this.state.questions.length - 1 == this.state.step){
       this.showResults();
       this.clearTimer();
     } else{
