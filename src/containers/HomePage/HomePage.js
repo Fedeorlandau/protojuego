@@ -20,7 +20,7 @@ export default class HomePageContainer extends Component {
     GlobalVariable.userName = evt.target.value;
   }
   
-  handleClick() {  
+  handleClick() {   
     history.push(ROUTES.DASHBOARD);
   }
 

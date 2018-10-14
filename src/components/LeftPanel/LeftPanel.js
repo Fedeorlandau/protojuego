@@ -4,7 +4,7 @@ import './style.css';
 import GlobalVariable from '../GlobalVariable/GlobalVariable'
 
 export default class LeftPanel extends Component {
-  render() {
+    render() {
     return (
       <div>
         <h3>{GlobalVariable.userName}</h3>
@@ -22,21 +22,20 @@ export default class LeftPanel extends Component {
           <tbody>
           <tr>
             <td>Federico</td>
-            <td>90%</td>
+            <td>100%</td>
           </tr>
           <tr>
             <td>Videla</td>
-            <td>75%</td>
+            <td>66%</td>
             <td></td>
           </tr>
           <tr>
             <td>Matías</td>
-            <td>40%</td>
+            <td>33%</td>
             <td></td>
           </tr>
           </tbody>
         </Table>
-
       </div>
     );
   }

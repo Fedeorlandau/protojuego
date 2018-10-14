@@ -31,16 +31,16 @@ export default class QuestionComponent extends Component {
     showResults: false,
     isApproved: false,
     result: "",
-    questions: shuffleArray(this.props.questions)
+    questions: this.props.questions//shuffleArray(this.props.questions)
   };
 
   isApproved() {
     if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
       this.state.result = "Aprobado";
       this.state.isApproved = true;
-      GlobalVariable.progress+=1;
+      GlobalVariable.updateProgress(this.props.AchievementName);
     } else{ 
-      this.state.isApproved = "Desaprobado";
+      this.state.result = "Desaprobado";
     }
   }
 
@@ -174,7 +174,7 @@ export default class QuestionComponent extends Component {
        <Row>
          <Col><h4>Respuestas correctas: {rightAnswers} </h4></Col>
          <Col><h4>Respuestas incorrectas: {wrongAnswers}</h4></Col>
-         <Col><h4>El resultado del examen es: {this.state.isApproved}</h4></Col>
+         <Col><h4>El resultado del examen es: {this.state.result}</h4></Col>
        </Row>
      </div>
    )

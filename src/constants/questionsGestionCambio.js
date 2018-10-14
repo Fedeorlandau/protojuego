@@ -147,7 +147,7 @@ export const QUESTIONS = [
     ],
   },
   {
-    question: 'Según el método de las 4 puertas. ¿Cuáles puertas indican el verdadero cambio?',
+    question: 'Según el método de las 4 puertas. ¿Cuáles puertas son las que se encuentran afectadas por el cambio?',
     options: [
       {
         answer: 'Cosas que podíamos hacer antes del cambio y aún podemos; Cosas que no podíamos hacer y ahora tampoco', 
@@ -159,11 +159,11 @@ export const QUESTIONS = [
       },
       {
         answer: 'Cosas que no podíamos hacer antes, pero ahora sí; Cosas que podíamos hacer y ahora no', 
-        isRight: false
+        isRight: true
       },
       {
         answer: 'Cosas que no podíamos hacer antes, pero ahora sí; Cosas que podíamos hacer y aún podemos', 
-        isRight: true
+        isRight: false
       },
     ],
   },
