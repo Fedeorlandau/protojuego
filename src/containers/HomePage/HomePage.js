@@ -8,6 +8,21 @@ import './style.css';
 import GlobalVariable from '../../components/GlobalVariable/GlobalVariable'
 
 export default class HomePageContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: ''
+    };
+  }
+
+  updateInputValue(evt) {
+    console.log(evt.target.value);
+    GlobalVariable.userName = evt.target.value;
+  }
+  
+  handleClick() {  
+    history.push(ROUTES.DASHBOARD);
+  }
 
   render() {
     return (
@@ -26,13 +41,14 @@ export default class HomePageContainer extends Component {
           <div className="form-container">
           <Form>
             <FormGroup>
-              <Input type="text" name="name" placeholder="Escribí tu nombre" value={GlobalVariable.userName} />
+              <Input type="text" name="name" placeholder="Escribí tu nombre" onChange={evt => this.updateInputValue(evt)}/>
             </FormGroup>
-            <Button type="button" className="btn-protojuego" onClick={() => history.push(ROUTES.DASHBOARD)}>Entrar</Button>
+            <Button type="button" className="btn-protojuego" onClick={() => this.handleClick()} >Entrar</Button>
+            
           </Form>
           </div>
         </div>
       </Layout>
     );
   }
-}
+} 

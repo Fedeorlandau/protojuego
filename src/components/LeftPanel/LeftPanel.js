@@ -16,20 +16,23 @@ export default class LeftPanel extends Component {
           <thead>
           <tr>
             <th>Jugador</th>
-            <th>Nivel</th>
-            <th>Puntos</th>
+            <th>Completado</th>
           </tr>
           </thead>
           <tbody>
           <tr>
             <td>Federico</td>
-            <td>10</td>
-            <td>599</td>
+            <td>90%</td>
           </tr>
           <tr>
-            <td>Federico</td>
-            <td>10</td>
-            <td>599</td>
+            <td>Videla</td>
+            <td>75%</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Matías</td>
+            <td>40%</td>
+            <td></td>
           </tr>
           </tbody>
         </Table>
