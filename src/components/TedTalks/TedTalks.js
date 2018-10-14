@@ -62,11 +62,11 @@ export default class TedTalksComponent extends Component {
         </div>
 
         <div id="divContenido" style={{display:'none'}}>
-            <h4 id="titulo"></h4>
+            <h4 id="titulo">  </h4>
             <div style={{"position":"relative","height":"0","padding-bottom":"56.25%"}}>
-                <iframe id="frTalk" width="854" height="480" style={{"position":"absolute","left":"0","top":"0","width":"100%","height":"100%"}} frameborder="0" scrolling="no" allowfullscreen></iframe>
+                <iframe title="frTalk" id="frTalk" width="854" height="480" style={{"position":"absolute","left":"0","top":"0","width":"100%","height":"100%"}} frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
-            <iframe id="frResumen"></iframe>
+            <iframe title="frResumen" id="frResumen"></iframe>
         </div>
       </div>
     );
