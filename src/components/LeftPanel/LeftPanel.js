@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Progress, Table } from 'reactstrap';
 import './style.css';
-import ProgressBar from '../ProgressBar/ProgressBar'
+import GlobalVariable from '../GlobalVariable/GlobalVariable'
 
 export default class LeftPanel extends Component {
   render() {
     return (
       <div>
-        <h3>Federico</h3>
-        <div className="text-center">{ProgressBar.progress}%</div>
-        <Progress value={ProgressBar.progress}/>
+        <h3>{GlobalVariable.userName}</h3>
+        <div className="text-center">{GlobalVariable.progress}%</div>
+        <Progress value={GlobalVariable.progress}/>
         <hr/>
         <h3>Ranking</h3>
         <Table>

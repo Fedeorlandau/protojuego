@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
-import ProgressBar from '../ProgressBar/ProgressBar'
+import GlobalVariable from '../GlobalVariable/GlobalVariable'
 import { ROUTES } from 'constants/routes'; 
 import history from 'history/history'
 
@@ -15,7 +15,7 @@ function shuffleArray(array) {
   return array;
 }
 
-const TIMER_DEFAULT = 10;
+const TIMER_DEFAULT = 20;
 export default class QuestionComponent extends Component {
 
   state = {
@@ -38,7 +38,7 @@ export default class QuestionComponent extends Component {
     if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
       this.state.result = "Aprobado";
       this.state.isApproved = true;
-      ProgressBar.progress+=1;
+      GlobalVariable.progress+=1;
     } else{ 
       this.state.isApproved = "Desaprobado";
     }
