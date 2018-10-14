@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Progress, Table } from 'reactstrap';
 import './style.css';
 import ProgressBar from '../ProgressBar/ProgressBar'
+import User from 'components/User/User';
 
 export default class LeftPanel extends Component {
   render() {
     return (
       <div>
-        <h3>Federico</h3>
+        <h3>{User.getName()}</h3>
         <div className="text-center">{ProgressBar.progress}%</div>
         <Progress value={ProgressBar.progress}/>
         <hr/>

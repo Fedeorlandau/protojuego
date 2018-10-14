@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Switch, Router } from 'react-router-dom';
 import { ROUTES } from 'constants/routes';
+import AuthRoute from 'components/AuthRoute/AuthRoute';
+
 import HomePageContainer from 'containers/HomePage/HomePage'
 import DashboardHomeContainer from 'containers/DashboardHome/Dashboard'
 import SimulacionContainer from 'containers/Simulacion/Simulacion'
@@ -16,12 +18,12 @@ export default class App extends Component {
       <Router history={history}>
         <Switch>
           <Route path={ROUTES.HOME} exact component={HomePageContainer} />
-          <Route path={ROUTES.DASHBOARD} exact component={DashboardHomeContainer} />
-          <Route path={ROUTES.SIMULACION} exact component={SimulacionContainer} /> 
-          <Route path={ROUTES.QUESTIONS} exact component={QuestionContainer} />
-          <Route path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
-          <Route path={ROUTES.GESTION_CAMBIO} exact component={GestionCambioContainer} />
-          <Route path={ROUTES.GESTION_CAMBIO_QUIZ} exact component={GestionCambioQuizContainer} />
+          <AuthRoute path={ROUTES.DASHBOARD} exact component={DashboardHomeContainer} />
+          <AuthRoute path={ROUTES.SIMULACION} exact component={SimulacionContainer} />
+          <AuthRoute path={ROUTES.QUESTIONS} exact component={QuestionContainer} />
+          <AuthRoute path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
+          <AuthRoute path={ROUTES.GESTION_CAMBIO} exact component={GestionCambioContainer} />
+          <AuthRoute path={ROUTES.GESTION_CAMBIO_QUIZ} exact component={GestionCambioQuizContainer} />
         </Switch> 
       </Router>
     );
