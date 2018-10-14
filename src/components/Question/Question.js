@@ -94,12 +94,12 @@ export default class QuestionComponent extends Component {
       this.setState({
         rightAnswers: this.state.rightAnswers + 1
       });
-      toast("Respuesta correcta !");
+      toast.success("Respuesta correcta !");
     } else{
       this.setState({
         wrongAnswers: this.state.wrongAnswers + 1
       });
-      toast("Respuesta Incorrecta !");
+      toast.error("Respuesta Incorrecta !");
     }
     this.setState({
       totalAnswers: this.state.totalAnswers + 1
