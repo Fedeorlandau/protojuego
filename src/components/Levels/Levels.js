@@ -105,9 +105,19 @@ export default class LevelsComponenet extends Component {
                 </CardBody>
               </Card>
             </Col>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="https://www.axelos.com/Corporate/media/Images/Website%20Assets/Blogs/change-management-large.gif?width=455&height=231&ext=.gif" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Planes Desarrollo</CardTitle>
+                  <CardText>Abraza el cambio!</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
           </Row>
           <hr/>
-          <Row>
+          <Row>            
           <Col>
               <Card>
                 <CardImg top width="100%" src="https://www.universal.tv/sites/default/files/movie/images/ted_2_-_hero_with_tt_0.jpg" height="200" alt="Card image cap" />
