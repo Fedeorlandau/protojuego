@@ -12,5 +12,6 @@ export const ROUTES = {
     ESTIMACIONES: '/estimaciones',
     ESTIMACIONES_QUIZ: '/estimaciones_quiz',
     DIPLOMA: '/diploma',
-    PLANESDESARROLLO: '/planes'
+    PLANESDESARROLLO: '/planes',
+    APLICACIONESGQM: '/aplicacionesGQM'
 };

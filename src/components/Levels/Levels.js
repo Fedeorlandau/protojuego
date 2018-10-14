@@ -84,17 +84,7 @@ export default class LevelsComponenet extends Component {
                   <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
-            </Col>
-            <Col>
-              <Card>
-                <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>to change</CardTitle>
-                  <CardText>some text</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
-                </CardBody>
-              </Card>
-            </Col>
+            </Col>            
             <Col>
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
@@ -117,7 +107,17 @@ export default class LevelsComponenet extends Component {
             </Col>
           </Row>
           <hr/>
-          <Row>            
+          <Row>
+          <Col>
+              <Card>
+                <CardImg top width="100%" src="http://1.bp.blogspot.com/-DGQNiohV6Zc/UX7As5lh4_I/AAAAAAAAACo/5dP3Vrgu58M/s1600/Reports.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Aplicaciones de GQM</CardTitle>
+                  <CardText>Metricas</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.APLICACIONESGQM)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>            
           <Col>
               <Card>
                 <CardImg top width="100%" src="https://www.universal.tv/sites/default/files/movie/images/ted_2_-_hero_with_tt_0.jpg" height="200" alt="Card image cap" />
