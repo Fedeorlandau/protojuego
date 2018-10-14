@@ -8,6 +8,9 @@ import QuestionContainer from 'containers/Question/Question'
 import CasosEstudioContainer from 'containers/CasosEstudio/CasosEstudio'
 import GestionCambioContainer from 'containers/GestionCambio/GestionCambio'
 import GestionCambioQuizContainer from 'containers/GestionCambioQuiz/GestionCambioQuiz'
+import MetricasSoftwareContainer from 'containers/MetricasSoftware/MetricasSoftware'
+import MetricasSoftwareQuizContainer from 'containers/MetricasSoftwareQuiz/MetricasSoftwareQuiz'
+
 import history from 'history/history';
 
 export default class App extends Component {
@@ -22,6 +25,9 @@ export default class App extends Component {
           <Route path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
           <Route path={ROUTES.GESTION_CAMBIO} exact component={GestionCambioContainer} />
           <Route path={ROUTES.GESTION_CAMBIO_QUIZ} exact component={GestionCambioQuizContainer} />
+          <Route path={ROUTES.METRICAS_SOFTWARE} exact component={MetricasSoftwareContainer} />
+          <Route path={ROUTES.METRICAS_SOFTWARE_QUIZ} exact component={MetricasSoftwareQuizContainer} />
+          MetricasSoftwareQuizContainer
         </Switch> 
       </Router>
     );
