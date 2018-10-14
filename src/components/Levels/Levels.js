@@ -11,7 +11,7 @@ import './style.css';
 export default class LevelsComponenet extends Component {
 
   componentDidMount() {
-    toast("Default Notification !");
+    toast.info("Bienvenido a ProtoJuego ISW2!");
   }
 
   render() {
