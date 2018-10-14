@@ -4,6 +4,8 @@ import 'rc-slider/assets/index.css';
 import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
 import ProgressBar from '../ProgressBar/ProgressBar'
+import { ROUTES } from 'constants/routes'; 
+import history from 'history/history'
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -21,17 +23,21 @@ export default class QuestionComponent extends Component {
     wrongAnswers: 0,
     totalAnswers: 0,
     showQuestion: false,
+    isFirstTime: true,
+    isCompleted: false,
     step: 0,
     time: 10,
     showError: false,
     showResults: false,
-    isApproved: "",
+    isApproved: false,
+    result: "",
     questions: shuffleArray(this.props.questions)
   };
 
   isApproved() {
     if((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7) {
-      this.state.isApproved = "Aprobado";
+      this.state.result = "Aprobado";
+      this.state.isApproved = true;
       ProgressBar.progress+=1;
     } else{ 
       this.state.isApproved = "Desaprobado";
@@ -74,6 +80,7 @@ export default class QuestionComponent extends Component {
   startQuestionnaire() {
     this.setState({
       showQuestion: true,
+      isFirstTime:false,
       rightAnswers: 0,
       wrongAnswers: 0,
       totalAnswers: 0,
@@ -174,7 +181,7 @@ export default class QuestionComponent extends Component {
   }
 
   render() {
-    const { showQuestion, time, showResults } = this.state;
+    const { showQuestion, time, showResults, isApproved, isFirstTime } = this.state;
     return (
       <div className="question-container">
         <h1>{this.props.questionTitle}</h1>
@@ -190,10 +197,14 @@ export default class QuestionComponent extends Component {
           {showResults && this.renderResults()}
           <Row>
             <Col md={{offset: 4, size: 4}}>
-              { !showQuestion && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!</Button> }
+              { !showQuestion && !isApproved && isFirstTime && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!</Button> }
+              { (!showQuestion && !isApproved && !isFirstTime) && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Volver a jugar</Button> }
             </Col>
           </Row>
-
+          <Row>
+            <Col md={{offset: 4, size: 4}}>
+              { showResults && <Button className="btn-lg" onClick={() => history.push(ROUTES.DASHBOARD)}>Terminar</Button> }</Col>
+          </Row>
           { showQuestion && this.renderQuestion()}
         </div>
       </div>
