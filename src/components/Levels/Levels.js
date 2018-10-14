@@ -11,7 +11,7 @@ import './style.css';
 export default class LevelsComponenet extends Component {
 
   componentDidMount() {
-    toast.info("Bienvenido a ProtoJuego ISW2!");
+    toast("Default Notification !");
   }
 
   render() {
@@ -36,7 +36,7 @@ export default class LevelsComponenet extends Component {
                 <CardImg top width="100%" src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/07/Philips-AI-796x531.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Simulacion</CardTitle>
-                  <CardText>Afronta los desafios </CardText>
+                  <CardText>Afronta los desafios de un caso de estudio</CardText>
                   <Button onClick={() =>  history.push(ROUTES.SIMULACION)}>Ingresar</Button>
                 </CardBody>
               </Card>
@@ -134,6 +134,7 @@ export default class LevelsComponenet extends Component {
             </Col>
           </Row>
         </div>
+        <ToastContainer autoClose={8000} />
 
       </div>
     );
