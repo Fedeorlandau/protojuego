@@ -7,8 +7,6 @@ import history from 'history/history'
 import './style.css';
 import User from 'components/User/User';
 
-
-
 export default class HomePageContainer extends Component {
 
   state = {
