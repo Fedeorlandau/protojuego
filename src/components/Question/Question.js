@@ -4,6 +4,8 @@ import 'rc-slider/assets/index.css';
 import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
 import User from 'components/User/User';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -91,11 +93,13 @@ export default class QuestionComponent extends Component {
     if(option.isRight) {
       this.setState({
         rightAnswers: this.state.rightAnswers + 1
-      })
+      });
+      toast("Respuesta correcta !");
     } else{
       this.setState({
         wrongAnswers: this.state.wrongAnswers + 1
-      })
+      });
+      toast("Respuesta Incorrecta !");
     }
     this.setState({
       totalAnswers: this.state.totalAnswers + 1

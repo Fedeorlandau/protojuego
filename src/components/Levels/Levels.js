@@ -107,7 +107,6 @@ export default class LevelsComponenet extends Component {
             </Col>
           </Row>
         </div>
-        <ToastContainer autoClose={8000} />
 
       </div>
     );
