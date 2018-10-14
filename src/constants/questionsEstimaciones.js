@@ -1,38 +1,38 @@
 export const QUESTIONS = [
   {
-    question: '¿Quiénes son los desviadores positivos?',
+    question: 'Los casos de uso permiten:',
     options: [
       {
-        answer: 'Personas o grupos que no son afectados por ciertas problemáticas', 
-        isRight: false 
+        answer: 'Documentar los requerimientos', 
+        isRight: true 
       },
       {
-        answer: 'Personas afectadas por ciertas problemáticas', 
+        answer: 'Estimar el tamaño del sistema', 
         isRight: false
       },
       {
-        answer: 'Personas o grupos afectados por las mismas restricciones, pero que producen buenos resultados ', 
-        isRight: true
+        answer: 'Todas son correctas', 
+        isRight: false
       },
       {
-        answer: 'Personas o grupos más afectados por las restricciones', 
+        answer: 'Ninguna es correcta', 
         isRight: false
       },
     ],
   },
   {
-    question: 'Según el primer paso que propone el enfoque de desviación positiva. ¿Por qué se debe convertir al grupo en Gurú?',
+    question: 'Los Puntos de función',
     options: [
       {
-        answer: 'Para generar dependencias con los líderes', 
-        isRight: false 
-      },
-      {
-        answer: 'Para que la desconfianza y la resistencia sean más fáciles de superar', 
+        answer: 'Son independientes de las tecnologías, plataformas, metodologías.', 
         isRight: true
       },
       {
-        answer: 'Para que ningún integrante dependa de nadie', 
+        answer: 'Son dependientes de las tecnologías, plataformas, metodologías.', 
+        isRight: false
+      },
+      {
+        answer: 'Son dependientes de las plataformas.', 
         isRight: false
       },
       {
@@ -42,18 +42,18 @@ export const QUESTIONS = [
     ],
   },
   {
-    question: 'Según el enfoque de desviación positiva. ¿Cuál es la causa de que algunos cambios no puedan realizarse?',
+    question: 'Son transacciones de los casos de uso:',
     options: [
       {
-        answer: 'La gente se aferra al statu quo', 
+        answer: 'Entradas externas.', 
         isRight: false 
       },
       {
-        answer: 'Los desviadores positivos podrían tener miedo a quedar expuestos', 
+        answer: 'Salidas externas', 
         isRight: false
       },
       {
-        answer: 'Las soluciones desarrolladas externamente poseen mayor rechazo', 
+        answer: 'Consultas externas', 
         isRight: false
       },
       {
@@ -63,18 +63,18 @@ export const QUESTIONS = [
     ],
   },
   {
-    question: 'Según el enfoque de desviación positiva ¿Cuáles son algunas de las funciones del líder?',
+    question: 'Los puntos de función permiten:',
     options: [
       {
-        answer: 'Gestionar la atención y asignar los recursos escasos', 
-        isRight: true
-      },
-      {
-        answer: 'Imponer sus ideas sobre los demás', 
+        answer: 'Obtener una estimación fina del tamaño del proyecto.', 
         isRight: false
       },
       {
-        answer: 'Gestionar la atención e imponer la participación de los desviadores positivos', 
+        answer: 'Obtener una estimación grosera del tamaño del proyecto.', 
+        isRight: true
+      },
+      {
+        answer: 'Obtener la estimación final del proyecto.', 
         isRight: false
       },
       {
@@ -84,130 +84,130 @@ export const QUESTIONS = [
     ],
   },
   {
-    question: '¿Cuando es conveniente utilizar el enfoque de desviación positiva?',
+    question: 'Un caso de uso presenta:',
     options: [
       {
-        answer: 'Cuando se requieren cambios de comportamiento y actitud', 
+        answer: 'Un escenario principal.', 
         isRight: false
       },
       {
-        answer: 'Cuando no existen soluciones genéricas evidentes', 
+        answer: 'Un escenario alternativo.', 
         isRight: false
       },
       {
-        answer: 'Cuando las estrategias exitosas permanecen aisladas y ocultas', 
+        answer: 'Un escenario específico.', 
         isRight: false
       },
       {
-        answer: 'Todas son correctas', 
+        answer: 'A y B son correctas.', 
         isRight: true
       },
     ],
   },
   {
-    question: '¿Cuál fue el objetivo del taller propuesto para la primera causa propuesta por Clarke?',
+    question: 'Los puntos de función miden:',
     options: [
       {
-        answer: 'Tener en cuenta los puntos de vista negativos', 
+        answer: 'La cantidad de líneas del código', 
         isRight: false
       },
       {
-        answer: 'Tener en cuenta los puntos de vista positivos', 
-        isRight: false
-      },
-      {
-        answer: 'Tener en cuenta los puntos de vista positivos y negativos', 
-        isRight: false
-      },
-      {
-        answer: 'Tener en cuenta los puntos de vista positivos, interesantes y negativos', 
-        isRight: true
-      },
-    ],
-  },
-  {
-    question: '¿Qué se obtiene como resultado al advertir, a los integrantes del cambio, sobre sus posibles dificultades?',
-    options: [
-      {
-        answer: 'No tener que responsabilizarse por las dificultades', 
-        isRight: false
-      },
-      {
-        answer: 'Prevenir dificultades', 
-        isRight: false
-      },
-      {
-        answer: 'Que no se desmotiven al momento de que el cambio se haga presente', 
+        answer: 'La funcionalidad.', 
         isRight: true
       },
       {
-        answer: 'Que no se motiven al momento de que el cambio se haga presente', 
+        answer: 'La cantidad de recursos del proyecto.', 
+        isRight: false
+      },
+      {
+        answer: 'La cantidad de ciclos while que utilizará el proyecto.', 
         isRight: false
       },
     ],
   },
   {
-    question: 'Según el método de las 4 puertas. ¿Cuáles puertas son las que se encuentran afectadas por el cambio?',
+    question: 'Son estilos de presentación de estimaciones:',
     options: [
       {
-        answer: 'Cosas que podíamos hacer antes del cambio y aún podemos; Cosas que no podíamos hacer y ahora tampoco', 
+        answer: 'Modificadores más-o-menos.', 
         isRight: false
       },
       {
-        answer: 'Cosas que podíamos hacer y ahora no; Cosas que podemos hacer antes del cambio y aún podemos', 
+        answer: 'Rangos de fecha.', 
         isRight: false
       },
       {
-        answer: 'Cosas que no podíamos hacer antes, pero ahora sí; Cosas que podíamos hacer y ahora no', 
+        answer: 'Cuantificación de riesgos.', 
+        isRight: false
+      },
+      {
+        answer: 'Todas las anteriores son correctas.', 
+        isRight: true
+      },
+    ],
+  },
+  {
+    question: 'La estimacion:',
+    options: [
+      {
+        answer: 'Se mantiene fija a lo largo del proyecto.', 
+        isRight: false
+      },
+      {
+        answer: 'Se puede ir refinando gradualmente a lo largo del proyecto.', 
         isRight: true
       },
       {
-        answer: 'Cosas que no podíamos hacer antes, pero ahora sí; Cosas que podíamos hacer y aún podemos', 
+        answer: 'No tiene incidencia en el proceso de desarrollo del proyecto.', 
+        isRight: false
+      },
+      {
+        answer: 'Ninguna es correcta.', 
         isRight: false
       },
     ],
   },
   {
-    question: '¿Cómo demostrarle a un integrante que forma parte del cambio?',
+    question: 'La planificación basada en compromiso:',
     options: [
       {
-        answer: 'Imponer autoridad sobre el integrante', 
+        answer: 'Da lugar a grandes errores de estimación.', 
         isRight: false
       },
       {
-        answer: 'Demostrar la autoridad que tiene ese integrante', 
+        answer: 'Se compromete a los desarrolladores, crear las estimaciones de tamaño y esfuerzo.', 
+        isRight: false
+      },
+      {
+        answer: 'Incrementa la implicación de los desarrolladores en la planificación.', 
+        isRight: false
+      },
+      {
+        answer: 'Todas las anteriores son correctas.', 
         isRight: true
-      },
-      {
-        answer: 'Imponer el por qué se debe cambiar', 
-        isRight: false
-      },
-      {
-        answer: 'Mostrar cómo será el cambio', 
-        isRight: false
       },
     ],
   },
   {
-    question: '¿Qué sucede si se dispone de un cambio real, pero la mente de los integrantes está cerrada?',
+    question: 'En caso de no cumplir con los plazos en la semana, ¿Qué alternativas se podrían plantear?:',
     options: [
       {
-        answer: 'Oportunidad de hacer una diferencia real', 
+        answer: 'Reemplazar posteriormente esta semana perdida en la planificación.', 
         isRight: false
       },
       {
-        answer: 'Gran decepción', 
+        answer: 'Agregar una semana a la planificación total.', 
         isRight: false
       },
       {
-        answer: 'Pierden la oportunidad', 
+        answer: 'Multiplicar la planificación total por la magnitud del retraso.', 
+        isRight: false
+      },
+      {
+        answer: 'Todas las anteriores son correctas.', 
         isRight: true
-      },
-      {
-        answer: 'No se pierde nada', 
-        isRight: false
       },
     ]
   }
-];
+  ];
   
