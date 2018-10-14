@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
 import { Progress, Table } from 'reactstrap';
 import './style.css';
-import ProgressBar from '../ProgressBar/ProgressBar'
 import User from 'components/User/User';
 
+
+
 export default class LeftPanel extends Component {
+
+  componentDidMount() {
+    window.addEventListener('storage', (e) => {
+      if(e.key === 'progress') {
+        this.setState({
+          progress: e.newValue
+        })
+      }
+    });
+  }
+
+  state= {
+    progress: User.getProgress()
+  };
+
   render() {
     return (
       <div>
         <h3>{User.getName()}</h3>
-        <div className="text-center">{ProgressBar.progress}%</div>
-        <Progress value={ProgressBar.progress}/>
+        <div className="text-center">{User.getProgress()}%</div>
+        <Progress value={this.state.progress}/>
         <hr/>
         <h3>Ranking</h3>
         <Table>

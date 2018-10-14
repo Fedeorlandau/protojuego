@@ -3,6 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
+import User from 'components/User/User';
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -75,6 +76,9 @@ export default class QuestionComponent extends Component {
   }
 
   showResults() {
+   if((this.state.rightAnswers / this.state.totalAnswers) >= 0.7) {
+     User.setProgress(10);
+   }
    this.setState({
      showResults: true,
      showQuestion: false,
