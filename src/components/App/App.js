@@ -11,6 +11,7 @@ import CasosEstudioContainer from 'containers/CasosEstudio/CasosEstudio'
 import GestionCambioContainer from 'containers/GestionCambio/GestionCambio'
 import GestionCambioQuizContainer from 'containers/GestionCambioQuiz/GestionCambioQuiz'
 import TedTalksContainer from 'containers/TedTalks/TedTalks'
+import PlanesContainer from 'containers/Planes/Planes'
 
 import history from 'history/history';
 
@@ -27,6 +28,7 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
           <AuthRoute path={ROUTES.GESTION_CAMBIO} exact component={GestionCambioContainer} />
           <AuthRoute path={ROUTES.GESTION_CAMBIO_QUIZ} exact component={GestionCambioQuizContainer} />
+          <AuthRoute path={ROUTES.PLANESDESARROLLO} exact component={PlanesContainer} />
         </Switch> 
       </Router>
     );
