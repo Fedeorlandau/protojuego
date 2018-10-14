@@ -3,7 +3,7 @@ import Layout from 'containers/Layout/Layout';
 import LeftPanel from 'components/LeftPanel/LeftPanel';
 import { Row, Col } from 'reactstrap';
 import './style.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 
 export default class DashboardContainer extends Component {
 
