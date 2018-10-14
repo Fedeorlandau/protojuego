@@ -6,6 +6,8 @@ import DashboardHomeContainer from 'containers/DashboardHome/Dashboard'
 import SimulacionContainer from 'containers/Simulacion/Simulacion'
 import QuestionContainer from 'containers/Question/Question'
 import CasosEstudioContainer from 'containers/CasosEstudio/CasosEstudio'
+import GestionCambioContainer from 'containers/GestionCambio/GestionCambio'
+import GestionCambioQuizContainer from 'containers/GestionCambioQuiz/GestionCambioQuiz'
 import history from 'history/history';
 
 export default class App extends Component {
@@ -18,6 +20,8 @@ export default class App extends Component {
           <Route path={ROUTES.SIMULACION} exact component={SimulacionContainer} /> 
           <Route path={ROUTES.QUESTIONS} exact component={QuestionContainer} />
           <Route path={ROUTES.CASOS_ESTUDIO} exact component={CasosEstudioContainer} />
+          <Route path={ROUTES.GESTION_CAMBIO} exact component={GestionCambioContainer} />
+          <Route path={ROUTES.GESTION_CAMBIO_QUIZ} exact component={GestionCambioQuizContainer} />
         </Switch> 
       </Router>
     );

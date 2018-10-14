@@ -68,8 +68,8 @@ export default class LevelsComponenet extends Component {
                 <CardImg top width="100%" src="https://www.axelos.com/Corporate/media/Images/Website%20Assets/Blogs/change-management-large.gif?width=455&height=231&ext=.gif" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Gestion del cambio</CardTitle>
-                  <CardText>some text</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                  <CardText>Abraza el cambio!</CardText>
+                  <Button onClick={() =>  history.push(ROUTES.GESTION_CAMBIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -78,7 +78,7 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Gestion del cambio</CardTitle>
+                  <CardTitle>Estimaciones</CardTitle>
                   <CardText>some text</CardText>
                   <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
@@ -88,7 +88,7 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Gestion del cambio</CardTitle>
+                  <CardTitle>to change</CardTitle>
                   <CardText>some text</CardText>
                   <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
@@ -98,7 +98,7 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Gestion del cambio</CardTitle>
+                  <CardTitle>last one to change</CardTitle>
                   <CardText>some text</CardText>
                   <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
