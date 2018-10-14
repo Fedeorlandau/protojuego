@@ -28,7 +28,7 @@ export default class CasosEstudioComponent extends Component {
         </div>
         <br></br>
         <div id="divContenido" style={{display:'none'}}>
-          <iframe scrolling="yes" id="frameContenido"></iframe>
+          <iframe scrolling="yes" id="frameContenido" title="Doc2"></iframe>
         </div>
       </div>
     );

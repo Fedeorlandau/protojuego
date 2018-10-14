@@ -57,7 +57,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Cursos</CardTitle>
                   <CardText>Afronta los desafios </CardText>
-                  <Button onClick={() =>  history.push(ROUTES.DIPLOMA)}>Ingresar</Button>
+                  <Button>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -91,7 +91,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>to change</CardTitle>
                   <CardText>some text</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.METRICAS_SOFTWARE)}>Ingresar</Button>
+                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -101,7 +101,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>last one to change</CardTitle>
                   <CardText>some text</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.ESTIMACIONES)}>Ingresar</Button>
+                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>

@@ -6,24 +6,6 @@ import './style.css';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-
-const emotions = {
-  labels: ['Felicidad', 'Productividad', 'Tristeza', 'Frustracion'],
-  datasets: [
-    {
-      label: 'Emociones',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
-      pointBackgroundColor: 'rgba(255,99,132,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(255,99,132,1)',
-      data: [30, 100, 40, 60],
-      max: 100,
-    }
-  ]
-};
-
 const marks = {
   0: <strong>Basico</strong>,
   25: 'Funcionalidad X',

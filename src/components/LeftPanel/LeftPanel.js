@@ -1,41 +1,56 @@
 import React, { Component } from 'react';
 import { Progress, Table } from 'reactstrap';
 import './style.css';
-import GlobalVariable from '../GlobalVariable/GlobalVariable'
+import User from 'components/User/User';
+
+
 
 export default class LeftPanel extends Component {
-    render() {
+
+  componentDidMount() {
+    window.addEventListener('storage', (e) => {
+      if(e.key === 'progress') {
+        this.setState({
+          progress: e.newValue
+        })
+      }
+    });
+  }
+
+  state= {
+    progress: User.getProgress()
+  };
+
+  render() {
     return (
       <div>
-        <h3>{GlobalVariable.userName}</h3>
-        <div className="text-center">{GlobalVariable.progress}%</div>
-        <Progress value={GlobalVariable.progress}/>
+        <h3>{User.getName()}</h3>
+        <div className="text-center">{User.getProgress()}%</div>
+        <Progress value={this.state.progress}/>
         <hr/>
         <h3>Ranking</h3>
         <Table>
           <thead>
           <tr>
             <th>Jugador</th>
-            <th>Completado</th>
+            <th>Nivel</th>
+            <th>Puntos</th>
           </tr>
           </thead>
           <tbody>
           <tr>
             <td>Federico</td>
-            <td>100%</td>
+            <td>10</td>
+            <td>599</td>
           </tr>
           <tr>
-            <td>Videla</td>
-            <td>66%</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Matías</td>
-            <td>33%</td>
-            <td></td>
+            <td>Federico</td>
+            <td>10</td>
+            <td>599</td>
           </tr>
           </tbody>
         </Table>
+
       </div>
     );
   }
