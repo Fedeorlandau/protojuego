@@ -13,7 +13,7 @@ export default class AplicacionGQMComponent extends Component {
   render() {
     return (
       <div className="aplicacionGQM-container">
-        <h1>Planes de desarrollo</h1>
+        <h1>Aplicaciones de GQM</h1>
         <div className="linksAplicacionGQM" id="ce1">
           <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSX6VT-GC4xr1KPmZf2a2dosVCAaFx8j-AiRc9LQiPTUbDXlRSB0TVU5GQzunAqHdWi5jg69mBGbE1Z/pub?embedded=true")}>Caso 1</a>
         </div>
