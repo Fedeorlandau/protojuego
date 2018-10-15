@@ -1,0 +1,13 @@
+.aplicacionGQM-container {
+    padding: 20px;
+    height: 100%;
+}
+#divContenido {
+    height: 100%;
+}
+.linksAplicacionGQM{
+    cursor: pointer;
+}
+.linksAplicacionGQM:hover { 
+    color: blue;
+}

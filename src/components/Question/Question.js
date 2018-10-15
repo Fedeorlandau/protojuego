@@ -4,8 +4,9 @@ import 'rc-slider/assets/index.css';
 import './style.css' 
 import { Button, Row, Col } from 'reactstrap';
 import User from 'components/User/User';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -22,6 +23,7 @@ export default class QuestionComponent extends Component {
     rightAnswers: 0,
     wrongAnswers: 0,
     totalAnswers: 0,
+    result: "",
     showQuestion: false,
     step: 0,
     time: 10,
@@ -78,13 +80,15 @@ export default class QuestionComponent extends Component {
   }
 
   showResults() {
-   if((this.state.rightAnswers / this.state.totalAnswers) >= 0.7) {
+    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.7;
+   if(isOk) {
      User.setProgress(10);
    }
    this.setState({
      showResults: true,
      showQuestion: false,
-     isApproved: ((this.state.rightAnswers/ this.state.totalAnswers) >= 0.7)
+     isApproved: isOk,
+     result: (isOk)?"aprobado":"desaprobado"
    })
   }
 
@@ -159,13 +163,13 @@ export default class QuestionComponent extends Component {
   }
 
   renderResults() {
-   const {rightAnswers, wrongAnswers} = this.state;
+   const {rightAnswers, wrongAnswers, result} = this.state;
    return (
      <div className="results-container">
        <Row>
          <Col><h4>Respuestas correctas: {rightAnswers} </h4></Col>
          <Col><h4>Respuestas incorrectas: {wrongAnswers}</h4></Col>
-         <Col><h4>El resultado del examen es: {this.state.isApproved}</h4></Col>
+         <Col><h4>El resultado del examen es: {result}</h4></Col>
        </Row>
      </div>
    )
