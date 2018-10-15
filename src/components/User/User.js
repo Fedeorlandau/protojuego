@@ -63,16 +63,25 @@ export default class User  {
     localStorage.setItem('courses',JSON.stringify({'items':newCourses}));  
     var newProgress = (approvedCount/newCourses.length )*100; 
     User.setProgress(newProgress);
+    User.updateRanking();
   };
-
   
-  static updateRankingProgress = (username) => {   
+  static updateRanking = () => {   
     const ranking = User.getRanking();  
     const newRanking = ranking.items.map(item => { 
-      if (item.name === username){
+      if (item.username === User.getName()){
         item.completed= User.getProgress(); 
       } 
       return item;
+    }).sort((a,b) => { 
+      if ( parseInt(a.completed) < parseInt(b.completed)){ 
+        console.log("br 1");
+        return -1;
+      }
+      if (parseInt(a.completed) >parseInt( b.completed)){  
+        return 1;
+      }  
+      return 0;
     });  
     localStorage.setItem('ranking',JSON.stringify({'items':newRanking}));  
   };
