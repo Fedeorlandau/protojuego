@@ -79,60 +79,7 @@ export default class LevelsComponenet extends Component {
             <br />
             <Col>
               <Card>
-                <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>Estimaciones</CardTitle>
-                  <CardText>Realiza estimaciones más exactas!</CardText>
-                  <Button onClick={() => history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col>
-              <Card>
-                <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>last one to change</CardTitle>
-                  <CardText>some text</CardText>
-                  <Button onClick={() => history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col>
-              <Card>
-                <CardImg top width="100%" src="https://www.axelos.com/Corporate/media/Images/Website%20Assets/Blogs/change-management-large.gif?width=455&height=231&ext=.gif" height="200" alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>Planes Desarrollo</CardTitle>
-                  <CardText>Abraza el cambio!</CardText>
-                  <Button onClick={() => history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-          <hr />
-          <Row>
-            <Col>
-              <Card>
-                <CardImg top width="100%" src="http://1.bp.blogspot.com/-DGQNiohV6Zc/UX7As5lh4_I/AAAAAAAAACo/5dP3Vrgu58M/s1600/Reports.jpg" height="200" alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>Aplicaciones de GQM</CardTitle>
-                  <CardText>Metricas de software</CardText>
-                  <Button onClick={() => history.push(ROUTES.APLICACIONESGQM)}>Ingresar</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col>
-              <Card>
-                <CardImg top width="100%" src="https://www.reasonwhy.es/sites/default/files/empleo-futuro-reasonwhy.es_.png" height="200" alt="Card image cap" />
-                <CardBody>
-                  <CardTitle>Carreras y Estrategias de los Trabajos Informáticos</CardTitle>
-                  <CardText>¿Qué nos depara para el futuro el mundo laboral?</CardText>
-                  <Button onClick={() => history.push(ROUTES.CARRERAS)}>Ingresar</Button>
-                </CardBody>
-              </Card>
-            </Col>
-            <Col>
-              <Card>
-                <CardImg top width="100%" src="https://www.universal.tv/sites/default/files/movie/images/ted_2_-_hero_with_tt_0.jpg" height="200" alt="Card image cap" />
+                <CardImg top width="100%" src="https://diylogodesigns.com/wp-content/uploads/2017/09/ted-logo-vector-768x768.png" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Charlas TED</CardTitle>
                   <CardText>Aprendé de expertos</CardText>
@@ -149,6 +96,43 @@ export default class LevelsComponenet extends Component {
                   <Button onClick={() => history.push(ROUTES.PROPUESTAS_LUDICAS)}>Ingresar</Button>
                 </CardBody>
               </Card>
+            </Col>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="https://www.arauca.gov.co/images/plandesarrollo/ejesestrategicos%20-%20copia.png" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Planes Desarrollo</CardTitle>
+                  <CardText>Conoce mas acerca de Teradyne y Fundacion Lily</CardText>
+                  <Button onClick={() => history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+          <hr />
+          <Row>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="http://1.bp.blogspot.com/-DGQNiohV6Zc/UX7As5lh4_I/AAAAAAAAACo/5dP3Vrgu58M/s1600/Reports.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Aplicaciones de GQM</CardTitle>
+                  <CardText>Ejemplos de Aplicaciones en FLV, Quateams CRM y Teradyne</CardText>
+                  <Button onClick={() => history.push(ROUTES.APLICACIONESGQM)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="https://www.reasonwhy.es/sites/default/files/empleo-futuro-reasonwhy.es_.png" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Carreras y Estrategias de los Trabajos Informáticos</CardTitle>
+                  <CardText>¿Qué nos depara para el futuro el mundo laboral?</CardText>
+                  <Button onClick={() => history.push(ROUTES.CARRERAS)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col> 
+            </Col>
+            <Col> 
             </Col>
           </Row>
         </div>
