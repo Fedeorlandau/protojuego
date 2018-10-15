@@ -14,10 +14,16 @@ export default class LeftPanel extends Component {
           progress: e.newValue
         })
       }
+      if(e.key === 'ranking') {
+        this.setState({
+          ranking: e.newValue
+        })
+      }
     });
   } 
   state= {
-    progress: User.getProgress()
+    progress: User.getProgress(),
+    ranking: User.getRanking(),
   };
    
   render() { 
@@ -41,7 +47,7 @@ export default class LeftPanel extends Component {
           </thead>
           <tbody>
           {
-            User.getRanking().items.map(( listValue, index ) => {
+            this.state.ranking.items.map(( listValue, index ) => {
             return (
               <tr key={index}>
                 <td>{listValue.username}</td>
