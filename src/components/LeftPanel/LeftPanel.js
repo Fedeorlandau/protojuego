@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Progress, Table, Button } from 'reactstrap';
+import { Progress, Table } from 'reactstrap';
 import './style.css';
 import User from 'components/User/User';
 
