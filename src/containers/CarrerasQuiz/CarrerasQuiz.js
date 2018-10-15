@@ -7,7 +7,7 @@ export default class CarrerasQuizContainer extends Component {
   render() {
     return (
       <Dashboard>
-        <QuestionComponent questions={QUESTIONS} questionTitle="Carreras y Estrategias de los Trabajos Informáticos" AchievementName="Carreras"/>
+        <QuestionComponent questions={QUESTIONS} questionTitle="Carreras y Estrategias de los Trabajos Informáticos" achievementName="Carreras"/>
       </Dashboard>
     );
   }

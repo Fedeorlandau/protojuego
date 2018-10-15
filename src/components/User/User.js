@@ -9,7 +9,7 @@ export default class User  {
         {"name": "Metricas de Software","aproved" :"false"}, 
         {"name": "Simulacion","aproved" :"false"},
         {"name": "Gestion de cambios","aproved" :"false"},
-        {"name": "GQM", "aproved" :"false"} 
+        {"name": "Carreras", "aproved" :"false"} 
       ]}));
 
     }
@@ -17,12 +17,12 @@ export default class User  {
       localStorage.setItem('progress', 0);
     }
     if(!User.getCourses()) {
-      localStorage.setItem('courses', JSON.stringify({items:[ 
-        {name: 'Estimaciones', aproved : 'false'},
-        {name: 'Metricas de Software',aproved :'false'}, 
-        {name: 'Simulacion',aproved :'false'},
-        {name: 'Gestion de cambios',aproved :'false'} ,
-        {name: 'GQM', aproved :'false'} 
+      localStorage.setItem('courses', JSON.stringify({'items':[ 
+        {"name": "Estimaciones", "aproved" : "false"},
+        {"name": "Metricas de Software","aproved" :"false"}, 
+        {"name": "Simulacion","aproved" :"false"},
+        {"name": "Gestion de cambios","aproved" :"false"},
+        {"name": "Carreras", "aproved" :"false"} 
       ]}));
     }
   };
@@ -34,19 +34,18 @@ export default class User  {
   static getCourses = () => JSON.parse(localStorage.getItem('courses'));
   static updateProgress = (newAchievement) => {  
     let approvedCount = 0;
-    const courses = localStorage.getItem('courses'); 
-    console.log(courses);
-    console.log(courses.items);
-
-    for (let i in courses.items){  
-      console.log(courses[i]);
-      if (courses[i].name === newAchievement){
-        courses[i].aproved= "true"; 
+    const courses = User.getCourses();  
+    const newCourses = courses.items.map(item => { 
+      if (item.name === newAchievement){
+        item.aproved= "true"; 
       }
-      if(courses[i].aproved === "true"){
+      if(item.aproved === "true"){
         approvedCount++;
-      }
-    }  
-    User.setProgress((approvedCount/ courses.length )*100);
+      }  
+      return item;
+    });  
+    localStorage.setItem('courses',JSON.stringify({'items':newCourses}));  
+    var newProgress = (approvedCount/newCourses.length )*100; 
+    User.setProgress(newProgress);
   };
 };
