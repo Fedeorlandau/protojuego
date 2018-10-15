@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Progress, Table } from 'reactstrap';
+import { Progress, Table, Button } from 'reactstrap';
 import './style.css';
 import User from 'components/User/User';
 
@@ -15,8 +15,7 @@ export default class LeftPanel extends Component {
         })
       }
     });
-  }
-
+  } 
   state= {
     progress: User.getProgress()
   };
@@ -24,9 +23,9 @@ export default class LeftPanel extends Component {
   render() {
     return (
       <div>        
-        <div class="row">
-          <div class="col-sm-5"><h3>{User.getName()}</h3></div>
-          <div class="col-sm-3"><img style={{"height":"95%"}} alt="profile" src="/assets/profile.png"></img></div>
+        <div className="row">
+          <div className="col-sm-5"><h3>{User.getName()}</h3></div>
+          <div className="col-sm-3"><img style={{"height":"95%"}} alt="profile" src="/assets/profile.png"></img></div>
         </div>
         
         <div className="text-center">{User.getProgress()}%</div>
@@ -51,10 +50,9 @@ export default class LeftPanel extends Component {
             <td>Federico</td>
             <td>10</td>
             <td>599</td>
-          </tr>
+          </tr> 
           </tbody>
         </Table>
-
       </div>
     );
   }

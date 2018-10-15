@@ -82,7 +82,7 @@ export default class QuestionComponent extends Component {
   showResults() {
     var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.7;
    if(isOk) {
-     User.setProgress(10);
+     User.updateProgress(this.props.achievementName);
    }
    this.setState({
      showResults: true,
