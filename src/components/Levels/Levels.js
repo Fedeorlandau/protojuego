@@ -131,6 +131,14 @@ export default class LevelsComponenet extends Component {
               </Card>
             </Col>
             <Col> 
+              <Card>
+                <CardImg top width="100%" src="http://www.liquidplanner.com/wp-content/uploads/HiRes-17.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Gestion de Proyectos</CardTitle>
+                  <CardText>Relaciones conceptuales entre papers y el PMBOK</CardText>
+                  <Button onClick={() => history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
+                </CardBody>
+              </Card>
             </Col>
             <Col> 
             </Col>
