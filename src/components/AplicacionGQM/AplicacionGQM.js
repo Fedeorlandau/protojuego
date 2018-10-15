@@ -15,13 +15,13 @@ export default class AplicacionGQMComponent extends Component {
       <div className="aplicacionGQM-container">
         <h1>Aplicaciones de GQM</h1>
         <div className="linksAplicacionGQM" id="ce1">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSX6VT-GC4xr1KPmZf2a2dosVCAaFx8j-AiRc9LQiPTUbDXlRSB0TVU5GQzunAqHdWi5jg69mBGbE1Z/pub?embedded=true")}>Caso 1</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRavulcTbuUMJJ3pwaAzfzWTYRVwVwi_3UB2Plw9nBISTPmTP7J500d-ui1kn62GvqSJC0ePqKTWM-4/pub?embedded=true")}>Caso FLV</a>
         </div>
         <div className="linksAplicacionGQM" id="ce2">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRuE4i63qtzvbwwY4Xz46StfC7cO5Ws2J0NbUobSzeMNonrK_myjL9dzSYDGC7DXn3f7deyKhiyNttt/pub?embedded=true")}>Caso 2</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRed7hMiAjT_aXrMiExjLVTNvIizgSLNyYuyI_QzWf3FAa_yzppi6bDbE6zPq-1PLRsQtBmgU3_SIbw/pub?embedded=true")}>Caso Quateams CRM</a>
         </div>
         <div className="linksAplicacionGQM" id="ce3">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSmSO-CLXUIr0jbcOD6pBwEijGgQgJp0CsiyL6T4Vbg6OscebFPo-W77FVkcSiDCU88v7sd333cFgVq/pub?embedded=true")}>Caso 3</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSvnDU5AWy_x4_Zk0OnkLVDeIB5SEH338zdTu80o8r4JWY17cYB-KgjTdicr0JHRVfr4xfs5qQMtK9X/pub?embedded=true")}>Caso Teradyne</a>
         </div>
         <br></br>
         <div id="divContenido" style={{display:'none'}}>

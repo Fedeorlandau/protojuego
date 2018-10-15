@@ -7,7 +7,7 @@ export default class MetricasSoftwareQuizContainer extends Component {
   render() {
     return (
       <Dashboard>
-        <QuestionComponent questions={QUESTIONS} questionTitle="Aprendiendo sobre Metricas de Software" AchievementName="Metricas de Software"/>
+        <QuestionComponent questions={QUESTIONS} questionTitle="Aprendiendo sobre Metricas de Software" achievementName="Metricas de Software"/>
       </Dashboard>
     );
   }

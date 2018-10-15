@@ -15,21 +15,20 @@ export default class LeftPanel extends Component {
         })
       }
     });
-  }
-
+  } 
   state= {
     progress: User.getProgress()
   };
-
-  render() {
+   
+  render() { 
     return (
       <div>        
-        <div class="row">
-          <div class="col-sm-5"><h3>{User.getName()}</h3></div>
-          <div class="col-sm-3"><img style={{"height":"95%"}} alt="profile" src="/assets/profile.png"></img></div>
+        <div className="row">
+          <div className="col-sm-5"><h3>{User.getName()}</h3></div>
+          <div className="col-sm-3"><img style={{"height":"95%"}} alt="profile" src="/assets/profile.png"></img></div>
         </div>
         
-        <div className="text-center">{User.getProgress()}%</div>
+        <div className="text-center">{this.state.progress}%</div>
         <Progress value={this.state.progress}/>
         <hr/>
         <h3>Ranking</h3>
@@ -37,24 +36,22 @@ export default class LeftPanel extends Component {
           <thead>
           <tr>
             <th>Jugador</th>
-            <th>Nivel</th>
-            <th>Puntos</th>
+            <th>Completo</th> 
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Federico</td>
-            <td>10</td>
-            <td>599</td>
-          </tr>
-          <tr>
-            <td>Federico</td>
-            <td>10</td>
-            <td>599</td>
-          </tr>
+          {
+            User.getRanking().items.map(( listValue, index ) => {
+            return (
+              <tr key={index}>
+                <td>{listValue.username}</td>
+                <td>{listValue.completed}%</td> 
+              </tr>
+            );
+            })
+          }
           </tbody>
         </Table>
-
       </div>
     );
   }

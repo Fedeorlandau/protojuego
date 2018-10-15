@@ -7,7 +7,7 @@ export default class GestionCambioQuizContainer extends Component {
   render() {
     return (
       <Dashboard>
-        <QuestionComponent questions={QUESTIONS} questionTitle="Aprendiendo sobre Gestion de Cambios"/>
+        <QuestionComponent questions={QUESTIONS} questionTitle="Aprendiendo sobre Gestion de Cambios" achievementName="Gestion de cambios" />
       </Dashboard>
     );
   }

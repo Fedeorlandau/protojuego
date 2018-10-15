@@ -14,7 +14,7 @@ export default class EstimacionesComponent extends Component {
     return (
       <div>
           <h1>Estimaciones</h1> 
-            <iframe scrolling="no" src="https://docs.google.com/presentation/d/e/2PACX-1vSgcucbvF_PLeWAv0Xv6cnHIvrN2qoDX-xDuAOtE-Fb5yAmXuXf-og8Wa4VXcKkSKYxUlAZiD-4vKg5/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            <iframe title="Estimaciones" src="https://docs.google.com/document/d/e/2PACX-1vSdOA5lLUAn1pxJTmlcFv6y2B3M8FEsTlIRUnkIyquT5UjdgeBCiOylIfGt24W-2TEFv8JDNt4XqsIf/pub?embedded=true"></iframe>
         <br/>
         <div className="quiz-button">
           <Button onClick={() =>  history.push(ROUTES.METRICAS_SOFTWARE_QUIZ)}>Realizar QUIZ</Button>

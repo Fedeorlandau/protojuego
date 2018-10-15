@@ -7,7 +7,7 @@ export default class EstimacionesQuizContainer extends Component {
   render() {
     return (
       <Dashboard>
-        <QuestionComponent questions={QUESTIONS} questionTitle="Aprendiendo sobre Estimaciones" AchievementName="Estimaciones"/>
+        <QuestionComponent questions={QUESTIONS} questionTitle="Aprendiendo sobre Estimaciones" achievementName="Estimaciones"/>
       </Dashboard>
     );
   }

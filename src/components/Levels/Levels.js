@@ -82,7 +82,7 @@ export default class LevelsComponenet extends Component {
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Estimaciones</CardTitle>
-                  <CardText>some text</CardText>
+                  <CardText>Realiza estimaciones más exactas!</CardText>
                   <Button onClick={() => history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
@@ -146,7 +146,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Propuestas ludicas</CardTitle>
                   <CardText>Aprendé jugando</CardText>
-                  <Button onClick={() => history.push(ROUTES.TED_TALKS)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.PROPUESTAS_LUDICAS)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
