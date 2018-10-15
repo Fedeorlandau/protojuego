@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, Button, Row, Col } from 'reactstrap';
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, Button, Row, Col
+} from 'reactstrap';
 import { ROUTES } from 'constants/routes';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,16 +20,16 @@ export default class LevelsComponenet extends Component {
     return (
       <div className="levels-container">
         <h3>Niveles</h3>
-        <hr/>
+        <hr />
         <div className="cards-container">
           <Row>
-          <Col>
+            <Col>
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Material de referencia</CardTitle>
                   <CardText>Refresca los casos de estudio </CardText>
-                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -37,7 +39,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Simulacion</CardTitle>
                   <CardText>Afronta los desafios de un caso de estudio</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.SIMULACION)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.SIMULACION)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -47,7 +49,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Gestion de cambios</CardTitle>
                   <CardText>Abraza al cambio!</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.GESTION_CAMBIO)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.GESTION_CAMBIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -57,41 +59,41 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Metricas de software</CardTitle>
                   <CardText>Mide tu avance en el desarrollo</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.METRICAS_SOFTWARE)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.METRICAS_SOFTWARE)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
           </Row>
-          <hr/>
+          <hr />
           <Row>
-          <Col>
+            <Col>
               <Card>
                 <CardImg top width="100%" src="https://www.axelos.com/Corporate/media/Images/Website%20Assets/Blogs/change-management-large.gif?width=455&height=231&ext=.gif" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Gestion de Estimaciones</CardTitle>
                   <CardText>Estima de forma más efectiva</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.ESTIMACIONES)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.ESTIMACIONES)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
-            <br/>
+            <br />
             <Col>
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Estimaciones</CardTitle>
                   <CardText>some text</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
-            </Col>            
+            </Col>
             <Col>
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>last one to change</CardTitle>
                   <CardText>some text</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -101,30 +103,40 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Planes Desarrollo</CardTitle>
                   <CardText>Abraza el cambio!</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
           </Row>
-          <hr/>
+          <hr />
           <Row>
-          <Col>
+            <Col>
               <Card>
                 <CardImg top width="100%" src="http://1.bp.blogspot.com/-DGQNiohV6Zc/UX7As5lh4_I/AAAAAAAAACo/5dP3Vrgu58M/s1600/Reports.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Aplicaciones de GQM</CardTitle>
-                  <CardText>Metricas</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.APLICACIONESGQM)}>Ingresar</Button>
+                  <CardText>Metricas de software</CardText>
+                  <Button onClick={() => history.push(ROUTES.APLICACIONESGQM)}>Ingresar</Button>
                 </CardBody>
               </Card>
-            </Col>            
-          <Col>
+            </Col>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="https://www.reasonwhy.es/sites/default/files/empleo-futuro-reasonwhy.es_.png" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Carreras y Estrategias de los Trabajos Informáticos</CardTitle>
+                  <CardText>¿Qué nos depara para el futuro el mundo laboral?</CardText>
+                  <Button onClick={() => history.push(ROUTES.CARRERAS)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col>
+            <Col>
               <Card>
                 <CardImg top width="100%" src="https://www.universal.tv/sites/default/files/movie/images/ted_2_-_hero_with_tt_0.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Charlas TED</CardTitle>
                   <CardText>Aprendé de expertos</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.TED_TALKS)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.TED_TALKS)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>
@@ -134,13 +146,9 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Propuestas ludicas</CardTitle>
                   <CardText>Aprendé jugando</CardText>
-                  <Button onClick={() =>  history.push(ROUTES.TED_TALKS)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.TED_TALKS)}>Ingresar</Button>
                 </CardBody>
               </Card>
-            </Col>
-            <Col>
-            </Col>
-            <Col>
             </Col>
           </Row>
         </div>

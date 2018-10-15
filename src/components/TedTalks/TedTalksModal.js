@@ -24,7 +24,7 @@ export default class ModalComponent extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle} style={{"color":"black"}}>{this.props.buttonLabel}</ModalHeader>
           <ModalBody style={{"color":"black"}}>
-            <iframe src={this.props.modalContent}></iframe>
+            <iframe title="TedTalksModal" src={this.props.modalContent}></iframe>
           </ModalBody>
           <ModalFooter>
             <Button color="primary" onClick={this.toggle}>Cerrar</Button>{' '}
