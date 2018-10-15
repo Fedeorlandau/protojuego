@@ -7,7 +7,8 @@ class GlobalVariable {
         {name: "Estimaciones", aproved : "false"},
         {name: "Metricas de Software",aproved :"false"}, 
         {name: "Simulacion",aproved :"false"},
-        {name: "Gestion de cambios",aproved :"false"} 
+        {name: "Gestion de cambios",aproved :"false"} ,
+        {name: "GQM",aproved :"false"} 
       ]; 
     }
 
