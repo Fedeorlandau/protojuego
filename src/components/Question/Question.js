@@ -6,6 +6,8 @@ import { Button, Row, Col } from 'reactstrap';
 import User from 'components/User/User';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ROUTES } from 'constants/routes'; 
+import history from 'history/history'
 
 
 function shuffleArray(array) {
@@ -24,6 +26,8 @@ export default class QuestionComponent extends Component {
     wrongAnswers: 0,
     totalAnswers: 0,
     result: "",
+    isFirstTime: true,
+    isCompleted: false,
     showQuestion: false,
     step: 0,
     time: 10,
@@ -71,6 +75,7 @@ export default class QuestionComponent extends Component {
       showQuestion: true,
       rightAnswers: 0,
       wrongAnswers: 0,
+      isFirstTime:false,
       totalAnswers: 0,
       step: 0,
       showError: false,
@@ -80,7 +85,7 @@ export default class QuestionComponent extends Component {
   }
 
   showResults() {
-    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.7;
+    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.75;
    if(isOk) {
      User.updateProgress(this.props.achievementName);
    }
@@ -88,7 +93,7 @@ export default class QuestionComponent extends Component {
      showResults: true,
      showQuestion: false,
      isApproved: isOk,
-     result: (isOk)?"aprobado":"desaprobado"
+     result: isOk? "aprobado" : "desaprobado"
    })
   }
 
@@ -176,7 +181,7 @@ export default class QuestionComponent extends Component {
   }
 
   render() {
-    const { showQuestion, time, showResults } = this.state;
+    const { showQuestion, time, showResults, isApproved, isFirstTime } = this.state;
     return (
       <div className="question-container">
         <h1>{this.props.questionTitle}</h1>
@@ -192,7 +197,9 @@ export default class QuestionComponent extends Component {
           {showResults && this.renderResults()}
           <Row>
             <Col md={{offset: 4, size: 4}}>
-              { !showQuestion && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!</Button> }
+              { !showQuestion && !isApproved && isFirstTime && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!</Button> }
+              { (!showQuestion && !isApproved && !isFirstTime) && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Volver a jugar</Button> }
+              { showResults && <Button className="btn-lg" onClick={() => history.push(ROUTES.DASHBOARD) }>Terminar</Button>}
             </Col>
           </Row>
 
