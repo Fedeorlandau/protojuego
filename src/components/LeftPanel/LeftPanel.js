@@ -19,8 +19,8 @@ export default class LeftPanel extends Component {
   state= {
     progress: User.getProgress()
   };
-
-  render() {
+   
+  render() { 
     return (
       <div>        
         <div className="row">
@@ -36,21 +36,20 @@ export default class LeftPanel extends Component {
           <thead>
           <tr>
             <th>Jugador</th>
-            <th>Nivel</th>
-            <th>Puntos</th>
+            <th>Completo</th> 
           </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Federico</td>
-            <td>10</td>
-            <td>599</td>
-          </tr>
-          <tr>
-            <td>Federico</td>
-            <td>10</td>
-            <td>599</td>
-          </tr> 
+          {
+            User.getRanking().items.map(( listValue, index ) => {
+            return (
+              <tr key={index}>
+                <td>{listValue.username}</td>
+                <td>{listValue.completed}%</td> 
+              </tr>
+            );
+            })
+          }
           </tbody>
         </Table>
       </div>

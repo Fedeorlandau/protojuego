@@ -12,6 +12,12 @@ export default class User  {
         {"name": "Carreras", "aproved" :"false"} 
       ]}));
 
+      localStorage.setItem('ranking', JSON.stringify({'items':[ 
+        {"username": "Dario", "completed" : "100"},
+        {"username": "Fede","completed" :"50"},
+        {"username": name,"completed" :"0"}
+      ]}));
+
     }
     if(!User.getProgress()) {
       localStorage.setItem('progress', 0);
@@ -25,6 +31,15 @@ export default class User  {
         {"name": "Carreras", "aproved" :"false"} 
       ]}));
     }
+
+    if(!User.getRanking())
+    {
+      localStorage.setItem('ranking', JSON.stringify({'items':[ 
+        {"username": "Dario", "completed" : "100"},
+        {"username": "Fede","completed" :"50"},
+        {"username": name,"completed" :"0"}
+      ]}));
+    }
   };
   static setProgress = (value) => localStorage.setItem('progress', value);
   static setCourses = (course) => localStorage.setItem('courses', [...localStorage.getItem('courses'), course]);
@@ -32,6 +47,7 @@ export default class User  {
   static getName = () => localStorage.getItem('user');
   static getProgress = () => localStorage.getItem('progress');
   static getCourses = () => JSON.parse(localStorage.getItem('courses'));
+  static getRanking = () => JSON.parse(localStorage.getItem('ranking'));
   static updateProgress = (newAchievement) => {  
     let approvedCount = 0;
     const courses = User.getCourses();  
@@ -47,5 +63,17 @@ export default class User  {
     localStorage.setItem('courses',JSON.stringify({'items':newCourses}));  
     var newProgress = (approvedCount/newCourses.length )*100; 
     User.setProgress(newProgress);
+  };
+
+  
+  static updateRankingProgress = (username) => {   
+    const ranking = User.getRanking();  
+    const newRanking = ranking.items.map(item => { 
+      if (item.name === username){
+        item.completed= User.getProgress(); 
+      } 
+      return item;
+    });  
+    localStorage.setItem('ranking',JSON.stringify({'items':newRanking}));  
   };
 };
