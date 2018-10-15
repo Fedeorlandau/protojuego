@@ -28,7 +28,7 @@ export default class LeftPanel extends Component {
           <div className="col-sm-3"><img style={{"height":"95%"}} alt="profile" src="/assets/profile.png"></img></div>
         </div>
         
-        <div className="text-center">{User.getProgress()}%</div>
+        <div className="text-center">{this.state.progress}%</div>
         <Progress value={this.state.progress}/>
         <hr/>
         <h3>Ranking</h3>

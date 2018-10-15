@@ -26,7 +26,7 @@ export default class User  {
       ]}));
     }
   };
-  static setProgress = (value) => localStorage.setItem('progress', localStorage.getItem('progress') + value);
+  static setProgress = (value) => localStorage.setItem('progress', value);
   static setCourses = (course) => localStorage.setItem('courses', [...localStorage.getItem('courses'), course]);
 
   static getName = () => localStorage.getItem('user');
