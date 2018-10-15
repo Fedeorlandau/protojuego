@@ -14,6 +14,7 @@ import TedTalksContainer from 'containers/TedTalks/TedTalks'
 import PlanesContainer from 'containers/Planes/Planes'
 import AplicacionGQM from 'containers/AplicacionGQM/AplicacionGQM'
 import Carreras from 'containers/Carreras/Carreras'
+import CarrerasQuiz from 'containers/CarrerasQuiz/CarrerasQuiz'
 
 import history from 'history/history';
 
@@ -33,6 +34,7 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.PLANESDESARROLLO} exact component={PlanesContainer} />
           <AuthRoute path={ROUTES.APLICACIONESGQM} exact component={AplicacionGQM} />
           <AuthRoute path={ROUTES.CARRERAS} exact component={Carreras} />
+          <AuthRoute path={ROUTES.CARRERAS_QUIZ} exact component={CarrerasQuiz} />
         </Switch> 
       </Router>
     );
