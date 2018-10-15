@@ -15,6 +15,11 @@ import PlanesContainer from 'containers/Planes/Planes'
 import AplicacionGQM from 'containers/AplicacionGQM/AplicacionGQM'
 import Carreras from 'containers/Carreras/Carreras'
 import CarrerasQuiz from 'containers/CarrerasQuiz/CarrerasQuiz'
+import MetricasSoftwareContainer from 'containers/MetricasSoftware/MetricasSoftware'
+import MetricasSoftwareQuizContainer from 'containers/MetricasSoftwareQuiz/MetricasSoftwareQuiz'
+import PropuestasLudicasContainer from 'containers/PropuestasLudicas/PropuestasLudicas'
+import EstimacionesContainer from 'containers/Estimaciones/Estimaciones'
+import EstimacionesQuizContainer from 'containers/EstimacionesQuiz/EstimacionesQuiz'
 
 import history from 'history/history';
 

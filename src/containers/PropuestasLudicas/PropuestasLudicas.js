@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Dashboard from 'containers/Dashboard/Dashboard';
-import Levels from 'components/Levels/Levels';
+import PropuestasLudicas from 'components/PropuestasLudicas/PropuestasLudicas';
 import './style.css';
 
 export default class PropuestasLudicasContainer extends Component {
