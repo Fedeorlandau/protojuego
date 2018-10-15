@@ -40,6 +40,11 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.APLICACIONESGQM} exact component={AplicacionGQM} />
           <AuthRoute path={ROUTES.CARRERAS} exact component={Carreras} />
           <AuthRoute path={ROUTES.CARRERAS_QUIZ} exact component={CarrerasQuiz} />
+          <AuthRoute path={ROUTES.METRICAS_SOFTWARE} exact component={MetricasSoftwareContainer} />
+          <AuthRoute path={ROUTES.METRICAS_SOFTWARE_QUIZ} exact component={MetricasSoftwareQuizContainer} />
+          <AuthRoute path={ROUTES.ESTIMACIONES} exact component={EstimacionesContainer} />
+          <AuthRoute path={ROUTES.ESTIMACIONES_QUIZ} exact component={EstimacionesQuizContainer} />
+          <AuthRoute path={ROUTES.PROPUESTAS_LUDICAS} exact component={PropuestasLudicasContainer} />
         </Switch> 
       </Router>
     );
