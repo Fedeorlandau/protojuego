@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Progress, Table } from 'reactstrap';
+import { Progress, Table, Button } from 'reactstrap';
 import './style.css';
 import User from 'components/User/User';
 
@@ -15,8 +15,7 @@ export default class LeftPanel extends Component {
         })
       }
     });
-  }
-
+  } 
   state= {
     progress: User.getProgress()
   };
@@ -52,9 +51,13 @@ export default class LeftPanel extends Component {
             <td>10</td>
             <td>599</td>
           </tr>
+          <tr>
+            <td><input type="button" onClick={()=>User.updateProgress("GQM")} value="click me"/> </td>
+            <td>10</td>
+            <td>599</td>
+          </tr>
           </tbody>
         </Table>
-
       </div>
     );
   }
