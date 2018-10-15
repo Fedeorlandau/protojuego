@@ -14,7 +14,11 @@ export default class User  {
 
       localStorage.setItem('ranking', JSON.stringify({'items':[ 
         {"username": "Dario", "completed" : "100"},
-        {"username": "Fede","completed" :"50"},
+        {"username": "Nico", "completed" : "90"},
+        {"username": "Gonza", "completed" : "70"},
+        {"username": "Matias", "completed" : "50"},
+        {"username": "Fede","completed" :"30"},
+        {"username": "Lucas","completed" :"10"},
         {"username": name,"completed" :"0"}
       ]}));
 
@@ -36,7 +40,11 @@ export default class User  {
     {
       localStorage.setItem('ranking', JSON.stringify({'items':[ 
         {"username": "Dario", "completed" : "100"},
-        {"username": "Fede","completed" :"50"},
+        {"username": "Nico", "completed" : "90"},
+        {"username": "Gonza", "completed" : "70"},
+        {"username": "Matias", "completed" : "50"},
+        {"username": "Fede","completed" :"30"},
+        {"username": "Lucas","completed" :"10"},
         {"username": name,"completed" :"0"}
       ]}));
     }
@@ -75,11 +83,10 @@ export default class User  {
       return item;
     }).sort((a,b) => { 
       if ( parseInt(a.completed) < parseInt(b.completed)){ 
-        console.log("br 1");
-        return -1;
+        return 1;
       }
       if (parseInt(a.completed) >parseInt( b.completed)){  
-        return 1;
+        return -1;
       }  
       return 0;
     });  
