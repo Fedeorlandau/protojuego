@@ -31,7 +31,6 @@ export default class LeftPanel extends Component {
       <div>        
         <div className="row">
           <div className="col-sm-5"><h3>{User.getName()}</h3></div>
-          <div className="col-sm-3"><img style={{"height":"95%"}} alt="profile" src="/assets/profile.png"></img></div>
         </div>
         
         <div className="text-center">{this.state.progress}%</div>
