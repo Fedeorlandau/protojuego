@@ -136,7 +136,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Gestion de Proyectos</CardTitle>
                   <CardText>Relaciones conceptuales entre papers y el PMBOK</CardText>
-                  <Button onClick={() => history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.GESTIONPROYECTOS)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>

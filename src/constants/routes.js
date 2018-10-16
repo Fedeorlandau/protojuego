@@ -16,5 +16,6 @@ export const ROUTES = {
     APLICACIONESGQM: '/aplicacionesGQM',
     CARRERAS: '/carreras',
     CARRERAS_QUIZ: '/carreras_quiz',
-    PROPUESTAS_LUDICAS: '/propuestas_ludicas'
+    PROPUESTAS_LUDICAS: '/propuestas_ludicas',
+    GESTIONPROYECTOS: '/gestionProyectos',
 };
