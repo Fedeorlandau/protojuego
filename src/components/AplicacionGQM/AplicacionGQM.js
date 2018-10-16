@@ -21,7 +21,7 @@ export default class AplicacionGQMComponent extends Component {
           <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRed7hMiAjT_aXrMiExjLVTNvIizgSLNyYuyI_QzWf3FAa_yzppi6bDbE6zPq-1PLRsQtBmgU3_SIbw/pub?embedded=true")}>Caso Quateams CRM</a>
         </div>
         <div className="linksAplicacionGQM" id="ce3">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSvnDU5AWy_x4_Zk0OnkLVDeIB5SEH338zdTu80o8r4JWY17cYB-KgjTdicr0JHRVfr4xfs5qQMtK9X/pub?embedded=true")}>Caso Teradyne</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRFGvN64EMgz8qAObys__DdZ6XS7VZZUod23F74KzISLiZwS8bRiDVbX43AMFOXOTF1k3WKtiFK4SGi/pub?embedded=true")}>Caso Teradyne</a>
         </div>
         <br></br>
         <div id="divContenido" style={{display:'none'}}>

@@ -1,0 +1,13 @@
+.gestionProyectos-container {
+    padding: 20px;
+    height: 100%;
+}
+#divContenido {
+    height: 100%;
+}
+.linksGestionProyectos{
+    cursor: pointer;
+}
+.linksGestionProyectos:hover { 
+    color: blue;
+}
