@@ -171,7 +171,7 @@ export default class SimulacionComponent extends Component {
               <div className="config-card">
                 <h3>Devs</h3>
                 <div className="config-input">
-                  <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('devs', parseInt(evt.target.value))}>
+                  <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('devs', parseInt(evt.target.value,10))}>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -202,7 +202,7 @@ export default class SimulacionComponent extends Component {
                 <h4>Reuniones</h4>
                 <FormGroup row>
                   <Label md={2}>Daily</Label>
-                  <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('daily', parseInt(evt.target.value))}md={10}>
+                  <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('daily', parseInt(evt.target.value,10))}md={10}>
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -211,7 +211,7 @@ export default class SimulacionComponent extends Component {
                 </FormGroup>
                 <FormGroup row>
                   <Label md={2}>Semanal</Label>
-                  <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('semanal', parseInt(evt.target.value))} md={10}>
+                  <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('semanal', parseInt(evt.target.value,10))} md={10}>
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -220,7 +220,7 @@ export default class SimulacionComponent extends Component {
                 </FormGroup>
                 <FormGroup row>
                 <Label md={2}>Capacitaciones</Label>
-                <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('capacitaciones', parseInt(evt.target.value))} md={10}>
+                <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('capacitaciones', parseInt(evt.target.value,10))} md={10}>
                   <option>0</option>
                   <option>1</option>
                   <option>2</option>
