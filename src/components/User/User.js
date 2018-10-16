@@ -82,10 +82,10 @@ export default class User  {
       } 
       return item;
     }).sort((a,b) => { 
-      if ( parseInt(a.completed) < parseInt(b.completed)){ 
+      if ( parseInt(a.completed,10) < parseInt(b.completed,10)){ 
         return 1;
       }
-      if (parseInt(a.completed) >parseInt( b.completed)){  
+      if (parseInt(a.completed,10) >parseInt( b.completed,10)){  
         return -1;
       }  
       return 0;
