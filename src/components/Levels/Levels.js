@@ -140,7 +140,15 @@ export default class LevelsComponenet extends Component {
                 </CardBody>
               </Card>
             </Col>
-            <Col> 
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="https://retos-operaciones-logistica.eae.es/wp-content/uploads/2016/02/gesti%C3%B3n-del-cambio.jpg" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Change Management</CardTitle>
+                  <CardText>Relaciones entre Gestion del Cambio y Casos de Estudio</CardText>
+                  <Button onClick={() => history.push(ROUTES.CHANGEMANAGEMENT)}>Ingresar</Button>
+                </CardBody>
+              </Card> 
             </Col>
           </Row>
         </div>

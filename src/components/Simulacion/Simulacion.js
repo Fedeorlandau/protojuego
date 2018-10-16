@@ -32,6 +32,14 @@ const timeMarks = {
   },
 };
 
+const SPRINT_BUDGET_DEFAULT = 0;
+
+const SENIORITY_VALUE = {
+  'Junior': 50,
+  'Semi Senior': 100,
+  'Senior': 150
+};
+
 export default class SimulacionComponent extends Component {
 
   state = {
@@ -82,12 +90,23 @@ export default class SimulacionComponent extends Component {
         }
       ]
     },
+    sprintBudget: SPRINT_BUDGET_DEFAULT,
+    devs: 1,
+    seniority: 'Junior',
+    daily: 0,
+    semanal: 0,
+    capacitaciones: 0,
+    alcance:  25,
+    tiempo: 10
   };
+
+  componentDidMount() {
+    this.calculateBudget();
+  }
 
   updateChart() {
     const datasetsCopy = this.state.data.datasets.slice(0);
     const dataCopy = datasetsCopy[1].data.slice(0);
-    console.log(dataCopy)
     dataCopy.forEach((value, i) => {
       dataCopy[i] = value + 10;
     });
@@ -100,40 +119,59 @@ export default class SimulacionComponent extends Component {
     })
   }
 
+  calculateBudget() {
+    const devSeniority = this.state.devs * SENIORITY_VALUE[this.state.seniority];
+    const dailyValue = this.state.daily * 20;
+    const semanalValue = this.state.semanal * 50;
+    const capacitacionValue = this.state.capacitaciones * 50;
+    const tiempoAjuste = this.state.tiempo * -1 * 5;
+    const alcanceAjuste = this.state.alcance * 5;
+
+    this.setState({
+      sprintBudget: SPRINT_BUDGET_DEFAULT + devSeniority + dailyValue + semanalValue + capacitacionValue + tiempoAjuste + alcanceAjuste,
+    })
+  }
+
+  updateBudget(type, value) {
+    const update = {};
+    update[type] = value;
+    this.setState(update, () => this.calculateBudget());
+  }
+
   render() {
     return (
       <div className="levels-container">
         <h3>Simulación</h3>
         <div className="simulacion-container">
           <div className="config-card">
-            <h3>Budget</h3>
-            <span className="price">$2000</span>
+            <h3>Budget Proyecto</h3>
+            <span className="price">$20.000</span>
           </div>
           <div className="complexity-container">
             <h3>
               Alcance
             </h3>
-            <Slider marks={marks} step={null} defaultValue={25} onChange={() => this.updateChart()}/>
+            <Slider marks={marks} step={null} defaultValue={25} onChange={(evt) => this.updateBudget('alcance', evt)}/>
           </div>
           <div className="complexity-container">
             <h3>
               Tiempo
             </h3>
-            <Slider marks={timeMarks} step={null} defaultValue={10}  max={25} onChange={() => this.updateChart()}/>
+            <Slider marks={timeMarks} step={null} defaultValue={10}  max={25} onChange={(evt) => this.updateBudget('tiempo', evt)}/>
           </div>
           <div className="config-container">
           <Row>
             <Col>
               <div className="config-card">
                 <h3>Gasto del sprint</h3>
-                <span className="price">$200</span>
+                <span className="price">${this.state.sprintBudget}</span>
               </div>
             </Col>
             <Col>
               <div className="config-card">
                 <h3>Devs</h3>
                 <div className="config-input">
-                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()}>
+                  <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('devs', parseInt(evt.target.value))}>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -147,7 +185,7 @@ export default class SimulacionComponent extends Component {
               <div className="config-card">
                 <h3>Seniority</h3>
                 <div className="config-input">
-                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()}>
+                  <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('seniority', evt.target.value)}>
                     <option>Junior</option>
                     <option>Semi Senior</option>
                     <option>Senior</option>
@@ -164,7 +202,7 @@ export default class SimulacionComponent extends Component {
                 <h4>Reuniones</h4>
                 <FormGroup row>
                   <Label md={2}>Daily</Label>
-                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()} md={10}>
+                  <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('daily', parseInt(evt.target.value))}md={10}>
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -173,7 +211,7 @@ export default class SimulacionComponent extends Component {
                 </FormGroup>
                 <FormGroup row>
                   <Label md={2}>Semanal</Label>
-                  <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()} md={10}>
+                  <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('semanal', parseInt(evt.target.value))} md={10}>
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -182,7 +220,7 @@ export default class SimulacionComponent extends Component {
                 </FormGroup>
                 <FormGroup row>
                 <Label md={2}>Capacitaciones</Label>
-                <Input type="select" name="select" id="exampleSelect" onChange={() => this.updateChart()} md={10}>
+                <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('capacitaciones', parseInt(evt.target.value))} md={10}>
                   <option>0</option>
                   <option>1</option>
                   <option>2</option>
