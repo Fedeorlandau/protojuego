@@ -1,0 +1,13 @@
+.changeManagement-container {
+    padding: 20px;
+    height: 100%;
+}
+#divContenido {
+    height: 100%;
+}
+.linksChangeManagement{
+    cursor: pointer;
+}
+.linksChangeManagement:hover { 
+    color: blue;
+}

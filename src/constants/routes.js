@@ -18,4 +18,5 @@ export const ROUTES = {
     CARRERAS_QUIZ: '/carreras_quiz',
     PROPUESTAS_LUDICAS: '/propuestas_ludicas',
     GESTIONPROYECTOS: '/gestionProyectos',
+    CHANGEMANAGEMENT: '/changeManagement',
 };

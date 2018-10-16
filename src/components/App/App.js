@@ -13,6 +13,7 @@ import GestionCambioQuizContainer from 'containers/GestionCambioQuiz/GestionCamb
 import TedTalksContainer from 'containers/TedTalks/TedTalks'
 import PlanesContainer from 'containers/Planes/Planes'
 import GestionProyectosContainer from 'containers/GestionProyectos/GestionProyectos'
+import ChangeManagementContainer from 'containers/ChangeManagement/ChangeManagement'
 import AplicacionGQM from 'containers/AplicacionGQM/AplicacionGQM'
 import Carreras from 'containers/Carreras/Carreras'
 import CarrerasQuiz from 'containers/CarrerasQuiz/CarrerasQuiz'
@@ -47,6 +48,7 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.ESTIMACIONES} exact component={EstimacionesContainer} />
           <AuthRoute path={ROUTES.ESTIMACIONES_QUIZ} exact component={EstimacionesQuizContainer} />
           <AuthRoute path={ROUTES.PROPUESTAS_LUDICAS} exact component={PropuestasLudicasContainer} />
+          <AuthRoute path={ROUTES.CHANGEMANAGEMENT} exact component={ChangeManagementContainer} />
         </Switch> 
       </Router>
     );
