@@ -8,14 +8,14 @@ import 'rc-slider/assets/index.css';
 
 const marks = {
   0: <strong>Basico</strong>,
-  25: 'Funcionalidad X',
-  50: 'Funcionalidad Y',
-  75: 'Funcionalidad Z',
+  25: 'Funcionalidad X (15 tareas)',
+  50: 'Funcionalidad Y (30 tareas)',
+  75: 'Funcionalidad Z (45 tareas)',
   100: {
     style: {
       color: 'green',
     },
-    label: <strong>Completo</strong>,
+    label: <strong>Completo (60 tareas)</strong>,
   },
 };
 
@@ -99,7 +99,9 @@ export default class SimulacionComponent extends Component {
     alcance:  25,
     tiempo: 10,
     total: 20000,
-    semana: 0
+    semana: 0,
+    tareas_resueltas: 0,
+    tareas: 5
   };
 
   componentDidMount() {
@@ -126,11 +128,10 @@ export default class SimulacionComponent extends Component {
     const dailyValue = this.state.daily * 40;
     const semanalValue = this.state.semanal * 150;
     const capacitacionValue = this.state.capacitaciones * 150;
-    const tiempoAjuste = this.state.tiempo * -1 * 15;
     const alcanceAjuste = this.state.alcance * 15;
 
     this.setState({
-      sprintBudget: SPRINT_BUDGET_DEFAULT + devSeniority + dailyValue + semanalValue + capacitacionValue + tiempoAjuste + alcanceAjuste,
+      sprintBudget: SPRINT_BUDGET_DEFAULT + devSeniority + dailyValue + semanalValue + capacitacionValue  + alcanceAjuste,
     })
   }
 
@@ -140,12 +141,19 @@ export default class SimulacionComponent extends Component {
     this.setState(update, () => this.calculateBudget());
   }
 
-  nextSprint() {
-    const { sprintBudget, total } = this.state;
+  calcularTareasResueltasSprint() {
+    const { tareas } = this.state;
+    return tareas - 5; //ACA HAY QUE VALIDAR DEVS, CANTIDAD, SENIORITY Y REUNIONES.
+  }
 
+  nextSprint() {
+    const { sprintBudget, total, tareas_resueltas } = this.state;
+
+    const tareas_resueltas_sprint = this.calcularTareasResueltasSprint();
     this.setState({
       total: total - sprintBudget,
       sprintBudget,
+      tareas_resueltas: tareas_resueltas + tareas_resueltas_sprint
     });
 
     const datasetsCopy = this.state.data.datasets.slice(0);
@@ -181,6 +189,12 @@ export default class SimulacionComponent extends Component {
                 <span className="price">{this.state.semana * 5}</span>
               </div>
             </Col>
+            <Col>
+              <div className="config-card">
+                <h3>Tareas resueltas</h3>
+                <span className="price">{this.state.tareas_resueltas}</span>
+              </div>
+            </Col>
           </Row>
           <hr/>
 
@@ -192,15 +206,15 @@ export default class SimulacionComponent extends Component {
           </div>
           <div className="config-container">
           <Row>
-            <Col>
+            <Col md={3}>
               <div className="config-card">
-                <h3>Gasto del sprint</h3>
+                <h4>Gasto del sprint</h4>
                 <span className="price">${this.state.sprintBudget}</span>
               </div>
             </Col>
-            <Col>
+            <Col md={3}>
               <div className="config-card">
-                <h3>Devs</h3>
+                <h4>Devs</h4>
                 <div className="config-input">
                   <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('devs', parseInt(evt.target.value,10))}>
                     <option>1</option>
@@ -212,14 +226,28 @@ export default class SimulacionComponent extends Component {
                 </div>
               </div>
             </Col>
-            <Col>
+            <Col md={3}>
               <div className="config-card">
-                <h3>Seniority</h3>
+                <h4>Seniority</h4>
                 <div className="config-input">
                   <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('seniority', evt.target.value)}>
                     <option>Junior</option>
                     <option>Semi Senior</option>
                     <option>Senior</option>
+                  </Input>
+                </div>
+              </div>
+            </Col>
+            <Col md={3}>
+              <div className="config-card">
+                <h4>Cantidad de tareas</h4>
+                <div className="config-input">
+                  <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('tareas', parseInt(evt.target.value,10))}>
+                    <option>5</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>25</option>
                   </Input>
                 </div>
               </div>
