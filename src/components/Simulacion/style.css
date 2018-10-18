@@ -18,7 +18,7 @@
     height: 150px;
 }
 
-.config-card h3 {
+.config-card h4 {
     color: white;
 }
 
@@ -61,4 +61,8 @@
 
 .proyeccion-container h3 {
     color: black;
+}
+
+.config-card select, select:focus, .form-control:focus {
+    width: 100%;
 }
