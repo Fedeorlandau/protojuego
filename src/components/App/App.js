@@ -20,6 +20,7 @@ import CarrerasQuiz from 'containers/CarrerasQuiz/CarrerasQuiz'
 import MetricasSoftwareContainer from 'containers/MetricasSoftware/MetricasSoftware'
 import MetricasSoftwareQuizContainer from 'containers/MetricasSoftwareQuiz/MetricasSoftwareQuiz'
 import PropuestasLudicasContainer from 'containers/PropuestasLudicas/PropuestasLudicas'
+import CasosEstimacionesContainer from 'containers/CasosEstimaciones/CasosEstimaciones'
 import EstimacionesContainer from 'containers/Estimaciones/Estimaciones'
 import EstimacionesQuizContainer from 'containers/EstimacionesQuiz/EstimacionesQuiz'
 
@@ -49,6 +50,7 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.ESTIMACIONES_QUIZ} exact component={EstimacionesQuizContainer} />
           <AuthRoute path={ROUTES.PROPUESTAS_LUDICAS} exact component={PropuestasLudicasContainer} />
           <AuthRoute path={ROUTES.CHANGEMANAGEMENT} exact component={ChangeManagementContainer} />
+          <AuthRoute path={ROUTES.CASOSESTIMACIONES} exact component={CasosEstimacionesContainer} />
         </Switch> 
       </Router>
     );

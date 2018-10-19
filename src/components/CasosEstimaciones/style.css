@@ -1,0 +1,13 @@
+.casosEstimaciones-container {
+    padding: 20px;
+    height: 100%;
+}
+#divContenido {
+    height: 100%;
+}
+.linksCasosEstimaciones{
+    cursor: pointer;
+}
+.linksCasosEstimaciones:hover { 
+    color: blue;
+}

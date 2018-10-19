@@ -151,6 +151,22 @@ export default class LevelsComponenet extends Component {
               </Card> 
             </Col>
           </Row>
+          <hr />
+          <Row>
+          <Col>
+              <Card>
+                <CardImg top width="100%" src="https://indolinkspanish.files.wordpress.com/2013/02/capturfiles5.png" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Proceso de Estimación en Casos de Estudio</CardTitle>
+                  <CardText>¿De qué manera se debería haber llevado adelante el proceso de estimación de software en los casos de estudio?</CardText>
+                  <Button onClick={() => history.push(ROUTES.CASOSESTIMACIONES)}>Ingresar</Button>
+                </CardBody>
+              </Card> 
+            </Col>
+            <Col></Col>
+            <Col></Col>
+            <Col></Col>
+          </Row>
         </div>
       </div>
     );
