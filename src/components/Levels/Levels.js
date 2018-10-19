@@ -92,7 +92,7 @@ export default class LevelsComponenet extends Component {
                 <CardImg top width="100%" src="https://www.wikihow.com/images_en/thumb/9/9c/Play-Ludo-Step-3-Version-3.jpg/v4-728px-Play-Ludo-Step-3-Version-3.jpg.webp" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Propuestas ludicas</CardTitle>
-                  <CardText>Aprendé jugando</CardText>
+                  <CardText>Gamificá tus métodos y modelos</CardText>
                   <Button onClick={() => history.push(ROUTES.PROPUESTAS_LUDICAS)}>Ingresar</Button>
                 </CardBody>
               </Card>
