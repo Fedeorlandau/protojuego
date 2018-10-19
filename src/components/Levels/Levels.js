@@ -101,8 +101,8 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="https://www.arauca.gov.co/images/plandesarrollo/ejesestrategicos%20-%20copia.png" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Planes Desarrollo</CardTitle>
-                  <CardText>Conoce mas acerca de Teradyne y Fundacion Valle del Lili</CardText>
+                  <CardTitle>Planes de Desarrollo de Software</CardTitle>
+                  <CardText>Conocé más sobre este artefacto de UP y los planes desarrolllados para Teradyne y Fundacion Valle del Lili</CardText>
                   <Button onClick={() => history.push(ROUTES.PLANESDESARROLLO)}>Ingresar</Button>
                 </CardBody>
               </Card>
@@ -150,6 +150,22 @@ export default class LevelsComponenet extends Component {
                 </CardBody>
               </Card> 
             </Col>
+          </Row>
+          <hr />
+          <Row>
+          <Col>
+              <Card>
+                <CardImg top width="100%" src="https://indolinkspanish.files.wordpress.com/2013/02/capturfiles5.png" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Proceso de Estimación en Casos de Estudio</CardTitle>
+                  <CardText>¿De qué manera se debería haber llevado adelante el proceso de estimación de software en los casos de estudio?</CardText>
+                  <Button onClick={() => history.push(ROUTES.CASOSESTIMACIONES)}>Ingresar</Button>
+                </CardBody>
+              </Card> 
+            </Col>
+            <Col></Col>
+            <Col></Col>
+            <Col></Col>
           </Row>
         </div>
       </div>

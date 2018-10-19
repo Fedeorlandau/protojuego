@@ -1,4 +1,4 @@
-.casosEstudio-container {
+.estimaciones-container {
     padding: 20px;
     height: 100%;
 }
@@ -8,7 +8,10 @@
 .quiz-button{
     text-align: center;
 }
-.linksCasosEstudio:hover { 
+.linksEstimaciones{
+    cursor: pointer;
+}
+.linksEstimaciones:hover { 
     color: blue;
 }
 

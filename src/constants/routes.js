@@ -9,6 +9,7 @@ export const ROUTES = {
     QUESTIONS: '/examen',    //Punto 7 TP 
     METRICAS_SOFTWARE: '/metricas_software',
     METRICAS_SOFTWARE_QUIZ: '/metricas_software_quiz',
+    CASOSESTIMACIONES: '/casosEstimaciones',
     ESTIMACIONES: '/estimaciones',
     ESTIMACIONES_QUIZ: '/estimaciones_quiz',
     DIPLOMA: '/diploma',

@@ -8,6 +8,9 @@
 .quiz-button{
     text-align: center;
 }
+.linksCarreras{
+    cursor: pointer;
+}
 .linksCarreras:hover { 
     color: blue;
 }
