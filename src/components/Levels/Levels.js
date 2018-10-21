@@ -19,7 +19,7 @@ export default class LevelsComponenet extends Component {
   render() {
     return (
       <div className="levels-container">
-        <h3>Niveles</h3>
+        <h3>Inicio</h3>
         <hr />
         <div className="cards-container">
           <Row>
@@ -27,7 +27,7 @@ export default class LevelsComponenet extends Component {
               <Card>
                 <CardImg top width="100%" src="http://www.pewresearch.org/wp-content/uploads/2016/11/FT_16.11.23_Nonreaders-promo.jpg" height="200" alt="Card image cap" />
                 <CardBody>
-                  <CardTitle>Material de referencia</CardTitle>
+                  <CardTitle>Casos de estudio</CardTitle>
                   <CardText>Refresca los casos de estudio </CardText>
                   <Button onClick={() => history.push(ROUTES.CASOS_ESTUDIO)}>Ingresar</Button>
                 </CardBody>
