@@ -95,7 +95,7 @@ export default class QuestionComponent extends Component {
      isApproved: isOk,
      result: isOk? "aprobado" : "desaprobado"
    });
-   toast.success("Logro adquirido: "+ this.props.achievementName);
+   toast.warn("Logro adquirido: "+ this.props.achievementName);
   }
 
   validateAnswer(option) {

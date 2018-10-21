@@ -24,6 +24,7 @@ import CasosEstimacionesContainer from 'containers/CasosEstimaciones/CasosEstima
 import EstimacionesContainer from 'containers/Estimaciones/Estimaciones'
 import EstimacionesQuizContainer from 'containers/EstimacionesQuiz/EstimacionesQuiz'
 import DificultadesContainer from 'containers/Dificultades/Dificultades'
+import QuizesContainer from 'containers/Quizes/Quizes'
 
 import history from 'history/history';
 
@@ -53,6 +54,7 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.CHANGEMANAGEMENT} exact component={ChangeManagementContainer} />
           <AuthRoute path={ROUTES.CASOSESTIMACIONES} exact component={CasosEstimacionesContainer} />
           <AuthRoute path={ROUTES.DIFICULTADES} exact component={DificultadesContainer} />
+          <AuthRoute path={ROUTES.QUIZES} exact component={QuizesContainer} />
         </Switch> 
       </Router>
     );
