@@ -20,4 +20,5 @@ export const ROUTES = {
     PROPUESTAS_LUDICAS: '/propuestas_ludicas',
     GESTIONPROYECTOS: '/gestionProyectos',
     CHANGEMANAGEMENT: '/changeManagement',
+    DIFICULTADES: '/dificultades',
 };
