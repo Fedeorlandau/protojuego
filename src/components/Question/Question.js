@@ -18,7 +18,7 @@ function shuffleArray(array) {
   return array;
 }
 
-const TIMER_DEFAULT = 10;
+const TIMER_DEFAULT = 25;
 export default class QuestionComponent extends Component {
 
   state = {
@@ -30,7 +30,7 @@ export default class QuestionComponent extends Component {
     isCompleted: false,
     showQuestion: false,
     step: 0,
-    time: 10,
+    time: 25,
     showError: false,
     showResults: false,
     isApproved: false,
@@ -49,7 +49,7 @@ export default class QuestionComponent extends Component {
   }
 
   startTimer() {
-    this.countdown = setInterval(() => this.interval(), 1000);
+    this.countdown = setInterval(() => this.interval(), 2500);
   }
 
   clearTimer() {
@@ -85,7 +85,7 @@ export default class QuestionComponent extends Component {
   }
 
   showResults() {
-    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.75;
+    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.7;
    if(isOk) {
      User.updateProgress(this.props.achievementName);
    }
