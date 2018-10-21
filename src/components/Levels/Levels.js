@@ -39,7 +39,7 @@ export default class LevelsComponenet extends Component {
                 <CardBody>
                   <CardTitle>Simulacion</CardTitle>
                   <CardText>Afronta los desafios de un caso de estudio</CardText>
-                  <Button onClick={() => history.push(ROUTES.SIMULACION)}>Ingresar</Button>
+                  <Button onClick={() => history.push(ROUTES.DIFICULTADES)}>Ingresar</Button>
                 </CardBody>
               </Card>
             </Col>

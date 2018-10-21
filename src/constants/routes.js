@@ -21,4 +21,7 @@ export const ROUTES = {
     GESTIONPROYECTOS: '/gestionProyectos',
     CHANGEMANAGEMENT: '/changeManagement',
     DIFICULTADES: '/dificultades',
+    DIFICULTADES_BEGINNER: '/dificultades_beginner',
+    DIFICULTADES_INTERMEDIATE: '/dificultades_intermediate',
+    DIFICULTADES_ADVANCE: '/dificultades_advance',
 };

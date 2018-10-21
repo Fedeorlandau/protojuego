@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import Dificultades from 'components/Dificultades/Dificultades'; 
-import './style.css'; 
+import Dashboard from 'containers/Dashboard/Dashboard';
+import './style.css';  
 
 export default class DificultadesContainer extends Component {
 
