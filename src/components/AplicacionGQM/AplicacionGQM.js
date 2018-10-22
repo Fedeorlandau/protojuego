@@ -6,8 +6,8 @@ import Tree from 'react-animated-tree'
 
 const treeStyles = {
   position: 'absolute',
-  //top: 80,
-  //left: 80,
+  top: 80,
+  left: 80,
   color: 'white',
   fill: 'white',
   width: '100%'
