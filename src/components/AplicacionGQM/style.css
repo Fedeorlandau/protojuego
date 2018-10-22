@@ -1,13 +1,8 @@
-.aplicacionGQM-container {
-    padding: 20px;
-    height: 100%;
+.treeview > .toggle {
+  pointer-events: all;
+  cursor: pointer;
 }
-#divContenido {
-    height: 100%;
-}
-.linksAplicacionGQM{
-    cursor: pointer;
-}
-.linksAplicacionGQM:hover { 
-    color: blue;
+.treeview > .toggle:hover {
+  color: #63b1de;
+  fill: #63b1de;
 }

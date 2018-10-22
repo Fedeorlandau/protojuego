@@ -41,7 +41,7 @@ export default class LeftPanel extends Component {
           <thead>
           <tr>
             <th>Jugador</th>
-            <th>Completo</th> 
+            <th>% Completado</th> 
           </tr>
           </thead>
           <tbody>

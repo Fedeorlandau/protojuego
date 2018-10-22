@@ -8,6 +8,7 @@
     "rc-slider": "^8.6.3",
     "react": "^16.5.2",
     "react-animated-text": "^0.1.3",
+    "react-animated-tree": "^1.0.8",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",

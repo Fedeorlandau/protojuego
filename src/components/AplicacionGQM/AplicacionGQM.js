@@ -2,32 +2,62 @@ import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import 'rc-slider/assets/index.css';
 import './style.css'
+import Tree from 'react-animated-tree'
+
+const treeStyles = {
+  position: 'absolute',
+  top: 40,
+  left: 40,
+  color: 'white',
+  fill: 'white',
+  width: '100%'
+}
+
+const typeStyles = {
+  fontSize: '2em',
+  verticalAlign: 'middle'
+}
+
 
 export default class AplicacionGQMComponent extends Component {
-  
-  mostrarIframe(contenido){
-    document.getElementById("divContenido").style.display = "block";
-    document.getElementById("frameContenido").src = contenido;
-  }
-
   render() {
     return (
-      <div className="aplicacionGQM-container">
-        <h1>Aplicaciones de GQM</h1>
-        <div className="linksAplicacionGQM" id="ce1">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRavulcTbuUMJJ3pwaAzfzWTYRVwVwi_3UB2Plw9nBISTPmTP7J500d-ui1kn62GvqSJC0ePqKTWM-4/pub?embedded=true")}>Caso FLV</a>
-        </div>
-        <div className="linksAplicacionGQM" id="ce2">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRed7hMiAjT_aXrMiExjLVTNvIizgSLNyYuyI_QzWf3FAa_yzppi6bDbE6zPq-1PLRsQtBmgU3_SIbw/pub?embedded=true")}>Caso Quateams CRM</a>
-        </div>
-        <div className="linksAplicacionGQM" id="ce3">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRFGvN64EMgz8qAObys__DdZ6XS7VZZUod23F74KzISLiZwS8bRiDVbX43AMFOXOTF1k3WKtiFK4SGi/pub?embedded=true")}>Caso Teradyne</a>
-        </div>
-        <br></br>
-        <div id="divContenido" style={{display:'none'}}>
-          <iframe scrolling="yes" id="frameContenido" title="Doc2"></iframe>
-        </div>
-      </div>
+    <div>
+      <Tree content="CASOS DE ESTUDIO" canHide open style={treeStyles}>
+        <Tree content="TERADYNE" type={<span role="img" aria-labelledby="panda1" style={typeStyles}>🙀</span>} canHide />
+        <Tree content="FVL" canHide>
+          <Tree content="GOAL">
+            <Tree content="PROBLEMA 1" style={{ color: '#63b1de' }}>
+              <Tree content="METRICA 1" canHide />
+              <Tree content="METRICA 2" canHide />
+              <Tree content="METRICA 3" canHide />
+            </Tree>
+            <Tree content="PROBLEMA 2" style={{ color: '#63b1de' }}>
+              <Tree content="METRICA 1" canHide />
+              <Tree content="METRICA 2" canHide />
+              <Tree content="METRICA 3" canHide />
+            </Tree>
+            <Tree content="PROBLEMA 3" style={{ color: '#63b1de' }}>
+              <Tree content="METRICA 1" canHide />
+              <Tree content="METRICA 2" canHide />
+              <Tree content="METRICA 3" canHide />
+            </Tree>
+            <Tree content="PROBLEMA 4" style={{ color: '#63b1de' }}>
+              <Tree content="METRICA 1" canHide />
+              <Tree content="METRICA 2" canHide />
+              <Tree content="METRICA 3" canHide />
+            </Tree>
+            <Tree content="PROBLEMA 5" style={{ color: '#63b1de' }}>
+              <Tree content="METRICA 1" canHide />
+              <Tree content="METRICA 2" canHide />
+              <Tree content="METRICA 3" canHide />
+            </Tree>
+          </Tree>
+        </Tree>
+        <Tree content="CISCO" canHide />
+      </Tree>
+    </div>
     );
   }
 }
+

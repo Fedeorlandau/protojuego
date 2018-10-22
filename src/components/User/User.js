@@ -92,4 +92,20 @@ export default class User  {
     });  
     localStorage.setItem('ranking',JSON.stringify({'items':newRanking}));  
   };
+
+  static getTentativeProgress =  (newAchievement)  => {
+    let approvedCount = 0;
+    const courses = User.getCourses();  
+    const newCourses = courses.items.map(item => { 
+      if (item.name === newAchievement){
+        item.aproved= "true"; 
+      }
+      if(item.aproved === "true"){
+        approvedCount++;
+      }  
+      return item;
+    });  
+    var newProgress = (approvedCount/newCourses.length )*100; 
+    return newProgress;
+  };
 };
