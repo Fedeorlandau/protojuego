@@ -21,7 +21,7 @@ export default class AplicacionGQMComponent extends Component {
     <h1>Aplicacion GQM</h1>
     <br></br>
     </div>
-      <Tree content="CASOS DE ESTUDIO" open style={treeStyles}>
+      <Tree content="Casos de estudio" open style={treeStyles}>
       <Tree content="Quateams CRM: procesos" type="CASO">
           <Tree content="Poder gestionar de forma dinámica los miembros del IIF desde la aplicación." type="GOAL" style={{ color: 'GREEN' }}>
             <Tree content="¿El sistema contempla el crecimiento abrupto de usuarios?" type="QUESTION" style={{ color: '#63b1de' }}>
