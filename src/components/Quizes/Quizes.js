@@ -60,6 +60,23 @@ export default class QuizesComponenet extends Component {
               </Card>
             </Col>
           </Row>
+          <hr />
+          <Row>
+            <Col> 
+            </Col>
+            <Col>
+              <Card>
+                <CardImg top width="100%" src="https://paddocksblog.files.wordpress.com/2016/12/know-the-rules.jpg?w=584" height="200" alt="Card image cap" />
+                <CardBody>
+                  <CardTitle>Reglas del juego</CardTitle>
+                  <CardText>Conoce como completar los desafios!</CardText>
+                  <Button onClick={() => history.push(ROUTES.RULES)}>Ingresar</Button>
+                </CardBody>
+              </Card>
+            </Col> 
+            <Col> 
+            </Col>
+          </Row>
         </div>
       </div>
     );

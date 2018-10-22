@@ -25,4 +25,5 @@ export const ROUTES = {
     DIFICULTADES_INTERMEDIATE: '/dificultades_intermediate',
     DIFICULTADES_ADVANCE: '/dificultades_advance',
     QUIZES: '/dificultades_advance',
+    RULES: '/rules'
 };

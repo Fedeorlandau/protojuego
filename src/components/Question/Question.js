@@ -85,9 +85,10 @@ export default class QuestionComponent extends Component {
   }
 
   showResults() {
-    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.7;
+    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.69;
    if(isOk) {
      User.updateProgress(this.props.achievementName);
+     toast.warn("Logro adquirido: "+ this.props.achievementName);
    }
    this.setState({
      showResults: true,
@@ -95,7 +96,6 @@ export default class QuestionComponent extends Component {
      isApproved: isOk,
      result: isOk? "aprobado" : "desaprobado"
    });
-   toast.warn("Logro adquirido: "+ this.props.achievementName);
   }
 
   validateAnswer(option) {
