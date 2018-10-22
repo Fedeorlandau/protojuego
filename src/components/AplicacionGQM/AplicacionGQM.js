@@ -17,7 +17,6 @@ const typeStyles = {
   fontSize: '2em',
   verticalAlign: 'middle'
 }
-var goalFVL = "Goal: Mejorar el tiempo de acceso a las historias clínicas de los pacientes del hospital desde el punto de vista de los médicos y personal administrativo."
 
 export default class AplicacionGQMComponent extends Component {
   render() {
