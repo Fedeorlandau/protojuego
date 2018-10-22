@@ -23,13 +23,13 @@ export default class CarrerasComponent extends Component {
           <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vSjfKOHEL63ukEH4yZ6OLjsHoAjcl7crHA9k6ZQhrMR83id3uM7sgTnll25mumI1po9kbPqmh_UoUsf/embed?start=false&loop=false&delayms=3000")}>Códigos Generizados</a>
         </div>
         <div className="linksCarreras" id="ce2">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vRvAfgh7olCTHZKiKdSne_M5PqGXK0KreujeIMGuyhLRRdSpUkKMzHhBVTfxtcmwTM2deTE0n74pAEW/embed?start=false&loop=false&delayms=3000")}>Images of carrer: Nine key metaphors. Clase 1 Metáforas</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vRvAfgh7olCTHZKiKdSne_M5PqGXK0KreujeIMGuyhLRRdSpUkKMzHhBVTfxtcmwTM2deTE0n74pAEW/embed?start=false&loop=false&delayms=3000")}>Images of carrer: Nine key metaphors. Introducción: Metáforas</a>
         </div>
         <div className="linksCarreras" id="ce3">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vTVCDndsHQJKjJ7XzymP8HdnTeXhuT7yeguIrOPTVz_SWYxOFr3vbz2s1tYdaxK5W_FCFb1MmTlIsp6/embed?start=false&loop=false&delayms=3000")}>Images of carrer: Nine key metaphors. Clase 2 Las nueve metáforas</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vTVCDndsHQJKjJ7XzymP8HdnTeXhuT7yeguIrOPTVz_SWYxOFr3vbz2s1tYdaxK5W_FCFb1MmTlIsp6/embed?start=false&loop=false&delayms=3000")}>Images of carrer: Nine key metaphors. Las nueve métaforas</a>
         </div>
         <div className="linksCarreras" id="ce4">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vTmFpF3BpLnl4qi5HUKnFFWCWv07uD2nS3A68Cf-nGIoIfGVxhAckUm3MyZnLgf_IEMjIZDTZq-frpG/embed?start=false&loop=false&delayms=3000")}>Images of carrer: Nine key metaphors. Clase 3 Conclusiones</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vTmFpF3BpLnl4qi5HUKnFFWCWv07uD2nS3A68Cf-nGIoIfGVxhAckUm3MyZnLgf_IEMjIZDTZq-frpG/embed?start=false&loop=false&delayms=3000")}>Images of carrer: Nine key metaphors. Conclusiones</a>
         </div>
         <div className="linksCarreras" id="ce5">
           <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vRLBLPj5d72zfNpJxBTCTnygV-MnXeEkemQAVoRCTqPAw5lIZmvhf2e5zdEy4dgjnMTxxB4gVy5RcGW/embed?start=false&loop=false&delayms=3000")}>Educación Formal, No Formal e Informal.</a>
