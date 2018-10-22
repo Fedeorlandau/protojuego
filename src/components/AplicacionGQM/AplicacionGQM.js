@@ -116,4 +116,3 @@ export default class AplicacionGQMComponent extends Component {
     );
   }
 }
-
