@@ -19,7 +19,7 @@ export default class LevelsComponenet extends Component {
   render() {
     return (
       <div className="levels-container">
-        <h3>Inicio</h3>
+        <h3>Tarjetas</h3>
         <hr />
         <div className="cards-container">
           <Row>
