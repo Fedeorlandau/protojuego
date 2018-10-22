@@ -91,7 +91,8 @@ export default class QuestionComponent extends Component {
   }
 
   showResults() {
-    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.69;
+    const {rightAnswers, totalAnswers} = this.state;
+    var isOk = (rightAnswers / totalAnswers *1.0) >= 0.7; 
    if(isOk) {
      User.updateProgress(this.props.achievementName);
      toast.warn("Logro adquirido: "+ this.props.achievementName);
@@ -105,20 +106,19 @@ export default class QuestionComponent extends Component {
   }
 
   validateAnswer(option) {
-
     if(option.isRight) {
       this.setState({
-        rightAnswers: this.state.rightAnswers + 1
+        rightAnswers: ++this.state.rightAnswers
       });
       toast.success("Respuesta correcta !");
     } else{
       this.setState({
-        wrongAnswers: this.state.wrongAnswers + 1
+        wrongAnswers: ++this.state.wrongAnswers
       });
       toast.error("Respuesta Incorrecta !");
     }
     this.setState({
-      totalAnswers: this.state.totalAnswers + 1
+      totalAnswers:  ++this.state.totalAnswers
     });
     
 
