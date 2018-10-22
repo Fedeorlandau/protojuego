@@ -37,6 +37,11 @@ export default class QuestionComponent extends Component {
     questions: shuffleArray(this.props.questions)
   };
 
+  showTentativeProgress(){
+    var futureProgress = User.getTentativeProgress(this.props.achievementName);
+    toast.warn("Completando este quiz alcanzarás un "+ futureProgress + "% de complititud");
+  }
+
  interval() {
     if(this.state.time > 0){
       this.setState({
@@ -198,7 +203,8 @@ export default class QuestionComponent extends Component {
           {showResults && this.renderResults()}
           <Row>
             <Col md={{offset: 4, size: 4}}>
-              { !showQuestion && !isApproved && isFirstTime && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!</Button> }
+        
+              { !showQuestion && !isApproved && isFirstTime && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!{this.showTentativeProgress()}</Button> }
               { (!showQuestion && !isApproved && !isFirstTime) && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Volver a jugar</Button> }
               { showResults && <Button className="btn-lg" onClick={() => history.push(ROUTES.DASHBOARD) }>Terminar</Button>}
             </Col>

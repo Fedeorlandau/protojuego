@@ -4,7 +4,6 @@ import {
   CardTitle, Button, Row, Col
 } from 'reactstrap';
 import { ROUTES } from 'constants/routes';
-import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import history from 'history/history';
 
