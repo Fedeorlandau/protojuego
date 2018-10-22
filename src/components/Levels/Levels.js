@@ -81,7 +81,7 @@ export default class LevelsComponenet extends Component {
                 <CardImg top width="100%" src="http://1.bp.blogspot.com/-DGQNiohV6Zc/UX7As5lh4_I/AAAAAAAAACo/5dP3Vrgu58M/s1600/Reports.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Aplicaciones de GQM</CardTitle>
-                  <CardText>Ejemplos de Aplicaciones en FLV, Quateams CRM y Teradyne</CardText>
+                  <CardText>Ejemplos de Aplicaciones en FVL, Quateams CRM y Teradyne</CardText>
                   <Button onClick={() => history.push(ROUTES.APLICACIONESGQM)}>Ingresar</Button>
                 </CardBody>
               </Card>
@@ -114,7 +114,7 @@ export default class LevelsComponenet extends Component {
                 <CardImg top width="100%" src="https://indolinkspanish.files.wordpress.com/2013/02/capturfiles5.png" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Proceso de Estimación en Casos de Estudio</CardTitle>
-                  <CardText>¿De qué manera se debería haber llevado adelante el proceso de estimación de software en los casos de estudio?</CardText>
+                  <CardText>Aprende a estimar proyectos como un experto</CardText>
                   <Button onClick={() => history.push(ROUTES.CASOSESTIMACIONES)}>Ingresar</Button>
                 </CardBody>
               </Card> 

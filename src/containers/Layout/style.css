@@ -27,3 +27,11 @@ hr {
 option:not(checked) {
     color: black;
 }
+
+.arrow-left {
+    cursor: pointer;
+  }
+
+  .arrow-left:hover{
+    color: blue;
+  }
