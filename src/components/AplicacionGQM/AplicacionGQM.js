@@ -13,11 +13,6 @@ const treeStyles = {
   width: '100%'
 }
 
-const typeStyles = {
-  fontSize: '2em',
-  verticalAlign: 'middle'
-}
-
 export default class AplicacionGQMComponent extends Component {
   render() {
     return (
@@ -84,31 +79,35 @@ export default class AplicacionGQMComponent extends Component {
             </Tree>
           </Tree>
         </Tree><Tree content="TERADYNE">
-          <Tree content= "GOAL">
-            <Tree content="PROBLEMA 1" style={{ color: '#63b1de' }}>
-              <Tree content="METRICA 1"  />
-              <Tree content="METRICA 2"  />
-              <Tree content="METRICA 3"  />
+          <Tree content= "G: Mejorar la precisión de las estimaciones de desarrollo mediante el uso de una herramienta de gestión de proyectos desde el punto de vista del Project manager.">
+            <Tree content="Q: ¿Cuánto desvío de tiempo tienen los proyectos desarrollados actualmente?" style={{ color: '#63b1de' }}>
+              <Tree content="M: Porcentaje de proyectos con desvío utilizando herramientas de gestión de proyectos."  />
+              <Tree content="M: Porcentaje de proyectos con desvío sin utilizar herramientas de gestión de proyectos."  />
             </Tree>
-            <Tree content="PROBLEMA 2" style={{ color: '#63b1de' }}>
-              <Tree content="METRICA 1"  />
-              <Tree content="METRICA 2"  />
-              <Tree content="METRICA 3"  />
+            <Tree content="Q: ¿El uso de una herramienta de gestión de proyectos mejora la estimación de los proyectos?" style={{ color: '#63b1de' }}>
+              <Tree content="M: Cantidad de proyectos con desvío (umbral de desvío mayor al 5%) utilizando la herramienta." />
+              <Tree content="M: Promedio de horas de trabajo dedicadas a la utilización de la herramienta en cada proyecto. (Overhead)" />
+              <Tree content="M: Porcentaje de tareas estimadas como cuello de botella vs. tareas reales." />
+              <Tree content="M: Porcentaje de desvío en estimación de tres puntos" />
             </Tree>
-            <Tree content="PROBLEMA 3" style={{ color: '#63b1de' }}>
-              <Tree content="METRICA 1"  />
-              <Tree content="METRICA 2"  />
-              <Tree content="METRICA 3"  />
+            <Tree content="Q: ¿Cuánto aumento de costos tienen los proyectos que utilizan la herramienta de gestión de proyectos?" style={{ color: '#63b1de' }}>
+              <Tree content="M: Porcentaje de proyectos con desvío utilizando herramientas de gestión de proyectos."  />
+              <Tree content="M: Promedio de reasignación de personal a proyectos en curso."  />
+              <Tree content="M: Cantidad de horas extras pagadas."  />
+              <Tree content="M: Cantidad de horas de capacitación en la herramienta de gestión de proyectos." />
             </Tree>
-            <Tree content="PROBLEMA 4" style={{ color: '#63b1de' }}>
-              <Tree content="METRICA 1"  />
-              <Tree content="METRICA 2"  />
-              <Tree content="METRICA 3"  />
+            <Tree content="Q: ¿Qué problemas puede generar la utilización de una herramienta de gestión de proyectos?" style={{ color: '#63b1de' }}>
+              <Tree content="M: Cantidad de proyectos con desvío (umbral de desvío mayor al 5%) utilizando la herramienta."  />
+              <Tree content="M: Porcentaje de tareas estimadas como cuello de botella vs. tareas reales."  />
+              <Tree content="M: Porcentaje de desvío en estimación de tres puntos."  />
+              <Tree content="M: Porcentaje de horas insumidas en la utilización de la herramienta de gestión de proyectos por proyecto."  />
+              <Tree content="M: Cantidad de interpretaciones erróneas subjetivas por parte del project manager de la herramienta por proyecto."  />
             </Tree>
-            <Tree content="PROBLEMA 5" style={{ color: '#63b1de' }}>
-              <Tree content="METRICA 1"  />
-              <Tree content="METRICA 2"  />
-              <Tree content="METRICA 3"  />
+            <Tree content="Q: ¿La herramienta de gestión de proyectos permite identificar desvíos a tiempo?" style={{ color: '#63b1de' }}>
+              <Tree content="M: Cantidad de proyectos con desvío (umbral de desvío mayor al 5%) utilizando la herramienta."  />
+              <Tree content="M: Porcentaje de tareas estimadas como cuello de botella vs. tareas reales."  />
+              <Tree content="M: Cantidad de interpretaciones erróneas subjetivas por parte del project manager de la herramienta por proyecto."  />
+              <Tree content="M: Cantidad de re-estimaciones realizadas en proyectos que utilizan herramienta de gestión de proyectos."  />
             </Tree>
           </Tree>
         </Tree>
