@@ -87,6 +87,7 @@ export default class QuestionComponent extends Component {
       showResults: false,
     });
     this.startTimer();
+    this.showTentativeProgress();
   }
 
   showResults() {
@@ -204,7 +205,7 @@ export default class QuestionComponent extends Component {
           <Row>
             <Col md={{offset: 4, size: 4}}>
         
-              { !showQuestion && !isApproved && isFirstTime && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!{this.showTentativeProgress()}</Button> }
+              { !showQuestion && !isApproved && isFirstTime && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!</Button> }
               { (!showQuestion && !isApproved && !isFirstTime) && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Volver a jugar</Button> }
               { showResults && <Button className="btn-lg" onClick={() => history.push(ROUTES.DASHBOARD) }>Terminar</Button>}
             </Col>
