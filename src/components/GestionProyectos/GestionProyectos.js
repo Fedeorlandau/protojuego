@@ -18,11 +18,15 @@ export default class GestionProyectosComponent extends Component {
 
   cargarPaper(titulo, paper, resumen, relaciones){
     document.getElementById("divContenidoPaper").style.display = "block";
-    document.getElementById("botonesModales").style.display = "block"; 
-    this.state.titulo= titulo;
-    this.state.urlPaper= paper;
-    this.state.urlResumen = resumen;
-    this.state.urlRelaciones = relaciones; 
+    document.getElementById("botonesModales").style.display = "block";
+    this.setState({ titulo: titulo}); 
+    //this.state.titulo= titulo;
+    this.setState({ urlPaper: paper});
+    //this.state.urlPaper= paper;
+    this.setState({ urlResumen: resumen});
+    //this.state.urlResumen = resumen;
+    this.setState({ urlRelaciones: relaciones});
+    //this.state.urlRelaciones = relaciones; 
   }
 
   updateUrl(newUrl){

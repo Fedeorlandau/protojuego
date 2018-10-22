@@ -24,7 +24,7 @@ export default class AplicacionGQMComponent extends Component {
     return (
     <div>
       <Tree content="CASOS DE ESTUDIO" canHide open style={treeStyles}>
-        <Tree content="TERADYNE" type={<span style={typeStyles}>🙀</span>} canHide />
+        <Tree content="TERADYNE" type={<span role="img" aria-labelledby="panda1" style={typeStyles}>🙀</span>} canHide />
         <Tree content="FVL" canHide>
           <Tree content="GOAL">
             <Tree content="PROBLEMA 1" style={{ color: '#63b1de' }}>

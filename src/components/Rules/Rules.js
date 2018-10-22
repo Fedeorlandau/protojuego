@@ -9,7 +9,7 @@ export default class RulesComponenet extends Component {
     return (
       <div>
           <h1>Reglas del juego</h1> 
-          <iframe src="https://docs.google.com/document/d/e/2PACX-1vQO09_jKR9R7Y0_-ZsOLlERDO8W2wnuPgcYILjZERPV1lBpEdROM_5k5cIsQONJQES-fYZI8dHfm7C-/pub?embedded=true"></iframe>
+          <iframe title="Reglas" src="https://docs.google.com/document/d/e/2PACX-1vQO09_jKR9R7Y0_-ZsOLlERDO8W2wnuPgcYILjZERPV1lBpEdROM_5k5cIsQONJQES-fYZI8dHfm7C-/pub?embedded=true"></iframe>
         <br/> 
       </div>
     );
