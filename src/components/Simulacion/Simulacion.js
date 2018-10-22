@@ -19,7 +19,6 @@ const marks = {
   },
 };
 
-// eslint-disable-next-line
 const timeMarks = {
   5: <strong>5 Semanas</strong>,
   10: '10 Semanas',

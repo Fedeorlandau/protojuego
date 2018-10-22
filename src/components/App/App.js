@@ -23,9 +23,6 @@ import PropuestasLudicasContainer from 'containers/PropuestasLudicas/PropuestasL
 import CasosEstimacionesContainer from 'containers/CasosEstimaciones/CasosEstimaciones'
 import EstimacionesContainer from 'containers/Estimaciones/Estimaciones'
 import EstimacionesQuizContainer from 'containers/EstimacionesQuiz/EstimacionesQuiz'
-import DificultadesContainer from 'containers/Dificultades/Dificultades'
-import QuizesContainer from 'containers/Quizes/Quizes'
-import RulesContainer from 'containers/Rules/Rules'
 
 import history from 'history/history';
 
@@ -54,9 +51,6 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.PROPUESTAS_LUDICAS} exact component={PropuestasLudicasContainer} />
           <AuthRoute path={ROUTES.CHANGEMANAGEMENT} exact component={ChangeManagementContainer} />
           <AuthRoute path={ROUTES.CASOSESTIMACIONES} exact component={CasosEstimacionesContainer} />
-          <AuthRoute path={ROUTES.DIFICULTADES} exact component={DificultadesContainer} />
-          <AuthRoute path={ROUTES.QUIZES} exact component={QuizesContainer} />
-          <AuthRoute path={ROUTES.RULES} exact component={RulesContainer} />
         </Switch> 
       </Router>
     );

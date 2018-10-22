@@ -18,7 +18,7 @@ function shuffleArray(array) {
   return array;
 }
 
-const TIMER_DEFAULT = 25;
+const TIMER_DEFAULT = 10;
 export default class QuestionComponent extends Component {
 
   state = {
@@ -30,17 +30,12 @@ export default class QuestionComponent extends Component {
     isCompleted: false,
     showQuestion: false,
     step: 0,
-    time: 25,
+    time: 10,
     showError: false,
     showResults: false,
     isApproved: false,
     questions: shuffleArray(this.props.questions)
   };
-
-  showTentativeProgress(){
-    var futureProgress = User.getTentativeProgress(this.props.achievementName);
-    toast.warn("Completando este quiz alcanzarás un "+ futureProgress + "% de complititud");
-  }
 
  interval() {
     if(this.state.time > 0){
@@ -54,7 +49,7 @@ export default class QuestionComponent extends Component {
   }
 
   startTimer() {
-    this.countdown = setInterval(() => this.interval(), 2500);
+    this.countdown = setInterval(() => this.interval(), 1000);
   }
 
   clearTimer() {
@@ -87,25 +82,23 @@ export default class QuestionComponent extends Component {
       showResults: false,
     });
     this.startTimer();
-    this.showTentativeProgress();
   }
 
   showResults() {
-    const {rightAnswers, totalAnswers} = this.state;
-    var isOk = (rightAnswers / totalAnswers *1.0) >= 0.7; 
+    var isOk = (this.state.rightAnswers / this.state.totalAnswers) >= 0.75;
    if(isOk) {
      User.updateProgress(this.props.achievementName);
-     toast.warn("Logro adquirido: "+ this.props.achievementName);
    }
    this.setState({
      showResults: true,
      showQuestion: false,
      isApproved: isOk,
      result: isOk? "aprobado" : "desaprobado"
-   });
+   })
   }
 
   validateAnswer(option) {
+
     if(option.isRight) {
       this.setState({
         rightAnswers: this.state.rightAnswers + 1
@@ -118,7 +111,7 @@ export default class QuestionComponent extends Component {
       toast.error("Respuesta Incorrecta !");
     }
     this.setState({
-      totalAnswers:  this.state.totalAnswers + 1
+      totalAnswers: this.state.totalAnswers + 1
     });
     
 
@@ -204,7 +197,6 @@ export default class QuestionComponent extends Component {
           {showResults && this.renderResults()}
           <Row>
             <Col md={{offset: 4, size: 4}}>
-        
               { !showQuestion && !isApproved && isFirstTime && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Comenzar!</Button> }
               { (!showQuestion && !isApproved && !isFirstTime) && <Button className="btn-lg" onClick={() => this.startQuestionnaire(0)}>Volver a jugar</Button> }
               { showResults && <Button className="btn-lg" onClick={() => history.push(ROUTES.DASHBOARD) }>Terminar</Button>}
