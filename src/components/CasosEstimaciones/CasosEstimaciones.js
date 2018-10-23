@@ -18,10 +18,13 @@ export default class CasosEstimacionesComponent extends Component {
           <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSdOA5lLUAn1pxJTmlcFv6y2B3M8FEsTlIRUnkIyquT5UjdgeBCiOylIfGt24W-2TEFv8JDNt4XqsIf/pub?embedded=true")}>Caso Chilquinta</a>
         </div>
         <div className="linksCasosEstimaciones" id="ce2">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vTcLb_Xhx2dX2gc9INJEIrimUWg0kKyJdlqUUEgcN8Vfke52vXf_68P5c9DfoaipRrNR43fA5vJA6xm/pub?embedded=true")}>Caso FVL (Hospital Fundación Valle del Lili)</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vTcLb_Xhx2dX2gc9INJEIrimUWg0kKyJdlqUUEgcN8Vfke52vXf_68P5c9DfoaipRrNR43fA5vJA6xm/pub?embedded=true")}>Caso Hospital Fundación Valle del Lili</a>
         </div>
         <div className="linksCasosEstimaciones" id="ce3">
           <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSyLoRW3DjHrLa8HJB78EA48uZcuqHnSPAAyhPNRe4CruK-4cSzUuCYFpNP1XY5EYxfvDFlnl1IAFXz/pub?embedded=true")}>Caso Teradyne</a>
+        </div>
+        <div className="linksCasosEstimaciones" id="ce4">
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRFYNocgVbO8Z3-jkz49xNtsTvW3Q0dLrlo8TI6_l8KuIzkewC1KR8jf0SUIRaD9rhwQ0l_BaXpmYpt/pub?embedded=true")}>Cuadro Comparativo</a>
         </div>
         <br></br>
         <div id="divContenido" style={{display:'none'}}>

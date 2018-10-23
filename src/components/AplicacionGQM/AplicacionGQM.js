@@ -52,7 +52,7 @@ export default class AplicacionGQMComponent extends Component {
             </Tree>
           </Tree>
         </Tree>
-        <Tree content="FVL: recursos" type="CASO">
+        <Tree content="Fundacion Valle del Lili: recursos" type="CASO">
           <Tree content="Mejorar el tiempo de acceso a las historias clínicas de los pacientes del hospital desde el punto de vista de los médicos y personal administrativo" type="GOAL" style={{ color: 'GREEN' }} >
             <Tree content="¿Cómo se realiza el trabajo administrativo actualmente?" type="QUESTION" style={{ color: '#63b1de' }}>
               <Tree content="Cantidad de personal dedicado a tareas administrativas."  type="METRICS" style={{ color: 'GREY' }} />

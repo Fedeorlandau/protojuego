@@ -29,15 +29,9 @@ export default class EstimacionesComponent extends Component {
           <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vR28vBhD0TkVrJ8QnATfUpLFA8q5kvU8Nghrmm_R4q3CrXQKx4Qei6RC0bCt2fM3uNSrCoBhPiWs1Yg/embed?start=false&loop=false&delayms=3000")}>Refinamiento de las estimaciones</a>
         </div>
         <div className="linksEstimaciones" id="ce4">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vTd_OfWbuH5a3ZX9PfCkyJAKvm2kgjNydk8UYtZaLwSDj8wDQsmc5xfFy-d7kocGaXmjVsLPL3pMFL9/embed?start=false&loop=false&delayms=3000")}>Estimación del esfuerzo basado en casos de uso: Clase 1</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vTd_OfWbuH5a3ZX9PfCkyJAKvm2kgjNydk8UYtZaLwSDj8wDQsmc5xfFy-d7kocGaXmjVsLPL3pMFL9/embed?start=false&loop=false&delayms=3000")}>Estimación del esfuerzo basado en casos de uso</a>
         </div>
         <div className="linksEstimaciones" id="ce5">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vQmrem-TWtlW04xZblS7CtjxvvF5Oa_hRmwmLCpH03LJIpgZ4qtP9DxZIkVc6qrI_AucjC1q5dQUjx8/embed?start=false&loop=false&delayms=3000")}>Estimación del esfuerzo basado en casos de uso: Clase 2: El método Cocomo II</a>
-        </div>
-        <div className="linksEstimaciones" id="ce6">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vTEnTKZ3_YuTueFZTrPpLbe1o1g8dPLWa8BUofgLBr21B_W_LylzJyRRf72fDodQXixUUJB0t-Zh8MN/embed?start=false&loop=false&delayms=3000")}>Estimación del esfuerzo basado en casos de uso: Clase 3: Puntos de caso de uso</a>
-        </div>
-        <div className="linksEstimaciones" id="ce7">
           <a onClick={() => this.mostrarIframe("https://docs.google.com/presentation/d/e/2PACX-1vSbHxoLKmv2H7XVwMkdKDcR2M18YU7mxbn_3W5PEDYsYtUnH38TcoWB6NETu5R9ttliHRNDaZg-unos/embed?start=false&loop=false&delayms=3000")}>Puntos de función en la estimación y evaluación en el proceso de software</a>
         </div>
         <br></br>
