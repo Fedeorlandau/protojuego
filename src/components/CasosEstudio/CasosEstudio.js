@@ -21,7 +21,7 @@ export default class CasosEstudioComponent extends Component {
           <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vTiwXOyvDBvQoNQTtq-IwvH9zoyDua17Rgj6jraRGwM_6SyrAwmXKakxMJsT66CDc2Z6OlWS9XMTtrz/pub?embedded=true")}>Diamonds in the Data Mine</a>
         </div>
         <div className="linksCasosEstudio" id="ce3">
-          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vQwjEhe0gX5erS-smpCNSYBOaHGDKZnbglwgPWjiXhupqc6xzQPuPLEaHDrSvMmN_gF-zB7Vyak0wl-/pub?embedded=true")}>Sintesis Teradyne</a>
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vQwjEhe0gX5erS-smpCNSYBOaHGDKZnbglwgPWjiXhupqc6xzQPuPLEaHDrSvMmN_gF-zB7Vyak0wl-/pub?embedded=true")}>Teradyne Corporation: El Proyecto Jaguar</a>
         </div>
         <div className="linksCasosEstudio" id="ce4">
           <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vT2dEWAMGIhQK9KuhRDhDlZf2uXO95a_HSzT0K2aKp2w7xvG_pM9IVr6DAZJAqlrwf78QN6OZYEchn2/pub?embedded=true")}>Minas cupríferas de Codelco</a>
