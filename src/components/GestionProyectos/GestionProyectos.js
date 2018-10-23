@@ -143,7 +143,7 @@ export default class GestionProyectosComponent extends Component {
         <div id="divContenidoPaper" style={{display:'none'}}>
             <h4 >{this.state.titulo} </h4>
             <div style={{"position":"relative","height":"0","padding-bottom":"56.25%"}}>
-                <iframe title="paper" src={this.state.urlPaper} id="paper" width="854" height="480" style={{"position":"absolute","left":"0","top":"0","width":"100%","height":"100%"}} frameborder="0" scrolling="no" allowfullscreen></iframe>
+                <iframe title="paper" src={this.state.urlPaper} id="paper" width="854" height="480" style={{"position":"absolute","left":"0","top":"0","width":"100%","height":"100%"}} frameborder="0" scrolling="yes" allowfullscreen></iframe>
             </div>
         </div>	       
       </div> 
