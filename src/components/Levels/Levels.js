@@ -81,7 +81,7 @@ export default class LevelsComponenet extends Component {
                 <CardImg top width="100%" src="http://1.bp.blogspot.com/-DGQNiohV6Zc/UX7As5lh4_I/AAAAAAAAACo/5dP3Vrgu58M/s1600/Reports.jpg" height="200" alt="Card image cap" />
                 <CardBody>
                   <CardTitle>Aplicaciones de GQM</CardTitle>
-                  <CardText>Ejemplos de Aplicaciones en FLV, Quateams CRM y Teradyne</CardText>
+                  <CardText>Ejemplos de Aplicaciones en Fundacion Valle del Lili, Quateams CRM y Teradyne</CardText>
                   <Button onClick={() => history.push(ROUTES.APLICACIONESGQM)}>Ingresar</Button>
                 </CardBody>
               </Card>
