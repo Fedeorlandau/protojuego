@@ -23,6 +23,9 @@ export default class CasosEstimacionesComponent extends Component {
         <div className="linksCasosEstimaciones" id="ce3">
           <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vSyLoRW3DjHrLa8HJB78EA48uZcuqHnSPAAyhPNRe4CruK-4cSzUuCYFpNP1XY5EYxfvDFlnl1IAFXz/pub?embedded=true")}>Caso Teradyne</a>
         </div>
+        <div className="linksCasosEstimaciones" id="ce4">
+          <a onClick={() => this.mostrarIframe("https://docs.google.com/document/d/e/2PACX-1vRFYNocgVbO8Z3-jkz49xNtsTvW3Q0dLrlo8TI6_l8KuIzkewC1KR8jf0SUIRaD9rhwQ0l_BaXpmYpt/pub?embedded=true")}>Cuadro Comparativo</a>
+        </div>
         <br></br>
         <div id="divContenido" style={{display:'none'}}>
           <iframe scrolling="yes" id="frameContenido" title="Doc2"></iframe>
