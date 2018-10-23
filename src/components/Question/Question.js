@@ -48,6 +48,11 @@ export default class QuestionComponent extends Component {
     }
   }
 
+  showTentativeProgress(){
+    var futureProgress = User.getTentativeProgress(this.props.achievementName);
+    toast.warn("Completando este quiz alcanzarás un "+ futureProgress + "% de complititud");
+  }
+
   startTimer() {
     this.countdown = setInterval(() => this.interval(), 2500);
   }
@@ -81,6 +86,7 @@ export default class QuestionComponent extends Component {
       showError: false,
       showResults: false,
     });
+    this.showTentativeProgress();
     this.startTimer();
   }
 
@@ -102,17 +108,17 @@ export default class QuestionComponent extends Component {
 
     if(option.isRight) {
       this.setState({
-        rightAnswers: this.state.rightAnswers + 1
+        rightAnswers: ++this.state.rightAnswers
       });
       toast.success("Respuesta correcta !");
     } else{
       this.setState({
-        wrongAnswers: this.state.wrongAnswers + 1
+        wrongAnswers: ++this.state.wrongAnswers
       });
       toast.error("Respuesta Incorrecta !");
     }
     this.setState({
-      totalAnswers: this.state.totalAnswers + 1
+      totalAnswers: ++this.state.totalAnswers
     });
     
 
