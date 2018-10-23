@@ -15,13 +15,15 @@ export default class GestionProyectosComponent extends Component {
       urlRelaciones: "",
     }; 
   }
-   cargarPaper(titulo, paper, resumen, relaciones){
+   cargarPaper(titulo, urlPaper, urlResumen, urlRelaciones){
     document.getElementById("divContenidoPaper").style.display = "block";
-    document.getElementById("botonesModales").style.display = "block"; 
-    this.state.titulo= titulo;
-    this.state.urlPaper= paper;
-    this.state.urlResumen = resumen;
-    this.state.urlRelaciones = relaciones; 
+    document.getElementById("botonesModales").style.display = "block";
+    this.setState({
+      titulo,
+      urlPaper,
+      urlResumen,
+      urlRelaciones
+    });
   }
  
   render() {

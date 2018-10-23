@@ -108,17 +108,17 @@ export default class QuestionComponent extends Component {
 
     if(option.isRight) {
       this.setState({
-        rightAnswers: ++this.state.rightAnswers
+        rightAnswers: this.state.rightAnswers + 1
       });
       toast.success("Respuesta correcta !");
     } else{
       this.setState({
-        wrongAnswers: ++this.state.wrongAnswers
+        wrongAnswers: this.state.wrongAnswers + 1
       });
       toast.error("Respuesta Incorrecta !");
     }
     this.setState({
-      totalAnswers: ++this.state.totalAnswers
+      totalAnswers: this.state.totalAnswers + 1
     });
     
 
