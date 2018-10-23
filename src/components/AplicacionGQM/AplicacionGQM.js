@@ -23,59 +23,59 @@ export default class AplicacionGQMComponent extends Component {
     </div>
       <Tree content="Casos de estudio" open style={treeStyles}>
       <Tree content="Quateams CRM: procesos" type="CASO">
-          <Tree content="Poder gestionar de forma dinámica los miembros del IIF desde la aplicación." type="GOAL" style={{ color: 'GREEN' }}>
-            <Tree content="¿El sistema contempla el crecimiento abrupto de usuarios?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Total de miembros activos en la aplicación."  type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Porcentaje de aumento de miembros por mes."   type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Estimaciones sobre el crecimiento paulatino de miembros."  type="METRICS" style={{ color: 'GREY' }} />
+          <Tree content="Mejorar el proceso de seguimiento de los documentos que utilizan y envían los clientes de la institución para poder elaborar un análisis financiero desde el punto de vista de los empleados de la IIF. " type="GOAL" style={{ color: 'GREEN' }}>
+            <Tree content="¿Cuantos documentos gestionados por los clientes pueden ser visualizados por parte de los empleados de la IIF?" type="QUESTION" style={{ color: '#63b1de' }}>
+              <Tree content="Cantidad de documentos que pueden ser gestionados por cliente."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de clientes totales."   type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de documentos enviados por mes."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Tiempo promedio de vigencia de cada documento."  type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
-            <Tree content="¿El acceso a la información es relativamente rápido por parte de los miembros?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Tiempo de respuesta de cada consulta a la base de datos." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Tablas a las que se accede con mayor frecuencia en la Base de Datos. " type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Cantidad de consultas simultáneas soportadas por el servidor." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Costos mensuales/anuales de los servidores." type="METRICS" style={{ color: 'GREY' }} />
-            </Tree>
-            <Tree content="¿Se contempla dentro del sistema el acceso de usuarios provenientes del exterior?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Cantidad de miembros activos en la aplicación." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Cantidad de usuarios provenientes del exterior." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Tiempos de respuesta del servidor." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Cantidad de consultas simultáneas soportadas por el servidor." type="METRICS" style={{ color: 'GREY' }} />
-            </Tree>
-            <Tree content="¿A qué información acceden los miembros?" type="QUESTION" style={{ color: '#63b1de' }}>
+            <Tree content="¿Sobre qué datos se realizan los análisis financieros?" type="QUESTION" style={{ color: '#63b1de' }}>
+              <Tree content="Cantidad de ventas realizadas por cliente por mes." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de auditorías realizadas por mes a cada cliente." type="METRICS" style={{ color: 'GREY' }} />
               <Tree content="Número de visitas de cada documento publicado." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Cantidad de audiencias por mes realizadas por la IIF." type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
-            <Tree content="¿Saben los miembros cuál es su estado de cuenta?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Tablas a las que se accede con mayor frecuencia en la Base de Datos. " type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Tiempo que se tarda en consultar los pagos." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Número de pagos registrados." type="METRICS" style={{ color: 'GREY' }} />
+            <Tree content="¿Cuales son las transacciones que se realizan con mayor frecuencia por parte de los clientes provenientes del exterior?" type="QUESTION" style={{ color: '#63b1de' }}>
+              <Tree content="Cantidad de clientes totales." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Número de visitas de cada documento publicado." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Total de miembros provenientes del exterior." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Porcentaje de transacciones realizadas por miembros provenientes del exterior." type="METRICS" style={{ color: 'GREY' }} />
+            </Tree>
+            <Tree content="¿El análisis financiero generado resulta útil para los clientes de la IIF?" type="QUESTION" style={{ color: '#63b1de' }}>
+              <Tree content="Cantidad de clientes totales." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Porcentaje de crecimiento de clientes por mes." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Tasa de ganancia anual de los miembros." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de miembros que dejan de ser parte de la IIF por año." type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
           </Tree>
         </Tree>
         <Tree content="Fundacion Valle del Lili: recursos" type="CASO">
           <Tree content="Mejorar el tiempo de acceso a las historias clínicas de los pacientes del hospital desde el punto de vista de los médicos y personal administrativo" type="GOAL" style={{ color: 'GREEN' }} >
             <Tree content="¿Cómo se realiza el trabajo administrativo actualmente?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Cantidad de personal dedicado a tareas administrativas."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de personal dedicado exclusivamente a realizar tareas administrativas."  type="METRICS" style={{ color: 'GREY' }} />
               <Tree content="Cantidad de formularios a llenar por cada tipo de personal."  type="METRICS" style={{ color: 'GREY' }} />
               <Tree content="Tiempo que le demanda a cada usuario realizar una tarea administrativa."  type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
             <Tree content="¿Cómo son las interacciones entre el personal del hospital?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Tiempo empleado en la comunicación."  type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Cantidad de empleados involucrados en cada tarea."  type="METRICS" style={{ color: 'GREY' }} />
               <Tree content="Cantidad de formularios a llenar por cada tipo de personal."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Tiempo empleado en la comunicación entre las distintas áreas del hospital."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de empleados involucrados en cada tarea."  type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
             <Tree content="¿Qué mejoras puede implicar la sistematización de las HC?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Estimación de documentos extraviados." type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Frecuencia con las que se utiliza cada historia clínica." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Tiempo que le demanda a cada usuario realizar una tarea administrativa." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de documentos extraviados." type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Frecuencia con la que se utiliza cada historia clínica." type="METRICS" style={{ color: 'GREY' }} />
               <Tree content="Promedio de errores de interpretación de documentos." type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
-            <Tree content="¿Cómo pueden llegar a reaccionar los usuarios ante el nuevo sistema?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Edad promedio de los médicos del hospital."  type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Tiempo de antigüedad promedio del personal del hospital."  type="METRICS" style={{ color: 'GREY' }} />
+            <Tree content="¿Cómo se puede facilitar la integración entre el nuevo sistema y los usuarios?" type="QUESTION" style={{ color: '#63b1de' }}>
+              <Tree content="Tiempo que le demanda a cada trabajador realizar una tarea administrativa."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de usuarios utilizando algún sistema digital en la actualidad."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de personal familiarizado con el uso de una computadora."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Cantidad de personal dispuesto a realizar una capacitación."  type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
-            <Tree content="¿Cuánto dinero se puede ahorrar con la sistematización de la facturación?" type="QUESTION" style={{ color: '#63b1de' }}>
-              <Tree content="Cantidad de insumos utilizados en las cirugías."  type="METRICS" style={{ color: 'GREY' }} />
-              <Tree content="Cantidad de facturas rechazadas por aseguradoras."  type="METRICS" style={{ color: 'GREY' }} />
+            <Tree content="¿Cuánto tiempo de espera se le puede ahorrar a cada paciente con la implementación del nuevo sistema?" type="QUESTION" style={{ color: '#63b1de' }}>
+              <Tree content="Cantidad de documentos extraviados."  type="METRICS" style={{ color: 'GREY' }} />
+              <Tree content="Tiempo que demanda encontrar la historia clínica de un paciente."  type="METRICS" style={{ color: 'GREY' }} />
             </Tree>
           </Tree>
         </Tree><Tree content="Teradyne: producto" type="CASO">
