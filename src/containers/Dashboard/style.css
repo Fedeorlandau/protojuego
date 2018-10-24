@@ -1,0 +1,12 @@
+.arrow-left {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.arrow-left:hover{
+    color: blue;
+}
+
+.arrow-left-img {
+    margin-right: 10px;
+}

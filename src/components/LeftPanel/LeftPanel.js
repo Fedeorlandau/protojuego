@@ -8,19 +8,23 @@ import User from 'components/User/User';
 export default class LeftPanel extends Component {
 
   componentDidMount() {
-    window.addEventListener('storage', (e) => {
-      if(e.key === 'progress') {
-        this.setState({
-          progress: e.newValue
-        })
+    document.addEventListener(
+      "localDataStorage"
+      , (e) => {
+        if(e.key === 'progress') {
+          this.setState({
+            progress: e.newValue
+          })
+        }
+        if(e.key === 'ranking') {
+          this.setState({
+            ranking: e.newValue
+          })
+        }
       }
-      if(e.key === 'ranking') {
-        this.setState({
-          ranking: e.newValue
-        })
-      }
-    });
-  } 
+      , false
+    );
+  }
   state= {
     progress: User.getProgress(),
     ranking: User.getRanking(),

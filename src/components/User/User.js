@@ -9,7 +9,7 @@ export default class User  {
         {"name": "Metricas de Software","aproved" :"false"}, 
         {"name": "Simulacion","aproved" :"false"},
         {"name": "Gestion de cambios","aproved" :"false"},
-        {"name": "Carreras", "aproved" :"false"} 
+        {"name": "Carreras", "aproved" :"false"}
       ]}));
 
       localStorage.setItem('ranking', JSON.stringify({'items':[ 
