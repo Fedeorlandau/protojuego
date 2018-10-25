@@ -391,8 +391,8 @@ export default class SimulacionComponent extends Component {
     const dataCopy = datasetsCopy[1].data.slice(0);
     dataCopy[this.state.semana +1] = sprintBudget;
     dataCopy.forEach((value, i) => {
-      if(i > this.state.semana +1) {
-        dataCopy[i] = sprintBudget * i;
+      if(i >= this.state.semana +1) {
+        dataCopy[i] = sprintBudget + dataCopy[i-1] ;
       }
     });
     datasetsCopy[1].data = dataCopy;
