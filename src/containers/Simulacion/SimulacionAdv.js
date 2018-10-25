@@ -8,7 +8,7 @@ export default class Simulacion extends Component {
   render() {
     return (
       <Dashboard>
-        <SimulacionComponent total={8000} tareas={60}/>
+        <SimulacionComponent total={8000} tareas={60} logro="Simulacion Avanzada"/>
       </Dashboard>
     );
   }

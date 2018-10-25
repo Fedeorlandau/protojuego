@@ -4,10 +4,12 @@ export default class User  {
     if(!localStorage.getItem('user') || localStorage.getItem('user') !== name) {
       localStorage.setItem('user', name);
       localStorage.setItem('progress', 0);
-      localStorage.setItem('courses', JSON.stringify({'items':[ 
+      localStorage.setItem('courses', JSON.stringify({'items':[
         {"name": "Estimaciones", "aproved" : "false"},
-        {"name": "Metricas de Software","aproved" :"false"}, 
+        {"name": "Metricas de Software","aproved" :"false"},
         {"name": "Simulacion","aproved" :"false"},
+        {"name": "Simulacion Intermedia","aproved" :"false"},
+        {"name": "Simulacion Avanzada","aproved" :"false"},
         {"name": "Gestion de cambios","aproved" :"false"},
         {"name": "Carreras", "aproved" :"false"}
       ]}));
@@ -31,6 +33,8 @@ export default class User  {
         {"name": "Estimaciones", "aproved" : "false"},
         {"name": "Metricas de Software","aproved" :"false"}, 
         {"name": "Simulacion","aproved" :"false"},
+        {"name": "SimulacionIntermedia","aproved" :"false"},
+        {"name": "SimulacionAvanzada","aproved" :"false"},
         {"name": "Gestion de cambios","aproved" :"false"},
         {"name": "Carreras", "aproved" :"false"} 
       ]}));

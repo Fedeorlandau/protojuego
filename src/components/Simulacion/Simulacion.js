@@ -407,7 +407,7 @@ export default class SimulacionComponent extends Component {
     });
     datasetsTasksCopy[1].data = dataTasksCopy;
     if(this.state.semana + 1 == 5) {
-      User.updateProgress('Simulacion');
+      User.updateProgress(this.props.logro);
       toast.warn("Logro adquirido: Simulacion");
     }
     this.setState({
