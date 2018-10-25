@@ -468,7 +468,7 @@ export default class SimulacionComponent extends Component {
             </Col>
           </Row>
           <Row className="proyecciones">
-            <Col>
+            <Col md={6} lg={6}>
               <div className="proyeccion-container">
                 <h3> Proyección de gasto <img src={InfoIcon} className="tooltip-info" href="#" id="T4"/></h3>
                 <UncontrolledTooltip placement="right" target="T4">
@@ -477,7 +477,7 @@ export default class SimulacionComponent extends Component {
                 <Line data={this.state.data} />
               </div>
             </Col>
-            <Col>
+            <Col md={6} lg={6}>
               <div className="proyeccion-container">
                 <h3> Proyección de tiempo/tareas <img src={InfoIcon} className="tooltip-info" href="#" id="T5"/></h3>
                 <UncontrolledTooltip placement="right" target="T5">
