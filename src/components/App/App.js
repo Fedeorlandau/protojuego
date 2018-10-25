@@ -6,6 +6,8 @@ import AuthRoute from 'components/AuthRoute/AuthRoute';
 import HomePageContainer from 'containers/HomePage/HomePage'
 import DashboardHomeContainer from 'containers/DashboardHome/Dashboard'
 import SimulacionContainer from 'containers/Simulacion/Simulacion'
+import SimulacionIntContainer from 'containers/Simulacion/SimulacionInt'
+import SimulacionAdvContainer from 'containers/Simulacion/SimulacionAdv'
 import QuestionContainer from 'containers/Question/Question'
 import CasosEstudioContainer from 'containers/CasosEstudio/CasosEstudio'
 import GestionCambioContainer from 'containers/GestionCambio/GestionCambio'
@@ -55,6 +57,9 @@ export default class App extends Component {
           <AuthRoute path={ROUTES.CHANGEMANAGEMENT} exact component={ChangeManagementContainer} />
           <AuthRoute path={ROUTES.CASOSESTIMACIONES} exact component={CasosEstimacionesContainer} />
           <AuthRoute path={ROUTES.DIFICULTADES} exact component={DificultadesContainer} />
+          <AuthRoute path={ROUTES.SIMULACION_BEGINNER} exact component={SimulacionContainer} />
+          <AuthRoute path={ROUTES.SIMULACION_INTERMEDIATE} exact component={SimulacionIntContainer} />
+          <AuthRoute path={ROUTES.SIMULACION_ADVANCE} exact component={SimulacionAdvContainer} />
           <AuthRoute path={ROUTES.QUIZES} exact component={QuizesContainer} />
           <AuthRoute path={ROUTES.RULES} exact component={RulesContainer} />
         </Switch> 

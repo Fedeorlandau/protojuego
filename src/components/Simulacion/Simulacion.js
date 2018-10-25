@@ -8,40 +8,15 @@ import 'rc-slider/assets/index.css';
 import User from 'components/User/User';
 import { toast } from 'react-toastify';
 import InfoIcon from 'assets/info_icon.png';
+import InfoIconWhite from 'assets/info-icon-white.png';
 
-const marks = {
-  0: <strong>Basico</strong>,
-  25: 'Funcionalidad X (15 tareas)',
-  50: 'Funcionalidad Y (30 tareas)',
-  75: 'Funcionalidad Z (45 tareas)',
-  100: {
-    style: {
-      color: 'green',
-    },
-    label: <strong>Completo (60 tareas)</strong>,
-  },
-};
-
-// eslint-disable-next-line
-const timeMarks = {
-  5: <strong>1 Semana</strong>,
-  10: '2 Semanas',
-  15: '3 Semanas',
-  20: '4 Semanas',
-  25: {
-    style: {
-      color: 'red',
-    },
-    label: <strong>5 Semanas </strong>,
-  },
-};
 
 const SPRINT_BUDGET_DEFAULT = 0;
 
 const SENIORITY_VALUE = {
-  'Junior': 300,
-  'Semi Senior': 600,
-  'Senior': 900
+  'Junior': 150,
+  'Semi Senior': 300,
+  'Senior': 450
 };
 
 const SENIORITY_PROBABILIDAD = {
@@ -75,7 +50,7 @@ export default class SimulacionComponent extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [0, 4000, 8000, 12000, 16000, 20000]
+          data: this.props.total == 10000 ? [0, 2000, 4000, 6000, 8000, 10000] : [0, 1600, 3200, 4800, 6400, 8000]
         },
         {
           label: 'Actual',
@@ -96,7 +71,7 @@ export default class SimulacionComponent extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [0, 4000, 8000, 12000, 16000, 20000]
+          data: this.props.total == 10000 ? [0, 2000, 4000, 6000, 8000, 10000] : [0, 1600, 3200, 4800, 6400, 8000]
         }
       ]
     },
@@ -122,7 +97,7 @@ export default class SimulacionComponent extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [0, 10, 20, 30, 40, 50]
+          data: this.props.tareas == 50 ? [0, 10, 20, 30, 40, 50] : [0, 12, 24, 36, 48, 60]
         },
         {
           label: 'Actual',
@@ -143,7 +118,7 @@ export default class SimulacionComponent extends Component {
           pointHoverBorderWidth: 2,
           pointRadius: 1,
           pointHitRadius: 10,
-          data: [0, 10, 20, 30, 40, 50]
+          data: this.props.tareas == 50 ? [0, 10, 20, 30, 40, 50] : [0, 12, 24, 36, 48, 60]
         }
       ]
     },
@@ -154,11 +129,11 @@ export default class SimulacionComponent extends Component {
     semanal: 0,
     capacitaciones: 0,
     tiempo: 10,
-    total: 10000,
+    total: this.props.total,
     semana: 0,
     tareas_resueltas: 0,
     tareas: 5,
-    tareas_totales: 50,
+    tareas_totales: this.props.tareas,
   };
 
   componentDidMount() {
@@ -181,7 +156,7 @@ export default class SimulacionComponent extends Component {
   }
 
   calculateBudget() {
-    const devSeniority = this.state.devs * SENIORITY_VALUE[this.state.seniority];
+    const devSeniority = this.state.devs * SENIORITY_VALUE[this.state.seniority] + this.state.tareas * 10;
     this.setState({
       sprintBudget: SPRINT_BUDGET_DEFAULT + devSeniority ,
     })
@@ -204,8 +179,152 @@ export default class SimulacionComponent extends Component {
     return 0;
   }
 
+  calcularDailyParaJunior() {
+    const { daily } = this.state;
+    switch(daily) {
+      case 0:
+        return -1;
+        break;
+      case 1:
+        return 2;
+        break;
+      case 2:
+        return 1;
+        break;
+      case 3:
+        return -2;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+  calcularDailyParaSemi() {
+    const { daily } = this.state;
+    switch(daily) {
+      case 0:
+        return -1;
+        break;
+      case 1:
+        return 3;
+        break;
+      case 2:
+        return -2;
+        break;
+      case 3:
+        return -3;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+  calcularDailyParaSenior() {
+    const { daily } = this.state;
+    switch(daily) {
+      case 0:
+        return 0;
+        break;
+      case 1:
+        return 1;
+        break;
+      case 2:
+        return -2;
+        break;
+      case 3:
+        return -4;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+  calcularSemanaParaJunior() {
+    const { semanal } = this.state;
+    switch(semanal) {
+      case 0:
+        return -2;
+        break;
+      case 1:
+        return 2;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+  calcularSemanaParaSemi() {
+    const { semanal } = this.state;
+    switch(semanal) {
+      case 0:
+        return -1;
+        break;
+      case 1:
+        return 1;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+  calcularSemanaParaSenior() {
+    return 0;
+  }
+
+  calcularCapacitacionParaJunior() {
+    const { capacitaciones } = this.state;
+    switch(capacitaciones) {
+      case 0:
+        return -2;
+        break;
+      case 1:
+        return 2;
+        break;
+      case 2:
+        return 1;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+  calcularCapacitacionParaSemi() {
+    const { capacitaciones } = this.state;
+    switch(capacitaciones) {
+      case 0:
+        return -1;
+        break;
+      case 1:
+        return 1;
+        break;
+      case 2:
+        return 0;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+  calcularCapacitacionParaSenior() {
+    const { capacitaciones } = this.state;
+    switch(capacitaciones) {
+      case 0:
+        return 2;
+        break;
+      case 1:
+        return -1;
+        break;
+      case 2:
+        return -2;
+        break;
+      default:
+        return 0;
+    }
+  }
+
+
   calcularTareasResueltasSprint() {
-    const { tareas, daily, semanal, capacitaciones, devs } = this.state;
+    const { tareas, daily, semanal, capacitaciones, devs, seniority } = this.state;
 
     const tareas_dev = tareas / devs;
     let tareas_resueltas = 0;
@@ -216,8 +335,45 @@ export default class SimulacionComponent extends Component {
       }
     }
 
-    tareas_resueltas = tareas_resueltas - daily - semanal * 2 - capacitaciones * 3;
-    return tareas_resueltas < 0 ? 0 : tareas_resueltas; //ACA HAY QUE VALIDAR DEVS, CANTIDAD, SENIORITY Y REUNIONES.
+    let dailyBalancer;
+    switch(seniority) {
+      case 'Junior':
+        dailyBalancer = this.calcularDailyParaJunior();
+        break;
+      case 'Semi Senior':
+        dailyBalancer = this.calcularDailyParaSemi();
+        break;
+      default:
+        dailyBalancer = this.calcularDailyParaSenior();
+    }
+
+    let semanaBalancer;
+    switch(seniority) {
+      case 'Junior':
+        semanaBalancer = this.calcularSemanaParaJunior();
+        break;
+      case 'Semi Senior':
+        semanaBalancer = this.calcularSemanaParaSemi();
+        break;
+      default:
+        semanaBalancer = this.calcularSemanaParaSenior();
+    }
+
+    let capacitacionesBalancer;
+    switch(seniority) {
+      case 'Junior':
+        capacitacionesBalancer = this.calcularCapacitacionParaJunior();
+        break;
+      case 'Semi Senior':
+        capacitacionesBalancer = this.calcularCapacitacionParaSemi();
+        break;
+      default:
+        capacitacionesBalancer = this.calcularCapacitacionParaSenior();
+    }
+
+
+    tareas_resueltas = tareas_resueltas + dailyBalancer  - semanaBalancer - capacitacionesBalancer;
+    return tareas_resueltas < 0 ? 0 : tareas_resueltas;
   }
 
   nextSprint() {
@@ -246,7 +402,7 @@ export default class SimulacionComponent extends Component {
     dataTasksCopy[this.state.semana +1] = tareas_resueltas_sprint;
     dataTasksCopy.forEach((value, i) => {
       if(i > this.state.semana +1) {
-        dataTasksCopy[i] = tareas_resueltas_sprint * i;
+        dataTasksCopy[i] = tareas_resueltas_sprint + dataTasksCopy[i -1];
       }
     });
     datasetsTasksCopy[1].data = dataTasksCopy;
@@ -314,13 +470,19 @@ export default class SimulacionComponent extends Component {
           <Row className="proyecciones">
             <Col>
               <div className="proyeccion-container">
-                <h3> Proyección de gasto </h3>
+                <h3> Proyección de gasto <img src={InfoIcon} className="tooltip-info" href="#" id="T4"/></h3>
+                <UncontrolledTooltip placement="right" target="T4">
+                  Esta métrica muestra la proyección de gasto esperada contra la conseguida a lo largo de la simulación.
+                </UncontrolledTooltip>
                 <Line data={this.state.data} />
               </div>
             </Col>
             <Col>
               <div className="proyeccion-container">
-                <h3> Proyección de tiempo/tareas </h3>
+                <h3> Proyección de tiempo/tareas <img src={InfoIcon} className="tooltip-info" href="#" id="T5"/></h3>
+                <UncontrolledTooltip placement="right" target="T5">
+                  Esta métrica muestra la proyección de cantidad de tareas resueltas en cada semana esperada contra la conseguida a lo largo de la simulación.
+                </UncontrolledTooltip>
                 <Line data={this.state.data_tareas} />
               </div>
             </Col>
@@ -356,7 +518,10 @@ export default class SimulacionComponent extends Component {
 
             <Col md={4}>
               <div className="config-card">
-                <h4>Devs</h4>
+                <h4>Devs <img src={InfoIconWhite} className="tooltip-info" href="#" id="T6"/></h4>
+                <UncontrolledTooltip placement="right" target="T6">
+                  Cantidad de desarroladores utilizados en la semana. A mayor cantidad de desarrolladores mayor gasto semanal.
+                </UncontrolledTooltip>
                 <div className="config-input">
                   <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('devs', parseInt(evt.target.value,10))}>
                     <option>1</option>
@@ -370,7 +535,10 @@ export default class SimulacionComponent extends Component {
             </Col>
             <Col md={4}>
               <div className="config-card">
-                <h4>Seniority</h4>
+                <h4>Seniority <img src={InfoIconWhite} className="tooltip-info" href="#" id="T7"/></h4>
+                <UncontrolledTooltip placement="right" target="T7">
+                  El seniority de los desarrolladores utilizados en la semana. Cada seniority tiene diferente probabilidad de terminar una tarea. Junior 30%, Semi-senior 50%, Senior 75%.
+                </UncontrolledTooltip>
                 <div className="config-input">
                   <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('seniority', evt.target.value)}>
                     <option>Junior</option>
@@ -382,7 +550,10 @@ export default class SimulacionComponent extends Component {
             </Col>
             <Col md={4}>
               <div className="config-card">
-                <h4>Cantidad de tareas la iteracion</h4>
+                <h4>Cantidad de tareas la iteracion <img src={InfoIconWhite} className="tooltip-info" href="#" id="T8"/></h4>
+                <UncontrolledTooltip placement="right" target="T8">
+                  Cantidad de tareas a la que se aspira completar en la semana. Esto aumenta el gasto semanal ya que los desarrolladores tienen que trabajar más tiempo.
+                </UncontrolledTooltip>
                 <div className="config-input">
                   <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('tareas', parseInt(evt.target.value,10))}>
                     <option>5</option>
@@ -398,7 +569,10 @@ export default class SimulacionComponent extends Component {
           <Row>
             <Col>
               <div className="reuniones-container">
-                <h4>Reuniones</h4>
+                <h4>Reuniones <img src={InfoIcon} className="tooltip-info" href="#" id="T9"/></h4>
+                <UncontrolledTooltip placement="right" target="T9">
+                  Las reuniones pueden aumentar la probabilidad de completar tareas si los desarrolladores no tienen mucha experiencia. Si se abusa de las mismas puede reducir la cantidad de tareas resueltas.
+                </UncontrolledTooltip>
                 <FormGroup row>
                   <Col md={2}>
                     <Label md={2}>Daily</Label>
@@ -421,8 +595,6 @@ export default class SimulacionComponent extends Component {
                   <Input type="select" name="select" id="exampleSelect"  onChange={(evt) => this.updateBudget('semanal', parseInt(evt.target.value,10))} md={10}>
                     <option>0</option>
                     <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
                   </Input>
                   </Col>
                 </FormGroup>
@@ -435,7 +607,6 @@ export default class SimulacionComponent extends Component {
                       <option>0</option>
                       <option>1</option>
                       <option>2</option>
-                      <option>3</option>
                     </Input>
                   </Col>
               </FormGroup>
@@ -454,7 +625,9 @@ export default class SimulacionComponent extends Component {
             <Row>
               <Col>
                 {this.state.semana < 5 && <Button color="primary" className="float-right btn-avanzar" onClick={() => this.nextSprint()}>Avanzar</Button> }
-                {this.state.semana >= 5 && <div>Mostrar resultados conclusiones</div>}
+                {this.state.semana >= 5 && <div>
+                  <h1>Felicitades! Terminaste la simulación. Mirá las métricas arriba y fijate cómo te fue.</h1>
+                </div>}
               </Col>
             </Row>
           </div>
