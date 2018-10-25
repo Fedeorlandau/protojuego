@@ -382,7 +382,7 @@ export default class SimulacionComponent extends Component {
             </Col>
             <Col md={4}>
               <div className="config-card">
-                <h4>Cantidad de tareas en este sprint</h4>
+                <h4>Cantidad de tareas la iteracion</h4>
                 <div className="config-input">
                   <Input type="select" name="select" id="exampleSelect" onChange={(evt) => this.updateBudget('tareas', parseInt(evt.target.value,10))}>
                     <option>5</option>
