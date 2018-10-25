@@ -71,3 +71,40 @@
 .reuniones-container select, select:focus, .form-control:focus {
     width: 100%;
 }
+
+.tooltip-info {
+    width: 20px;
+    height: 20px;
+}
+
+.card-inverse {
+    background-color: transparent;
+    border: 1px solid #041631;
+}
+
+.card-inverse h3 {
+    color: #041631;
+}
+
+.card-red {
+    background-color: #4c2525;
+}
+
+.config-gasto {
+    background-color: transparent;
+    border: 1px solid #041631;
+    height: 100%;
+}
+
+.config-gasto h4 {
+    color: #041631;
+}
+
+.simulacion-container h1 {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.proyecciones {
+    margin-top: 20px;
+}

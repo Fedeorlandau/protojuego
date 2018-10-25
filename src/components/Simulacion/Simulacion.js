@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import 'react-toastify/dist/ReactToastify.css';
 import { Line } from 'react-chartjs-2';
-import { Row, Col, Input, Button, Label, FormGroup } from 'reactstrap';
+import { Row, Col, Input, Button, Label, FormGroup, UncontrolledTooltip } from 'reactstrap';
 import './style.css';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import User from 'components/User/User';
 import { toast } from 'react-toastify';
+import InfoIcon from 'assets/info_icon.png';
 
 const marks = {
   0: <strong>Basico</strong>,
@@ -275,45 +276,81 @@ export default class SimulacionComponent extends Component {
   render() {
     return (
       <div className="levels-container">
-        <h3>Simulación</h3>
         <div className="simulacion-container">
           <Row>
             <Col>
-              <div className="config-card">
-                <h3>Presupuesto Proyecto</h3>
+              <h1>Variables del proyecto</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="config-card card-inverse">
+                <h3>Presupuesto Proyecto <img src={InfoIcon} className="tooltip-info" href="#" id="UncontrolledTooltipExample"/></h3>
+                <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample">
+                  Este es el presupuesto del proyecto, a medida que se avance con la simulación se ira reduciendo con el gasto de cada semana.
+                </UncontrolledTooltip>
                 <span className="price">${this.state.total}</span>
               </div>
             </Col>
             <Col>
-              <div className="config-card">
-                <h3>Tareas totales</h3>
+              <div className="config-card card-inverse">
+                <h3>Tareas totales  <img src={InfoIcon} className="tooltip-info" href="#" id="T2"/></h3>
+                <UncontrolledTooltip placement="right" target="T2">
+                  Esta es la cantidad de tareas faltantes para completar el proyecto. Se irán reduciendo a medida que los desarrolladores cumplan sus tareas.
+                </UncontrolledTooltip>
                 <span className="price">{this.state.tareas_totales}</span>
               </div>
             </Col>
             <Col>
-              <div className="config-card">
-                <h3>Tiempo máximo</h3>
+              <div className="config-card card-inverse">
+                <h3>Tiempo máximo  <img src={InfoIcon} className="tooltip-info" href="#" id="T3"/></h3>
+                <UncontrolledTooltip placement="right" target="T3">
+                  Este proyecto tiene una duración total de 5 semanas. Luego de que se cumpla el plazo la simulación termina.
+                </UncontrolledTooltip>
                 <span className="price">5 Semanas</span>
+              </div>
+            </Col>
+          </Row>
+          <Row className="proyecciones">
+            <Col>
+              <div className="proyeccion-container">
+                <h3> Proyección de gasto </h3>
+                <Line data={this.state.data} />
+              </div>
+            </Col>
+            <Col>
+              <div className="proyeccion-container">
+                <h3> Proyección de tiempo/tareas </h3>
+                <Line data={this.state.data_tareas} />
               </div>
             </Col>
           </Row>
           <hr/>
           <Row>
             <Col>
-              <div className="config-card">
+              <h1>Progreso semanal</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="config-card card-red">
                 <h3>Semana actual</h3>
                 <span className="price">{this.state.semana}</span>
               </div>
             </Col>
             <Col>
-              <div className="config-card">
+              <div className="config-card card-red">
                 <h3>Tareas resueltas</h3>
                 <span className="price">{this.state.tareas_resueltas}</span>
               </div>
             </Col>
           </Row>
           <hr/>
-
+          <Row>
+            <Col>
+              <h1>Parametrización</h1>
+            </Col>
+          </Row>
           <div className="config-container">
           <Row>
 
@@ -406,28 +443,13 @@ export default class SimulacionComponent extends Component {
             </Col>
 
             <Col md={4}>
-              <div className="config-card">
+              <div className="config-card config-gasto">
                 <h4>Gasto de la semana</h4>
                 <span className="price">${this.state.sprintBudget}</span>
               </div>
             </Col>
 
           </Row>
-            <hr/>
-            <Row>
-              <Col>
-                <div className="proyeccion-container">
-                  <h3> Proyección de gasto </h3>
-                  <Line data={this.state.data} />
-                </div>
-              </Col>
-              <Col>
-                <div className="proyeccion-container">
-                  <h3> Proyección de tiempo/tareas </h3>
-                  <Line data={this.state.data_tareas} />
-                </div>
-              </Col>
-            </Row>
           <hr/>
             <Row>
               <Col>
